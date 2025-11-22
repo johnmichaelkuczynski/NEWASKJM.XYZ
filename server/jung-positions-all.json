@@ -1,0 +1,2922 @@
+[
+  {
+    "positionId": "JUNG-AP-001",
+    "domain": "Analytical Psychology",
+    "thesis": "The Zürich School interprets psychological symbols both semiotically (as signs) and symbolistically (as having positive value for present and future development)",
+    "keyArguments": [
+      "Symbols are not merely signs of repressed content but attempts to comprehend and point out further psychological development",
+      "The method must be both analytical-causal and synthetic-prospective",
+      "Human mind is characterized by both causes and aims (fines)",
+      "Symbols have retrospective and prospective import"
+    ],
+    "sourceWork": "Collected Papers on Analytical Psychology",
+    "sourceLocation": "Author's Preface to First Edition",
+    "significance": "Establishes fundamental methodological difference between Vienna and Zürich schools",
+    "relatedConcepts": [
+      "symbol interpretation",
+      "prospective analysis",
+      "synthetic method",
+      "teleological psychology"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-002",
+    "domain": "Psychological Types",
+    "thesis": "There are two fundamental psychological types: extroversion (adaptation through feeling) and introversion (adaptation through thinking)",
+    "keyArguments": [
+      "The extrovert adapts by means of feeling, with thought under repression",
+      "The introvert adapts by means of thought, with feeling repressed",
+      "This inequality in the unconscious brings about conflict and neurosis",
+      "Both principles exist within every individual but not in equal proportions"
+    ],
+    "sourceWork": "Collected Papers on Analytical Psychology",
+    "sourceLocation": "Editor's Preface to Second Edition",
+    "significance": "Foundational theory for understanding personality differences and neurotic conflicts",
+    "relatedConcepts": [
+      "repression",
+      "adaptation",
+      "neurosis",
+      "unconscious conflict"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-003",
+    "domain": "Analytical Psychology",
+    "thesis": "Both causal and final (teleological) viewpoints are necessary regulative principles in psychology",
+    "keyArguments": [
+      "Causality and finality are regulative (subjective) principles of thought, not constituent principles",
+      "Psychology cannot be exhausted by causal methods alone since mind lives by aims",
+      "Following Kant, these viewpoints are not antagonistic when regarded as regulative principles",
+      "Modern physics has moved from pure mechanism to final concepts like conservation of energy"
+    ],
+    "sourceWork": "Collected Papers on Analytical Psychology",
+    "sourceLocation": "Author's Preface to Second Edition",
+    "significance": "Establishes philosophical foundation for Jung's departure from purely causal psychoanalysis",
+    "relatedConcepts": [
+      "causality",
+      "teleology",
+      "regulative principles",
+      "Kantian epistemology"
+    ]
+  },
+  {
+    "positionId": "JUNG-TU-004",
+    "domain": "Theory of Unconscious",
+    "thesis": "The unconscious has a compensating function that maintains psychological equilibrium",
+    "keyArguments": [
+      "The unconscious compensates for one-sided conscious attitudes",
+      "In neurosis, unconscious processes break through and disturb equilibrium",
+      "Symptomatic acts reveal unconscious compensation",
+      "The function of the unconscious in morbid conditions is compensatory"
+    ],
+    "sourceWork": "Collected Papers on Analytical Psychology",
+    "sourceLocation": "Chapter X - On the Importance of the Unconscious in Psychopathology",
+    "significance": "Central principle explaining the relationship between conscious and unconscious processes",
+    "relatedConcepts": [
+      "psychological equilibrium",
+      "neurosis",
+      "symptomatic acts",
+      "unconscious processes"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-005",
+    "domain": "Analytical Psychology",
+    "thesis": "Freud and Adler's theories are one-sided and only valid within the limits of their corresponding psychological types",
+    "keyArguments": [
+      "Freud's principle is hedonism (pleasure principle), Adler's is power principle",
+      "These correspond to different psychological types noted by William James",
+      "Both reduce to infantile and primitive levels without constructive synthesis",
+      "Each psychological symbol should be interpreted according to both principles"
+    ],
+    "sourceWork": "Collected Papers on Analytical Psychology",
+    "sourceLocation": "Author's Preface to First Edition",
+    "significance": "Establishes Jung's synthetic approach as superior to one-sided reductive methods",
+    "relatedConcepts": [
+      "hedonism",
+      "power principle",
+      "reductive analysis",
+      "psychological types"
+    ]
+  },
+  {
+    "positionId": "JUNG-AS-006",
+    "domain": "Archetypes and Symbols",
+    "thesis": "Symbols are necessary for moral development and cannot be replaced by concrete values",
+    "keyArguments": [
+      "Religious symbols proved efficacious in moral education for thousands of years",
+      "Only new and more efficient symbols can replace antiquated ones",
+      "Symbols represent something far in advance of the individual",
+      "Individual unconscious produces symbols of greatest value for moral development"
+    ],
+    "sourceWork": "Collected Papers on Analytical Psychology",
+    "sourceLocation": "Author's Preface to First Edition",
+    "significance": "Establishes the constructive and developmental function of symbolic thinking",
+    "relatedConcepts": [
+      "moral development",
+      "religious symbols",
+      "individual unconscious",
+      "symbolic function"
+    ]
+  },
+  {
+    "positionId": "JUNG-TU-007",
+    "domain": "Theory of Unconscious",
+    "thesis": "If a requisite psychological function is not represented in consciousness, it exists in the unconscious in archaic or embryonic form",
+    "keyArguments": [
+      "Those without philosophical/religious views have archaic worldviews in their unconscious",
+      "This represents an indispensable function of the human mind",
+      "The unconscious compensates for missing conscious functions",
+      "Archaic forms represent undeveloped psychological functions"
+    ],
+    "sourceWork": "Collected Papers on Analytical Psychology",
+    "sourceLocation": "Author's Preface to First Edition",
+    "significance": "Explains how the unconscious maintains psychological completeness",
+    "relatedConcepts": [
+      "psychological functions",
+      "archaic thinking",
+      "compensation",
+      "unconscious structure"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-008",
+    "domain": "Analytical Psychology",
+    "thesis": "Analysis must lead to constructive synthesis, not mere reduction to primitive trends",
+    "keyArguments": [
+      "Reduction alone leads to resignation and hopelessness",
+      "Recognition of symbolic value leads to constructive truth and helps living",
+      "Primitive trends must be balanced by recognition of their symbolic value",
+      "The goal is philosophical or religious attitude enabling further development"
+    ],
+    "sourceWork": "Collected Papers on Analytical Psychology",
+    "sourceLocation": "Author's Preface to First Edition",
+    "significance": "Establishes the therapeutic goal as constructive personality development",
+    "relatedConcepts": [
+      "constructive analysis",
+      "symbolic value",
+      "personality development",
+      "therapeutic goals"
+    ]
+  },
+  {
+    "positionId": "JUNG-CT-009",
+    "domain": "Complex Theory",
+    "thesis": "Complexes are autonomous groups of ideas with emotional charge that can be detected through association experiments",
+    "keyArguments": [
+      "Disturbances of reaction show emotional rather than intellectual causes",
+      "Complex-indicators reveal unconscious emotional constellations",
+      "Association experiments can discover hidden psychological content",
+      "Complexes operate independently of conscious control"
+    ],
+    "sourceWork": "Collected Papers on Analytical Psychology",
+    "sourceLocation": "Chapter II - The Association Method",
+    "significance": "Provides empirical method for investigating unconscious psychological structures",
+    "relatedConcepts": [
+      "association experiment",
+      "emotional complexes",
+      "unconscious constellations",
+      "psychological autonomy"
+    ]
+  },
+  {
+    "positionId": "JUNG-DA-010",
+    "domain": "Dream Analysis",
+    "thesis": "Dreams have both causal (retrospective) and teleological (prospective) significance",
+    "keyArguments": [
+      "Dreams serve a compensating function for conscious attitudes",
+      "Dream analysis reveals both historical causes and future developmental potential",
+      "Dreams provide material for psychological reconstruction",
+      "The causal and teleological views are both necessary for complete understanding"
+    ],
+    "sourceWork": "Collected Papers on Analytical Psychology",
+    "sourceLocation": "Chapter XII - The Psychology of Dreams",
+    "significance": "Establishes Jung's distinctive approach to dream interpretation",
+    "relatedConcepts": [
+      "dream compensation",
+      "prospective function",
+      "psychological reconstruction",
+      "teleological interpretation"
+    ]
+  },
+  {
+    "positionId": "JUNG-TU-011",
+    "domain": "Theory of Unconscious",
+    "thesis": "The unconscious contains both personal and impersonal (collective) layers",
+    "keyArguments": [
+      "Deepest layers are impersonal, absolute, collective, or super-personal",
+      "Primordial images exist at the collective level",
+      "Personal unconscious contents must be differentiated from impersonal ones",
+      "Collective unconscious is sediment of all human experience throughout time"
+    ],
+    "sourceWork": "Collected Papers on Analytical Psychology",
+    "sourceLocation": "Chapter XIV - The Psychology of the Unconscious Processes",
+    "significance": "Introduces the concept of collective unconscious as distinct from personal unconscious",
+    "relatedConcepts": [
+      "collective unconscious",
+      "primordial images",
+      "impersonal psyche",
+      "universal patterns"
+    ]
+  },
+  {
+    "positionId": "JUNG-AS-012",
+    "domain": "Archetypes and Symbols",
+    "thesis": "Dominants of the collective unconscious (gods, demons) are universal psychological truths that become conscious as projections",
+    "keyArguments": [
+      "Certain prominent features become 'dominants' with universal character",
+      "These dominants explain infatuations, incompatibilities, and unconscious conflicts",
+      "Projections must be traced back to the non-ego",
+      "The 'magical demon' is the most primitive concept of God"
+    ],
+    "sourceWork": "Collected Papers on Analytical Psychology",
+    "sourceLocation": "Chapter XIV - The Psychology of the Unconscious Processes",
+    "significance": "Establishes the archetypal foundation of religious and mythological experience",
+    "relatedConcepts": [
+      "dominants",
+      "projection",
+      "collective patterns",
+      "archetypal images"
+    ]
+  },
+  {
+    "positionId": "JUNG-IP-013",
+    "domain": "Individuation Process",
+    "thesis": "The transcendental function creates a bridge between conscious and unconscious, enabling psychological development",
+    "keyArguments": [
+      "Synthesis of symbols from the absolute unconscious is necessary",
+      "The transcendental function mediates between ego and non-ego",
+      "Differentiation of ego from non-ego is symbolized in hero-myths",
+      "This process liberates energy for further psychological progress"
+    ],
+    "sourceWork": "Collected Papers on Analytical Psychology",
+    "sourceLocation": "Chapter XIV - The Psychology of the Unconscious Processes",
+    "significance": "Introduces key concept for understanding psychological development and integration",
+    "relatedConcepts": [
+      "transcendental function",
+      "ego-non-ego differentiation",
+      "hero myth",
+      "psychological integration"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-014",
+    "domain": "Psychological Types",
+    "thesis": "Neurosis results from one-sided adaptation according to type, with the undifferentiated co-function remaining repressed",
+    "keyArguments": [
+      "The neglected co-function operates behind the adapted function",
+      "This inequality creates unconscious conflict leading to neurosis",
+      "Repressed feelings of introvert appear as physical symptoms",
+      "Repressed thinking of extrovert appears as hysterical symptoms"
+    ],
+    "sourceWork": "Collected Papers on Analytical Psychology",
+    "sourceLocation": "Chapter XIV - The Psychology of the Unconscious Processes",
+    "significance": "Provides typological explanation for the origin of neurotic symptoms",
+    "relatedConcepts": [
+      "one-sided adaptation",
+      "co-function",
+      "typological neurosis",
+      "repressed functions"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-015",
+    "domain": "Analytical Psychology",
+    "thesis": "Both objective and subjective interpretation of psychological material is necessary for complete understanding",
+    "keyArguments": [
+      "Causal-reductive method treats dream content as objective phenomenon",
+      "Synthetic-constructive method treats content as subjective phenomenon",
+      "Union of both viewpoints gives full meaning to psychological material",
+      "Neither approach alone provides complete understanding"
+    ],
+    "sourceWork": "Collected Papers on Analytical Psychology",
+    "sourceLocation": "Chapter XIV - The Psychology of the Unconscious Processes",
+    "significance": "Establishes methodological principle for comprehensive psychological interpretation",
+    "relatedConcepts": [
+      "objective interpretation",
+      "subjective interpretation",
+      "synthetic method",
+      "comprehensive analysis"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-001",
+    "domain": "Psychological Types",
+    "thesis": "Human psychology exhibits two fundamental types based on the direction of psychic energy: introverted and extraverted types.",
+    "keyArguments": [
+      "In introverted types, the fate of the individual is determined more by the subject's own inner self",
+      "In extraverted types, the fate is determined more by the objects of interest in the external world",
+      "The introverted standpoint sets the ego and subjective psychological process above the object",
+      "The extraverted standpoint subordinates the subject to the object, giving the object higher value"
+    ],
+    "sourceWork": "Psychological Types",
+    "sourceLocation": "Introduction",
+    "significance": "Foundational theory establishing Jung's primary typological distinction that underlies all psychological analysis",
+    "relatedConcepts": [
+      "psychic energy",
+      "attitude types",
+      "compensation",
+      "psychological equilibrium"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-002",
+    "domain": "Psychological Types",
+    "thesis": "Beyond introversion-extraversion, individuals can be distinguished by four basic psychological functions: thinking, feeling, sensation, and intuition.",
+    "keyArguments": [
+      "Experience shows that basic psychological functions are genuinely and essentially different from other functions",
+      "These four functions prove to be thinking, feeling, sensation, and intuition through empirical observation",
+      "If one function habitually predominates, a corresponding type results",
+      "Each of these types may be either introverted or extraverted depending on relation to the object"
+    ],
+    "sourceWork": "Psychological Types",
+    "sourceLocation": "Introduction",
+    "significance": "Establishes the complete eight-type system that became central to Jungian typology",
+    "relatedConcepts": [
+      "dominant function",
+      "auxiliary function",
+      "inferior function",
+      "psychological adaptation"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-003",
+    "domain": "Psychological Types",
+    "thesis": "Every human being possesses both introverted and extraverted mechanisms as expressions of natural life-rhythm, with only relative predominance determining type.",
+    "keyArguments": [
+      "Both mechanisms exist as expressions of natural life-rhythm, like systole and diastole of the heart",
+      "A rhythmical alternation of both forms would correspond to normal life course",
+      "Outer circumstances and inner disposition frequently favor one mechanism over the other",
+      "There can never be a pure type since both mechanisms are integral parts of psychic economy"
+    ],
+    "sourceWork": "Psychological Types",
+    "sourceLocation": "Introduction",
+    "significance": "Prevents rigid categorization by emphasizing the dynamic and compensatory nature of psychological types",
+    "relatedConcepts": [
+      "compensation",
+      "psychic equilibrium",
+      "life-rhythm",
+      "psychological balance"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-004",
+    "domain": "Analytical Psychology",
+    "thesis": "Objective psychology must recognize the subjective determination of knowledge and the personal equation of the observer.",
+    "keyArguments": [
+      "The personal equation is psychological and not merely psychophysical - we see colors but not wave-lengths",
+      "One sees what one can best see oneself, thus first seeing the mote in one's brother's eye",
+      "The observer should be adequate to his object, able to see not only subjectively but also objectively",
+      "Recognition of subjective determination is a basic condition for scientific evaluation of a psyche different from the observer's"
+    ],
+    "sourceWork": "Psychological Types",
+    "sourceLocation": "Chapter I - The Problem of Types in Classical and Medieval Thought",
+    "significance": "Establishes epistemological foundation for analytical psychology emphasizing observer's role in psychological knowledge",
+    "relatedConcepts": [
+      "personal equation",
+      "projection",
+      "objective psychology",
+      "scientific observation"
+    ]
+  },
+  {
+    "positionId": "JUNG-IP-005",
+    "domain": "Individuation Process",
+    "thesis": "The development of individuality goes hand in hand with the de-psychologizing work of objective science and differentiation from collective attitudes.",
+    "keyArguments": [
+      "The further back in history, the more personality disappears beneath wrappings of collectivity",
+      "In primitive psychology there is no trace of individual concept, only collective relationship",
+      "The collective attitude hinders recognition of psychology different from the subject's",
+      "What we understand by 'individual' is a relatively recent acquisition in human mind and culture"
+    ],
+    "sourceWork": "Psychological Types",
+    "sourceLocation": "Chapter I",
+    "significance": "Links individuation to historical development and establishes it as prerequisite for psychological understanding",
+    "relatedConcepts": [
+      "collective unconscious",
+      "participation mystique",
+      "psychological differentiation",
+      "individual development"
+    ]
+  },
+  {
+    "positionId": "JUNG-RS-006",
+    "domain": "Religion and Spirituality",
+    "thesis": "The Christian process of development demands sacrifice of the most valued psychological function, leading to type reversal and spiritual growth.",
+    "keyArguments": [
+      "Tertullian (introverted thinking type) performed sacrificium intellectus, becoming a man of feeling",
+      "Origen (extraverted type) performed sacrificium phalli, freeing himself from sensual ties to objects",
+      "The sacrifice serves interests of domestication biologically but opens doors for new spiritual development",
+      "Conversion signifies transition to another attitude, addressing adaptive deficiency through compensation"
+    ],
+    "sourceWork": "Psychological Types",
+    "sourceLocation": "Chapter I - Tertullian and Origen section",
+    "significance": "Demonstrates how religious transformation involves fundamental psychological type changes and compensation",
+    "relatedConcepts": [
+      "sacrifice",
+      "compensation",
+      "religious conversion",
+      "attitude change"
+    ]
+  },
+  {
+    "positionId": "JUNG-CT-007",
+    "domain": "Complex Theory",
+    "thesis": "Gnostic philosophy established three types corresponding to basic psychological functions: pneumatikoi (thinking), psychikoi (feeling), and hylikoi (sensation).",
+    "keyArguments": [
+      "The pneumatikoi could be correlated with the thinking function",
+      "The psychikoi corresponded to the feeling function",
+      "The hylikoi related to the sensation function",
+      "The inferior rating of psychikoi accorded with Gnostic emphasis on knowledge over Christian principles of love and faith"
+    ],
+    "sourceWork": "Psychological Types",
+    "sourceLocation": "Chapter I - Psychology in the Classical Age section",
+    "significance": "Shows historical precedent for psychological typology in ancient philosophical-religious systems",
+    "relatedConcepts": [
+      "Gnosticism",
+      "psychological functions",
+      "religious psychology",
+      "ancient typology"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-008",
+    "domain": "Analytical Psychology",
+    "thesis": "The typology is a critical apparatus for organizing empirical material, not a system for labeling people at first sight.",
+    "keyArguments": [
+      "The typology serves to sort out and organize the welter of empirical material",
+      "It is not a physiognomy and not an anthropological system",
+      "Classification as a labeling system would be nothing but a childish parlour game",
+      "It is a critical psychology dealing with organization and delimitation of typical psychic processes"
+    ],
+    "sourceWork": "Psychological Types",
+    "sourceLocation": "Foreword to the Argentine Edition",
+    "significance": "Clarifies the proper scientific use of typology against superficial misapplications",
+    "relatedConcepts": [
+      "empirical method",
+      "critical psychology",
+      "scientific classification",
+      "psychological assessment"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-009",
+    "domain": "Psychological Types",
+    "thesis": "A one-sided typical attitude creates adaptive deficiency that accumulates over time and drives the subject toward compensation through sacrifice of the dominant attitude.",
+    "keyArguments": [
+      "Since every person possesses all basic psychological functions, perfect adaptation requires employing them in equal measure",
+      "A one-sided attitude leaves deficiency in adaptive performance that accumulates during life",
+      "This produces disturbance of adaptation that drives toward compensation",
+      "Compensation can only be obtained through amputation (sacrifice) of the hitherto one-sided attitude"
+    ],
+    "sourceWork": "Psychological Types",
+    "sourceLocation": "Chapter I",
+    "significance": "Explains the dynamic mechanism driving psychological development and type transformation",
+    "relatedConcepts": [
+      "compensation",
+      "adaptation",
+      "psychological development",
+      "functional balance"
+    ]
+  },
+  {
+    "positionId": "JUNG-RS-010",
+    "domain": "Religion and Spirituality",
+    "thesis": "The soul is naturally Christian (anima naturaliter christiana), representing an inherent psychological tendency toward religious development.",
+    "keyArguments": [
+      "Tertullian crystallized his recognition of irrational inner reality in this formula",
+      "The Christian process represents a natural psychological necessity",
+      "Conversion addresses adaptive deficiency felt as vague sense of dissatisfaction",
+      "The need for redemption at the turning-point of the era brought unprecedented religious efflorescence"
+    ],
+    "sourceWork": "Psychological Types",
+    "sourceLocation": "Chapter I - Tertullian section",
+    "significance": "Establishes psychological basis for religious experience as natural developmental tendency",
+    "relatedConcepts": [
+      "religious instinct",
+      "psychological conversion",
+      "spiritual development",
+      "natural Christianity"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-001",
+    "domain": "Psychological Types",
+    "thesis": "Nietzsche's Dionysian and Apollinian concepts correspond to extraversion and introversion respectively, representing fundamental psychological attitudes",
+    "keyArguments": [
+      "Dionysian expansion represents extraversion of feeling-sensation with overpowering universal feeling",
+      "Apollinian perception involves introspection and contemplation of inner images, characteristic of introversion",
+      "The Dionysian state participates in sensation and affect to the highest degree through external expression",
+      "The Apollinian state is contemplation turned inwards to the dream world of eternal ideas"
+    ],
+    "sourceWork": "Complete Works Part 2",
+    "sourceLocation": "Sections 234-236",
+    "significance": "Establishes philosophical foundations for the extraversion-introversion distinction using Nietzschean concepts",
+    "relatedConcepts": [
+      "feeling-sensation",
+      "inner perception",
+      "psychological attitudes",
+      "affective states"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-002",
+    "domain": "Psychological Types",
+    "thesis": "Four psychological types exist: two rational types (thinking and feeling) and two aesthetic types (intuitive and sensation)",
+    "keyArguments": [
+      "Rational types differentiate perception through thinking or feeling principles",
+      "Aesthetic types do not differentiate but rely on pure perception or sensation",
+      "Intuitive type raises unconscious perception to a differentiated function for adaptation",
+      "Sensation type relies almost exclusively on sense impressions and is dependent on external stimuli"
+    ],
+    "sourceWork": "Complete Works Part 2",
+    "sourceLocation": "Sections 239-241",
+    "significance": "Establishes the four-function typology that becomes central to Jung's analytical psychology",
+    "relatedConcepts": [
+      "rational elaboration",
+      "aesthetic standpoint",
+      "unconscious perception",
+      "adaptation"
+    ]
+  },
+  {
+    "positionId": "JUNG-TU-003",
+    "domain": "Theory of Unconscious",
+    "thesis": "The intuitive function operates through unconscious directives and quasi-unconscious perception of dimly conscious stimuli",
+    "keyArguments": [
+      "Intuitive adaptation occurs through unconscious directives received via sensitive perception",
+      "The function has an irrational and quasi-unconscious character making description difficult",
+      "It can be compared to Socrates' daemon but operates more directly in consciousness",
+      "It involves sharpened perception and interpretation of barely conscious stimuli"
+    ],
+    "sourceWork": "Complete Works Part 2",
+    "sourceLocation": "Section 240",
+    "significance": "Defines intuition as a legitimate psychological function operating through unconscious processes",
+    "relatedConcepts": [
+      "unconscious directives",
+      "irrational function",
+      "daemon of Socrates",
+      "dimly conscious stimuli"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-004",
+    "domain": "Psychological Types",
+    "thesis": "Introversion and extraversion are general basic attitudes distinct from the four function-types",
+    "keyArguments": [
+      "Earlier identification of introvert with thinking and extravert with feeling was incomplete",
+      "The two attitudes can be recognized easily while function-types require considerable experience to distinguish",
+      "Extraverts can be thinking types and introverts can be feeling types",
+      "The general attitudes are more fundamental than specific function preferences"
+    ],
+    "sourceWork": "Complete Works Part 2",
+    "sourceLocation": "Section 248",
+    "significance": "Clarifies the relationship between attitude-types and function-types in Jung's typology",
+    "relatedConcepts": [
+      "basic attitudes",
+      "function-types",
+      "abstracting attitude",
+      "immediate reactions"
+    ]
+  },
+  {
+    "positionId": "JUNG-TU-005",
+    "domain": "Theory of Unconscious",
+    "thesis": "Introverts have unconscious archaic instincts and sensations while extraverts have unconscious archaic thinking and feeling",
+    "keyArguments": [
+      "The introvert's reflective nature is compensated by unconscious archaic instinct and sensation",
+      "Introverts rise above archaic impulsive nature to safe heights of abstraction",
+      "Extraverts have less deeply rooted affective life but dangerous unconscious fantasy life",
+      "Extraverts seek external experience to avoid confronting unconscious thoughts and feelings"
+    ],
+    "sourceWork": "Complete Works Part 2",
+    "sourceLocation": "Section 249",
+    "significance": "Establishes the compensatory relationship between conscious attitude and unconscious content",
+    "relatedConcepts": [
+      "archaic compensation",
+      "unconscious fantasy",
+      "instinctive nature",
+      "compensatory function"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-006",
+    "domain": "Psychological Types",
+    "thesis": "Jordan's intermediate type can be resolved into sensation and intuitive types rather than representing balanced characters",
+    "keyArguments": [
+      "The hylic man of Valentinian classification corresponds to the sensation type ruled by senses",
+      "Primitives have instinctive sensuousness with compensatory intuitive function",
+      "On higher civilization levels, some develop intuition as the determining function",
+      "The intermediate group represents these less differentiated sensation and intuitive types"
+    ],
+    "sourceWork": "Complete Works Part 2",
+    "sourceLocation": "Section 254",
+    "significance": "Integrates historical typological systems with Jung's four-function model",
+    "relatedConcepts": [
+      "Valentinian classification",
+      "primitive mentality",
+      "instinctive sensuousness",
+      "emergent psychic content"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-007",
+    "domain": "Psychological Types",
+    "thesis": "The introverted woman has well-developed conscious inner life but archaic, ungovernable emotional life",
+    "keyArguments": [
+      "Her conscious psychology is dominated by inner life and reflection rather than just feeling",
+      "She has compact and well-developed ordering of conscious psychic contents as defense",
+      "Her affective life is elemental, confused, and lacks human proportion",
+      "Her good qualities depend on thinking that influences part of instinctive life without transforming the whole"
+    ],
+    "sourceWork": "Complete Works Part 2",
+    "sourceLocation": "Sections 257-258",
+    "significance": "Demonstrates the conscious-unconscious compensation in introverted types",
+    "relatedConcepts": [
+      "conscious inner life",
+      "archaic emotionality",
+      "psychic defense",
+      "instinctive life"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-008",
+    "domain": "Psychological Types",
+    "thesis": "The extraverted woman has differentiated social affectivity but undeveloped unconscious mentality",
+    "keyArguments": [
+      "Her affectivity is adapted to ordinary social life with general value",
+      "She has socially differentiated affect that has sloughed off chaotic elements",
+      "Her inner mental life exists in unconscious in undeveloped, archaic, infantile state",
+      "The undeveloped unconscious mentality supplies hidden egoistic motives to her behavior"
+    ],
+    "sourceWork": "Complete Works Part 2",
+    "sourceLocation": "Section 262",
+    "significance": "Shows how extraversion involves conscious adaptation with unconscious compensation",
+    "relatedConcepts": [
+      "differentiated affectivity",
+      "social adaptation",
+      "unconscious mentality",
+      "egoistic motives"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-009",
+    "domain": "Psychological Types",
+    "thesis": "Intellectual analysis cannot fairly evaluate the extravert because their specific value lies in relation to objects, not in themselves",
+    "keyArguments": [
+      "The extravert's value lies in reciprocal relation to the object, not in personal resources",
+      "Intellectual formulation cannot grasp the imponderable nature of object-relations",
+      "Analytical criticism yields negative results by focusing on motives rather than relational value",
+      "Only life itself can grant the extravert just recognition of their contributions"
+    ],
+    "sourceWork": "Complete Works Part 2",
+    "sourceLocation": "Sections 266-267",
+    "significance": "Identifies fundamental limitation in understanding extraversion through introspective analysis",
+    "relatedConcepts": [
+      "object-relation",
+      "intellectual criticism",
+      "relational value",
+      "reciprocal relation"
+    ]
+  },
+  {
+    "positionId": "JUNG-TU-010",
+    "domain": "Theory of Unconscious",
+    "thesis": "One must differentiate the conscious man from his unconscious shadow to avoid confusion in psychological understanding",
+    "keyArguments": [
+      "People often see qualities in others that belong to the unconscious, not conscious psychology",
+      "These unconscious gleams are wrongly attributed to the conscious ego",
+      "Clear differentiation between conscious and unconscious is imperative for understanding",
+      "Reduction to unconscious backgrounds prevents clarity, while assimilation of conscious standpoints promotes it"
+    ],
+    "sourceWork": "Complete Works Part 2",
+    "sourceLocation": "Section 268",
+    "significance": "Establishes methodological principle for distinguishing conscious personality from unconscious shadow",
+    "relatedConcepts": [
+      "unconscious shadow",
+      "conscious ego",
+      "psychological projection",
+      "unconscious backgrounds"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-011",
+    "domain": "Psychological Types",
+    "thesis": "Introverted feeling is genuine and spontaneous because it wells up from the person's deeper nature as an end in itself",
+    "keyArguments": [
+      "Introverted feeling is rooted in the person's deeper nature rather than external aims",
+      "It has the spontaneity of archaic and natural phenomena that resist civilization's ends",
+      "The affective state bursts out forcing itself on the subject against will and expectation",
+      "It serves no other ends and is content to be an end in itself"
+    ],
+    "sourceWork": "Complete Works Part 2",
+    "sourceLocation": "Section 272",
+    "significance": "Characterizes the autonomous nature of introverted feeling as distinct from adapted feeling",
+    "relatedConcepts": [
+      "spontaneous feeling",
+      "archaic phenomena",
+      "autonomous affect",
+      "natural phenomena"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-012",
+    "domain": "Psychological Types",
+    "thesis": "The two psychological types are mutually complementary and their differences generate necessary tension for individual and social life",
+    "keyArguments": [
+      "Neither type is more valuable than the other in any respect",
+      "The types complement each other's strengths and weaknesses",
+      "Their differences create productive tension rather than mere opposition",
+      "Both individual development and social functioning require this dynamic tension"
+    ],
+    "sourceWork": "Complete Works Part 2",
+    "sourceLocation": "Section 264",
+    "significance": "Establishes the principle of typological complementarity as essential for psychological and social balance",
+    "relatedConcepts": [
+      "mutual complementarity",
+      "productive tension",
+      "individual development",
+      "social functioning"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-001",
+    "domain": "Psychological Types",
+    "thesis": "The abstracting type becomes identified with eternal validity of abstract images, leading to self-alienation and petrification in abstraction",
+    "keyArguments": [
+      "Abstract truth is set above the reality of life",
+      "The individual turns himself into an abstraction and identifies with eternal validity",
+      "He divests himself of his real self and puts whole life into abstraction",
+      "This crystallization serves as a redeeming formula but suppresses life"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 499",
+    "significance": "Describes pathological extreme of introverted thinking type",
+    "relatedConcepts": [
+      "self-alienation",
+      "identification",
+      "abstraction",
+      "introversion"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-002",
+    "domain": "Psychological Types",
+    "thesis": "The empathetic type suffers self-objectivation by projecting essential parts of himself into objects, leading to desubjectivization",
+    "keyArguments": [
+      "His activity and life is empathized into the object",
+      "He becomes the object through identification",
+      "This represents self-alienation through self-objectivation",
+      "Individual consciousness flows into fixed bounds contrasting with boundless diversity"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 500",
+    "significance": "Describes pathological extreme of extraverted feeling type",
+    "relatedConcepts": [
+      "empathy",
+      "self-objectivation",
+      "identification",
+      "extraversion"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-003",
+    "domain": "Psychological Types",
+    "thesis": "Abstraction and empathy serve as both mechanisms of adaptation and defense against psychological dangers",
+    "keyArguments": [
+      "Abstract image is bulwark against destructively animated unconscious object",
+      "Transference to object defends against disintegration from inner subjective factors",
+      "Both protect from external dangers and fortuitous impulses",
+      "They enable self-alienation as defense mechanism"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 501",
+    "significance": "Establishes dual function of type mechanisms as adaptive and defensive",
+    "relatedConcepts": [
+      "adaptation",
+      "defense mechanisms",
+      "unconscious",
+      "self-alienation"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-004",
+    "domain": "Psychological Types",
+    "thesis": "Identification with directed function enables social adaptation but causes degeneration of the individual through libido withdrawal from other functions",
+    "keyArguments": [
+      "Identification allows adaptation to collective demands and expectations",
+      "Enables avoidance of inferior, undifferentiated functions",
+      "More identification means more libido investment in one function",
+      "Other functions lose libido, sink below consciousness threshold, and regress to archaic level"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 502",
+    "significance": "Explains psychological cost of one-sided development and social conformity",
+    "relatedConcepts": [
+      "libido",
+      "directed function",
+      "regression",
+      "individuation"
+    ]
+  },
+  {
+    "positionId": "JUNG-TU-005",
+    "domain": "Theory of Unconscious",
+    "thesis": "Deprived functions regress to archaic level in unconscious, reactivating primitive modes of functioning due to humanity's brief civilized history",
+    "keyArguments": [
+      "Functions lose associative connection with consciousness when deprived of libido",
+      "They lapse into unconscious in regressive development",
+      "Archaic modes are extraordinarily vigorous due to hundreds of thousands of years in savagery",
+      "Only few thousand years of cultivation versus several hundred thousand of primitive existence"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 502",
+    "significance": "Establishes evolutionary basis for unconscious regression and archetypal activation",
+    "relatedConcepts": [
+      "regression",
+      "archaic functioning",
+      "phylogenetic inheritance",
+      "collective unconscious"
+    ]
+  },
+  {
+    "positionId": "JUNG-CT-006",
+    "domain": "Complex Theory",
+    "thesis": "Self-alienation creates dissociation of personality with no negotiable bridges between conscious and unconscious functions",
+    "keyArguments": [
+      "Archaic modes have no direct connection with consciousness",
+      "No negotiable bridges exist between consciousness and unconscious",
+      "Unconscious influence increases proportionately to self-alienation",
+      "Creates symptomatic disturbances and vicious circles characteristic of neuroses"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 503",
+    "significance": "Explains mechanism of neurotic dissociation and symptom formation",
+    "relatedConcepts": [
+      "dissociation",
+      "neurosis",
+      "conscious-unconscious split",
+      "symptoms"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-007",
+    "domain": "Psychological Types",
+    "thesis": "Directed functions necessarily require exclusion of alien elements, making self-alienation an inherent structural requirement",
+    "keyArguments": [
+      "Every directed function demands strict exclusion of everything not suited to its nature",
+      "Thinking excludes disturbing feelings, feeling excludes disturbing thoughts",
+      "Without repression of alien elements, directed function could not operate",
+      "Self-regulation requires harmonizing of whole human being as vital necessity"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 504",
+    "significance": "Establishes structural necessity of psychological differentiation and its inherent problems",
+    "relatedConcepts": [
+      "directed function",
+      "repression",
+      "self-regulation",
+      "psychological differentiation"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-008",
+    "domain": "Analytical Psychology",
+    "thesis": "Philosophical temperament fundamentally determines philosophical thinking more than objective premises, creating unconscious bias",
+    "keyArguments": [
+      "History of philosophy is largely clash of human temperaments",
+      "Temperament gives stronger bias than strictly objective premises",
+      "Loads evidence one way or other for sentimental vs hard-hearted worldview",
+      "Creates insincerity in philosophical discussions as potentest premise never mentioned"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 505",
+    "significance": "Establishes psychological foundation underlying philosophical systems",
+    "relatedConcepts": [
+      "temperament",
+      "philosophical bias",
+      "unconscious premises",
+      "worldview"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-009",
+    "domain": "Psychological Types",
+    "thesis": "James' rationalist and empiricist types correspond to fundamental temperamental differences in approach to reality",
+    "keyArguments": [
+      "Rationalist is devotee of abstract and eternal principles",
+      "Empiricist is lover of facts in all their crude variety",
+      "Different accents on facts vs principles create entirely different viewpoints",
+      "Rationalism associated with idealism and optimism, empiricism with materialism"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Sections 506-507",
+    "significance": "Connects James' philosophical typology to Jung's psychological types",
+    "relatedConcepts": [
+      "rationalism",
+      "empiricism",
+      "philosophical temperament",
+      "worldview"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-010",
+    "domain": "Psychological Types",
+    "thesis": "Tender-minded and tough-minded types show mutual antagonism and prejudice, each considering the other inferior",
+    "keyArguments": [
+      "Tough think of tender as sentimentalists and soft-heads",
+      "Tender feel tough to be unrefined, callous, or brutal",
+      "Each type believes other to be inferior to itself",
+      "Antagonism forms part of philosophic atmosphere of all ages"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 507",
+    "significance": "Demonstrates universal nature of type conflicts and mutual misunderstanding",
+    "relatedConcepts": [
+      "type antagonism",
+      "mutual prejudice",
+      "psychological projection",
+      "temperamental bias"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-011",
+    "domain": "Psychological Types",
+    "thesis": "Tender-minded correspond to introverted realists, tough-minded to extraverted nominalists in philosophical orientation",
+    "keyArguments": [
+      "Tender-minded share features with realists in universals controversy",
+      "Tough-minded align with nominalists in philosophical approach",
+      "Realism corresponds to introversion, nominalism to extraversion",
+      "Controversy about universals forms part of temperamental clash in philosophy"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 508",
+    "significance": "Links James' types to historical philosophical controversies and Jung's introversion-extraversion",
+    "relatedConcepts": [
+      "realism",
+      "nominalism",
+      "introversion",
+      "extraversion"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-012",
+    "domain": "Psychological Types",
+    "thesis": "James' characterization of thinking as 'thin' vs 'thick' reveals temperamental bias toward concrete empirical approach",
+    "keyArguments": [
+      "Abstract thinking appears fragile, hollow, thin because remote from objects",
+      "Concrete thinking appears substantial, resistant, thick because grounded in facts",
+      "This view possible only for person with a priori connection between substantiality and concrete thinking",
+      "Reveals James' own temperamental preference for empirical approach"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Sections 509-510",
+    "significance": "Demonstrates how temperament colors even supposedly objective descriptions",
+    "relatedConcepts": [
+      "temperamental bias",
+      "concrete vs abstract thinking",
+      "philosophical prejudice",
+      "objectivity"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-013",
+    "domain": "Psychological Types",
+    "thesis": "Concrete thinking characterized by preponderance of sensuously conditioned representations over active apperception",
+    "keyArguments": [
+      "Distinguished by preponderance of sense-bound representations",
+      "Contrasts with active apperception springing from subjective will",
+      "Object is empathized and leads quasi-independent existence",
+      "Comprehension follows as kind of after-thought to object empathy"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 511",
+    "significance": "Defines psychological mechanism underlying empirical thinking type",
+    "relatedConcepts": [
+      "concrete thinking",
+      "empathy",
+      "active apperception",
+      "object-orientation"
+    ]
+  },
+  {
+    "positionId": "JUNG-TU-014",
+    "domain": "Theory of Unconscious",
+    "thesis": "Mind cannot be tabula rasa as certain categories of thinking are given a priori as preformed determinants",
+    "keyArguments": [
+      "Epistemological criticism shows categories of thinking given a priori",
+      "They are antecedent to all experience and appear with first act of thought",
+      "Psyche has inherited and preformed functional disposition",
+      "New-born brain is immensely old instrument fitted for specific purposes"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 512",
+    "significance": "Establishes innate psychological structures against empiricist blank slate theory",
+    "relatedConcepts": [
+      "a priori categories",
+      "inherited disposition",
+      "preformed structures",
+      "phylogenetic inheritance"
+    ]
+  },
+  {
+    "positionId": "JUNG-AS-015",
+    "domain": "Archetypes and Symbols",
+    "thesis": "Primordial images are ideas ante rem that determine form and configuration of experience according to preformed patterns",
+    "keyArguments": [
+      "They are determinants of form, pre-existent ground-plan for experience",
+      "Give stuff of experience specific configuration like Platonic images",
+      "Are inherited functional possibilities that exclude or limit other possibilities",
+      "Even fantasy remains anchored to these preformed primordial images"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 512",
+    "significance": "Establishes archetypal basis of psychological experience and imagination",
+    "relatedConcepts": [
+      "primordial images",
+      "archetypal patterns",
+      "inherited forms",
+      "collective unconscious"
+    ]
+  },
+  {
+    "positionId": "JUNG-AS-016",
+    "domain": "Archetypes and Symbols",
+    "thesis": "Abstract thinking is dominated by irrepresentable primordial images lacking specific content that seek filling through experience",
+    "keyArguments": [
+      "Primordial images remain inactive while object is empathized",
+      "When object loses dominance, energy accumulates in subject and awakens primordial images",
+      "They emerge as invisible stage managers behind thinking process",
+      "Being empty forms, they draw stuff of experience into themselves for content"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 513",
+    "significance": "Explains psychological mechanism of abstract/ideological thinking through archetypal activation",
+    "relatedConcepts": [
+      "abstract thinking",
+      "primordial images",
+      "archetypal activation",
+      "unconscious determinants"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-017",
+    "domain": "Psychological Types",
+    "thesis": "Two types show opposite approaches: empiricist projects idea into object, abstract thinker shapes material from unconscious idea",
+    "keyArguments": [
+      "Empiricist unconsciously projects idea into object, reaches idea through material accumulation",
+      "Abstract thinker uses unconscious model, experiences idea only from finished product",
+      "One shapes material from unconscious idea to reach experience",
+      "Other lets material guide him to reach idea through projection"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 514",
+    "significance": "Reveals complementary but opposite psychological mechanisms in type functioning",
+    "relatedConcepts": [
+      "projection",
+      "unconscious model",
+      "type compensation",
+      "psychological mechanism"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-018",
+    "domain": "Psychological Types",
+    "thesis": "Empiricist sees individual objects and their behavior, abstract thinker sees similarities between objects for security in uniformity",
+    "keyArguments": [
+      "Empiricist interests himself in individual object behavior and singularity",
+      "Abstract thinker sees mainly similarities, disregards singularity",
+      "Abstract thinker finds security in reducing world multiplicity to uniformity",
+      "Empiricist finds similarities tiresome as they hinder recognizing object's singularity"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 514",
+    "significance": "Explains fundamental perceptual differences between psychological types",
+    "relatedConcepts": [
+      "individual vs universal",
+      "object perception",
+      "psychological security",
+      "cognitive focus"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-019",
+    "domain": "Psychological Types",
+    "thesis": "Concrete thinker appears sluggish due to time-consuming empathy process, but has fluid empathy; abstract thinker seizes similarities quickly",
+    "keyArguments": [
+      "Concrete thinker empathizes objects one by one in time-consuming procedure",
+      "This makes thinking appear sluggish and viscid in recognizing similarities",
+      "But empathy itself is fluid and could recognize similarities better if applied",
+      "Abstract thinker seizes similarities quickly, puts general characteristics in place of objects"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 515",
+    "significance": "Explains apparent cognitive speed differences and underlying empathic mechanisms",
+    "relatedConcepts": [
+      "empathy",
+      "cognitive speed",
+      "similarity recognition",
+      "thinking style"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-020",
+    "domain": "Analytical Psychology",
+    "thesis": "Both extreme empiricism and extreme idealism create mythology - one concrete in terms of cells/atoms, other abstract in eternal ideas",
+    "keyArguments": [
+      "Excessive object importance creates specialist 'brain mythology' theories",
+      "Abstract thinking formulates general hypotheses as removed from facts as myths",
+      "Extreme empiricism has advantage of presenting facts purely",
+      "Extreme idealism reflects primordial images as in mirror"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 516",
+    "significance": "Critiques one-sided approaches in science and philosophy as equally mythological",
+    "relatedConcepts": [
+      "scientific mythology",
+      "theoretical extremes",
+      "empiricism",
+      "idealism"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-021",
+    "domain": "Analytical Psychology",
+    "thesis": "Contemporary scientific attitude's exclusive concretism leads to accumulation of confusing material and scientific separatism",
+    "keyArguments": [
+      "Exclusively concretistic empirical attitude has no appreciation of ideas",
+      "Results in accumulation of empirical material whose immensity creates confusion",
+      "Leads to scientific separatism and specialist mythology",
+      "Predominance of empiricism suppresses active thinking and imperils theory building"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 516",
+    "significance": "Critiques modern scientific methodology as psychologically one-sided",
+    "relatedConcepts": [
+      "scientific method",
+      "empiricism",
+      "theoretical thinking",
+      "scientific specialization"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-022",
+    "domain": "Psychological Types",
+    "thesis": "James' 'tough-minded' and 'tender-minded' terms are one-sided and conceal prejudice, but deal with same types as introverted/extraverted",
+    "keyArguments": [
+      "Descriptive terms are one-sided and conceal certain prejudice",
+      "Nevertheless characterization deals with same fundamental type distinction",
+      "Discussion shows correspondence with introverted and extraverted types",
+      "Despite bias, captures essential psychological differences"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 517",
+    "significance": "Validates James' typology while critiquing its biased terminology",
+    "relatedConcepts": [
+      "terminological bias",
+      "type validation",
+      "introversion-extraversion",
+      "philosophical prejudice"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-023",
+    "domain": "Psychological Types",
+    "thesis": "Rationalism should not be opposed to empiricism as both forms of thinking are governed by reason and can be rational",
+    "keyArguments": [
+      "Concrete empirical thinking is just as rational as active ideological thinking",
+      "Both forms are governed by reason in their operations",
+      "There is rationalism of feeling as well as logical rationalism",
+      "Rationalism is general psychological attitude to rationality of both feeling and thought"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 518",
+    "significance": "Clarifies misconception in philosophical terminology about rationality",
+    "relatedConcepts": [
+      "rationalism",
+      "empiricism",
+      "rational thinking",
+      "psychological attitude"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-024",
+    "domain": "Psychological Types",
+    "thesis": "Reason is capacity to be reasonable - definite attitude enabling thought, feeling, and action according to objective values",
+    "keyArguments": [
+      "Reason is capacity to be reasonable, not just thinking faculty",
+      "It's definite attitude enabling reasonable thought, feeling, and action",
+      "Operates according to objective values in psychological functioning",
+      "From empirical standpoint values are product of experience, from ideological standpoint result of rational evaluation"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 519",
+    "significance": "Provides comprehensive psychological definition of reason beyond mere cognition",
+    "relatedConcepts": [
+      "reason",
+      "objective values",
+      "psychological attitude",
+      "rational evaluation"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-025",
+    "domain": "Psychological Types",
+    "thesis": "Extravert emphasizes elementary processes as primary, introvert emphasizes general concepts as basic functions or faculties",
+    "keyArguments": [
+      "For extravert, general concepts are secondary derivatives from elementary processes",
+      "For introvert, concepts like memory, reason are faculties comprising psychic processes",
+      "Extravert seeks to reduce concepts to simple factors whenever possible",
+      "Introvert sees concepts as agents with inner potency that shape experience"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 520",
+    "significance": "Explains fundamental difference in how types conceptualize mental processes",
+    "relatedConcepts": [
+      "elementary processes",
+      "general concepts",
+      "psychological faculties",
+      "reductive vs synthetic thinking"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-026",
+    "domain": "Psychological Types",
+    "thesis": "Two types show opposite energy sources and processes: extravert draws from object/experience, introvert from unconscious idea",
+    "keyArguments": [
+      "Active thinking type draws energy from innate functional form activated by introverted attitude",
+      "Extravert draws energy from object and elementary processes",
+      "Introvert shapes material from unconscious idea and comes to experience",
+      "Extravert lets material guide him through unconscious projection to reach idea"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 521",
+    "significance": "Identifies fundamental energic differences in type functioning",
+    "relatedConcepts": [
+      "psychic energy",
+      "unconscious idea",
+      "object orientation",
+      "innate forms"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-027",
+    "domain": "Psychological Types",
+    "thesis": "Idealism versus materialism represents attitude differences toward idea versus factual values rather than moral positions",
+    "keyArguments": [
+      "Materialism represents attitude oriented by factual rather than sensuous values",
+      "Refers to objective and concrete reality as determining factors",
+      "Idealism represents supreme valuation of idea in philosophical sense",
+      "Not moral idealism vs sensationalism but factual vs ideal orientation"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 525",
+    "significance": "Clarifies philosophical materialism as psychological attitude rather than moral position",
+    "relatedConcepts": [
+      "philosophical materialism",
+      "idealism",
+      "factual values",
+      "psychological attitude"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-028",
+    "domain": "Psychological Types",
+    "thesis": "Optimism versus pessimism antithesis does not validly apply to James' types as both types can be either optimistic or pessimistic",
+    "keyArguments": [
+      "Empirical thinkers like Darwin are not necessarily pessimistic",
+      "Idealistic thinkers like Schopenhauer can be pessimistic",
+      "Pure introverted types like Kant are remote from both optimism and pessimism",
+      "There are optimistic introverts and extraverts, both can be pessimists"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Sections 526-527",
+    "significance": "Critiques invalid correlation between type and optimism/pessimism",
+    "relatedConcepts": [
+      "optimism",
+      "pessimism",
+      "temperamental projection",
+      "philosophical worldview"
+    ]
+  },
+  {
+    "positionId": "JUNG-RS-029",
+    "domain": "Religion and Spirituality",
+    "thesis": "Both types can be religious - empiricist has almost religious belief in facts, idealist has reverence for eternal ideas",
+    "keyArguments": [
+      "Empiricist has almost religious belief in facts as determining attitude",
+      "Makes no psychological difference whether oriented by idea of God or matter",
+      "Absolute surrender to facts cannot be described as irreligious psychologically",
+      "Religious function is essential component of psyche found always and everywhere"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Sections 528-529",
+    "significance": "Establishes universal nature of religious function across psychological types",
+    "relatedConcepts": [
+      "religious attitude",
+      "empirical religion",
+      "idealistic religion",
+      "religious function"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-030",
+    "domain": "Psychological Types",
+    "thesis": "Determinism characterizes empiricist due to object empathy and causal identification; indeterminism characterizes idealist due to idea activation",
+    "keyArguments": [
+      "Empiricist oriented by empathized object experiences necessity of cause-effect connection",
+      "Identification with external facts carries over objective causal connections into subject",
+      "Idealist experiences unconscious activation of autonomous idea communicating sense of freedom",
+      "Inherited primordial image charged with power assimilates subject and creates feeling of independence"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Sections 531-534",
+    "significance": "Explains type differences in experience of freedom versus determinism",
+    "relatedConcepts": [
+      "determinism",
+      "free will",
+      "causal thinking",
+      "archetypal autonomy"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-031",
+    "domain": "Psychological Types",
+    "thesis": "Monism characterizes idea-oriented attitude due to hierarchical nature of ideas; pluralism characterizes object-oriented attitude",
+    "keyArguments": [
+      "Idea always possesses hierarchical character whether derived or existing a priori",
+      "One idea succeeds in gaining upper hand and constellates other elements monarchically",
+      "Object-oriented attitude tends toward plurality due to multiplicity of objective qualities",
+      "Multiplicity of objects necessitates plurality of concepts for proper interpretation"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 536",
+    "significance": "Explains philosophical preferences for unity versus multiplicity based on psychological type",
+    "relatedConcepts": [
+      "monism",
+      "pluralism",
+      "hierarchical thinking",
+      "object multiplicity"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-032",
+    "domain": "Psychological Types",
+    "thesis": "Dogmatism characterizes idea-oriented thinking while skepticism characterizes object-oriented empirical approach",
+    "keyArguments": [
+      "Dogmatism is attitude par excellence that clings to the idea",
+      "Forceful realization of unconscious idea gives impression of dogmatic ideological mould",
+      "Object-oriented thinker is skeptical about ideas from the start",
+      "Primary concern is letting every object and experience speak for itself undisturbed"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Section 537",
+    "significance": "Explains type differences in certainty versus questioning attitudes",
+    "relatedConcepts": [
+      "dogmatism",
+      "skepticism",
+      "idea-orientation",
+      "empirical attitude"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-033",
+    "domain": "Analytical Psychology",
+    "thesis": "James' typology is valuable but limited by philosophical bias and overly broad terms that can apply to opposite types",
+    "keyArguments": [
+      "Almost exclusively concerned with thinking qualities of types due to philosophical setting",
+      "Easy to show qualities equally characteristic of opposite type",
+      "Terms are too broad individually, give approximate picture only when taken as whole",
+      "Deserves credit for drawing attention to temperament's importance in philosophical thought"
+    ],
+    "sourceWork": "Complete Works Part 3",
+    "sourceLocation": "Sections 538-539",
+    "significance": "Provides balanced critique of James' contribution to psychological typology",
+    "relatedConcepts": [
+      "philosophical bias",
+      "temperamental influence",
+      "typological methodology",
+      "theoretical limitations"
+    ]
+  },
+  {
+    "positionId": "JUNG-IP-001",
+    "domain": "Individuation Process",
+    "thesis": "Individuation is always to some extent opposed to collective norms, representing separation and differentiation from the general to build up the particular.",
+    "keyArguments": [
+      "Individuation means building up particularity already ingrained in psychic constitution, not sought-out particularity",
+      "Opposition to collective norm is only apparent - individual standpoint is differently oriented, not antagonistic",
+      "Individual way can never be directly opposed to collective norm because it cannot be a norm itself",
+      "Individuation needs the norm for orientation to society and vital relationship between individual and society"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Section 761",
+    "significance": "Establishes the fundamental relationship between individual development and collective adaptation",
+    "relatedConcepts": [
+      "collective norm",
+      "persona",
+      "conscious adaptation",
+      "psychological types"
+    ]
+  },
+  {
+    "positionId": "JUNG-IP-002",
+    "domain": "Individuation Process",
+    "thesis": "Individuation is practically the same as the development of consciousness out of the original state of identity, representing an extension of the sphere of consciousness.",
+    "keyArguments": [
+      "Individuation extends the sphere of consciousness beyond original identity state",
+      "Process enriches conscious psychological life",
+      "Represents fundamental movement from unconscious identity to conscious differentiation",
+      "Constitutes the core developmental process of the psyche"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Section 762",
+    "significance": "Defines individuation as the central process of psychological development and consciousness expansion",
+    "relatedConcepts": [
+      "consciousness",
+      "identity",
+      "psychological development",
+      "differentiation"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-003",
+    "domain": "Psychological Types",
+    "thesis": "The inferior function lags behind in differentiation due to social demands compelling development of the most favored function, leading to psychological type formation.",
+    "keyArguments": [
+      "Impossible to develop all psychological functions simultaneously due to adverse circumstances",
+      "Society compels differentiation of function best equipped by nature or ensuring greatest social success",
+      "Man identifies more or less completely with most favored and developed function",
+      "One-sided development necessarily retards other functions, creating inferior functions"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Section 763",
+    "significance": "Explains the mechanism of psychological type formation and functional hierarchy",
+    "relatedConcepts": [
+      "differentiation",
+      "psychological functions",
+      "social adaptation",
+      "one-sided development"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-004",
+    "domain": "Psychological Types",
+    "thesis": "In neurosis, the inferior function sinks into the unconscious, undergoes regressive development, and activates unconscious fantasies.",
+    "keyArguments": [
+      "Inferior function remains conscious in normal cases but sinks into unconscious in neurosis",
+      "Greater share of libido taken by favored function causes inferior function to regress to archaic stage",
+      "Regressed function becomes incompatible with conscious favored function",
+      "Energy of inferior function passes into unconscious and activates fantasies on archaic level"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Section 764",
+    "significance": "Describes the pathological development of inferior function and its role in neurosis",
+    "relatedConcepts": [
+      "neurosis",
+      "regression",
+      "unconscious fantasies",
+      "libido distribution"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-005",
+    "domain": "Analytical Psychology",
+    "thesis": "Instinct is an impulsion towards certain activities that can arise from inner/outer stimuli or organic sources, encompassing all psychic phenomena not arising from voluntary causation.",
+    "keyArguments": [
+      "Instinct includes impulsions from inner or outer stimuli triggering psychic mechanisms",
+      "Can originate from organic sources outside sphere of psychic causality",
+      "All psychic processes whose energies are not under conscious control are instinctive",
+      "Affects are as much instinctive processes as they are feeling processes"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Section 765",
+    "significance": "Provides comprehensive definition of instinct in psychological context",
+    "relatedConcepts": [
+      "affects",
+      "voluntary causation",
+      "psychic energy",
+      "unconscious processes"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-006",
+    "domain": "Analytical Psychology",
+    "thesis": "Introjection is a process of assimilation of object to subject, while projection is dissimilation of object from subject through expulsion of subjective content.",
+    "keyArguments": [
+      "Introjection brings object into subjective sphere of interest as indrawing process",
+      "Projection expels subjective contents into object as outdrawing process",
+      "Introjection is process of extraversion requiring empathy and libido investment",
+      "Both passive and active forms exist - transference phenomena vs. empathic adaptation"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Sections 767-768",
+    "significance": "Establishes fundamental mechanisms of subject-object relationship in psyche",
+    "relatedConcepts": [
+      "assimilation",
+      "empathy",
+      "transference",
+      "extraversion"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-007",
+    "domain": "Psychological Types",
+    "thesis": "Introversion means inward-turning of libido in negative relation of subject to object, where subject is prime motivating factor and object secondary.",
+    "keyArguments": [
+      "Interest withdraws from object into subject rather than moving toward object",
+      "Introverted person thinks, feels, and acts with subject as prime motivating factor",
+      "Can be intellectual, emotional, sensational, or intuitive in character",
+      "Active form involves voluntary shutting off from object, passive form involves inability to restore libido to object"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Section 769",
+    "significance": "Defines one of the two fundamental attitude types in Jung's typology",
+    "relatedConcepts": [
+      "libido",
+      "subject-object relation",
+      "psychological functions",
+      "attitude types"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-008",
+    "domain": "Psychological Types",
+    "thesis": "Intuition is a basic psychological function that mediates unconscious perceptions with intrinsic certainty, representing an irrational function of perception.",
+    "keyArguments": [
+      "Mediates perceptions in unconscious way of outer/inner objects and relationships",
+      "Neither sense perception, feeling, nor intellectual inference, though may appear in these forms",
+      "Content presents itself whole and complete without explanation of how it came into existence",
+      "Possesses intrinsic certainty and conviction resting on definite state of psychic alertness"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Section 770",
+    "significance": "Establishes intuition as one of the four basic psychological functions",
+    "relatedConcepts": [
+      "unconscious perception",
+      "irrational functions",
+      "psychic alertness",
+      "instinctive apprehension"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-009",
+    "domain": "Psychological Types",
+    "thesis": "Intuition can be subjective or objective, concrete or abstract, and serves as matrix from which thinking and feeling develop as rational functions.",
+    "keyArguments": [
+      "Subjective intuition perceives unconscious psychic data from subject, objective perceives data from object",
+      "Concrete intuition mediates perceptions of actuality, abstract intuition mediates ideational connections",
+      "Characteristic of infantile and primitive psychology, counterbalancing sense impressions",
+      "Stands in compensatory relationship to sensation as irrational function"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Sections 771-772",
+    "significance": "Elaborates the varieties and developmental role of intuitive function",
+    "relatedConcepts": [
+      "compensation",
+      "primitive psychology",
+      "rational functions",
+      "sensation"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-010",
+    "domain": "Analytical Psychology",
+    "thesis": "The irrational is not contrary to reason but beyond reason, representing existential factors that cannot be completely encompassed by rational explanation.",
+    "keyArguments": [
+      "Irrational denotes something beyond reason, not grounded on reason, including elementary facts",
+      "Increasingly elaborate rational explanations become so complicated they pass comprehension limits",
+      "Completely rational explanation of actually existing object is utopian ideal",
+      "Empirical science posits objects within rational bounds by excluding the accidental"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Sections 774-775",
+    "significance": "Establishes the legitimate place of irrational factors in psychological understanding",
+    "relatedConcepts": [
+      "rational explanation",
+      "elementary facts",
+      "empirical science",
+      "existential factors"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-011",
+    "domain": "Psychological Types",
+    "thesis": "Thinking and feeling are rational functions when influenced by reflection, while sensation and intuition are irrational functions aimed at pure perception.",
+    "keyArguments": [
+      "Rational functions accord with laws of reason and function best in harmony with reason",
+      "Irrational functions dispense with rational to attain complete perception of flux of events",
+      "Irrational functions react to every possible occurrence and are attuned to absolutely contingent",
+      "Both types necessary - rational for direction, irrational for complete perception"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Sections 776-777",
+    "significance": "Establishes the fundamental distinction between rational and irrational psychological functions",
+    "relatedConcepts": [
+      "reflection",
+      "pure perception",
+      "laws of reason",
+      "contingent events"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-012",
+    "domain": "Analytical Psychology",
+    "thesis": "Libido is psychic energy representing the intensity of a psychic process and its psychological value, not a psychic force.",
+    "keyArguments": [
+      "Psychic energy is intensity of psychic process, its determining power",
+      "Psychological value implicit in determining power expressing itself in definite psychic effects",
+      "Does not imply moral, aesthetic, or intellectual value assignment",
+      "Not hypostatized concept of energy but used to denote intensities or values"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Section 778",
+    "significance": "Provides Jung's fundamental definition of psychic energy distinct from Freudian conception",
+    "relatedConcepts": [
+      "psychic energy",
+      "psychological value",
+      "determining power",
+      "psychic effects"
+    ]
+  },
+  {
+    "positionId": "JUNG-DA-013",
+    "domain": "Dream Analysis",
+    "thesis": "Objective level interpretation refers dream persons/situations to objectively real persons/situations, contrasting with subjective level interpretation.",
+    "keyArguments": [
+      "Objective level treats dream content as referring to external reality",
+      "Contrasts with subjective level where persons/situations refer to subjective factors",
+      "Freudian dream interpretation operates almost entirely on objective level",
+      "Dream wishes in objective interpretation refer to real objects or physiological processes"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Section 779",
+    "significance": "Establishes one of two fundamental approaches to dream interpretation",
+    "relatedConcepts": [
+      "dream interpretation",
+      "subjective level",
+      "external reality",
+      "dream wishes"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-014",
+    "domain": "Analytical Psychology",
+    "thesis": "Participation mystique denotes psychological connection where subject cannot distinguish from object, bound by direct relationship amounting to partial identity.",
+    "keyArguments": [
+      "Subject cannot clearly distinguish himself from object in this connection",
+      "Results from a priori oneness of subject and object as vestige of primitive condition",
+      "Best observed among primitives but found frequently among civilized peoples",
+      "Creates transference relationships with magical influence or identification with things"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Section 781",
+    "significance": "Describes fundamental mechanism of unconscious identification and projection",
+    "relatedConcepts": [
+      "primitive condition",
+      "transference",
+      "magical influence",
+      "identification"
+    ]
+  },
+  {
+    "positionId": "JUNG-CT-015",
+    "domain": "Complex Theory",
+    "thesis": "Power-complex denotes the whole complex of ideas and strivings seeking to subordinate all other influences to the ego.",
+    "keyArguments": [
+      "Encompasses ideas and strivings subordinating external influences to ego",
+      "Includes influences from people, objective conditions, and subject's own impulses",
+      "Represents comprehensive drive for ego dominance and control",
+      "Affects thoughts, feelings, and external relationships equally"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Section 782",
+    "significance": "Defines one of the fundamental complex types in analytical psychology",
+    "relatedConcepts": [
+      "ego dominance",
+      "complex formation",
+      "psychological strivings",
+      "influence subordination"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-016",
+    "domain": "Analytical Psychology",
+    "thesis": "Projection is expulsion of subjective content into object, a dissimilation process opposite to introjection, with both passive and active forms.",
+    "keyArguments": [
+      "Subject gets rid of painful, incompatible contents and inaccessible positive values through projection",
+      "Results from archaic identity of subject and object but becomes noticeable when identity disturbs adaptation",
+      "Passive form is automatic occurrence in pathological and normal cases",
+      "Active form is essential component of empathy and acts of judgment for subject-object separation"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Sections 783-784",
+    "significance": "Establishes projection as fundamental mechanism of psychic dissimilation",
+    "relatedConcepts": [
+      "dissimilation",
+      "archaic identity",
+      "empathy",
+      "subject-object separation"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-017",
+    "domain": "Analytical Psychology",
+    "thesis": "The rational accords with reason as attitude conforming thought, feeling, and action to objective values established by human historical experience.",
+    "keyArguments": [
+      "Reason is attitude whose principle is conforming to objective values",
+      "Objective values established by everyday experience of external and internal psychological facts",
+      "Rational attitude permitting objective values is product of human history, not individual subject",
+      "Most objective values and reason itself are firmly established complexes handed down through ages"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Sections 785-786",
+    "significance": "Defines rationality as historical adaptation to average environmental conditions",
+    "relatedConcepts": [
+      "objective values",
+      "historical adaptation",
+      "environmental conditions",
+      "collective inheritance"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-018",
+    "domain": "Analytical Psychology",
+    "thesis": "Reductive method regards unconscious products as signs/symptoms rather than symbols, tracing them back to elementary processes in backward orientation.",
+    "keyArguments": [
+      "Treats unconscious product semiotically as sign or symptom of underlying process",
+      "Traces unconscious product back to elements whether reminiscences or elementary psychic processes",
+      "Oriented backwards in contrast to constructive method",
+      "Both Freudian and Adlerian methods are reductive, reducing to infantile or physiological processes"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Section 788",
+    "significance": "Establishes one of two fundamental approaches to unconscious material interpretation",
+    "relatedConcepts": [
+      "constructive method",
+      "symbolic interpretation",
+      "elementary processes",
+      "backward orientation"
+    ]
+  },
+  {
+    "positionId": "JUNG-IP-019",
+    "domain": "Individuation Process",
+    "thesis": "The Self designates the whole range of psychic phenomena expressing unity of personality, encompassing both experienceable and inexperienceable aspects.",
+    "keyArguments": [
+      "Expresses unity of personality as whole but can only be partly conscious due to unconscious component",
+      "Concept is partly empirical and partly postulate encompassing experienced and not yet experienced",
+      "Transcendental concept presupposing existence of unconscious factors on empirical grounds",
+      "Characterizes entity describable only in part while other part remains unknowable and illimitable"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Section 789",
+    "significance": "Establishes the Self as the central archetype representing psychic totality",
+    "relatedConcepts": [
+      "psychic totality",
+      "transcendental concept",
+      "unconscious factors",
+      "personality unity"
+    ]
+  },
+  {
+    "positionId": "JUNG-AS-020",
+    "domain": "Archetypes and Symbols",
+    "thesis": "The Self appears empirically in dreams, myths, and fairytales as supraordinate personality figures or totality symbols representing union of opposites.",
+    "keyArguments": [
+      "Appears as king, hero, prophet, saviour or in form of totality symbols like circle, square, cross",
+      "When representing complexio oppositorum can appear as united duality like yang-yin or hostile brothers",
+      "Appears as play of light and shadow though conceived as totality uniting opposites",
+      "Empirical symbols often possess distinct numinosity with a priori emotional value"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Sections 790-791",
+    "significance": "Describes the symbolic manifestations of the Self archetype",
+    "relatedConcepts": [
+      "supraordinate personality",
+      "totality symbols",
+      "union of opposites",
+      "numinosity"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-021",
+    "domain": "Psychological Types",
+    "thesis": "Sensation is the psychological function mediating perception of physical stimuli, identical with perception but distinct from feeling.",
+    "keyArguments": [
+      "Mediates perception of both external stimuli and internal organic processes",
+      "Must be strictly distinguished from feeling though may associate with feeling as feeling-tone",
+      "Element of ideation conveying perceptual image and element of feeling through bodily changes",
+      "Representative of physiological impulses though not identical with them"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Sections 792-793",
+    "significance": "Establishes sensation as one of the four basic psychological functions",
+    "relatedConcepts": [
+      "physical perception",
+      "feeling-tone",
+      "physiological impulses",
+      "perceptual image"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-022",
+    "domain": "Psychological Types",
+    "thesis": "Abstract sensation is differentiated perception achieving aesthetic purity, while concrete sensation is contaminated with other psychic elements.",
+    "keyArguments": [
+      "Concrete sensation mixed with ideas, feelings, thoughts and conveys total object perception",
+      "Abstract sensation detaches from contamination achieving degree of purity beyond concrete sensation",
+      "Abstract sensation picks out most salient sensuous attribute as sole content of consciousness",
+      "Abstract sensation found chiefly among artists as product of functional differentiation"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Section 794",
+    "significance": "Distinguishes between primitive and differentiated forms of sensation function",
+    "relatedConcepts": [
+      "functional differentiation",
+      "aesthetic perception",
+      "contamination",
+      "artistic sensibility"
+    ]
+  },
+  {
+    "positionId": "JUNG-PT-023",
+    "domain": "Psychological Types",
+    "thesis": "Sensation is irrational function given a priori, strongly developed in children and primitives, forming compensatory pair with intuition.",
+    "keyArguments": [
+      "Elementary phenomenon given a priori, not subject to rational laws though reason assimilates many sensations",
+      "Predominates over thinking and feeling in children and primitives",
+      "Forms pair of opposites with intuition as mutually compensating functions",
+      "Thinking and feeling develop from sensation and intuition both ontogenetically and phylogenetically"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Sections 795-796",
+    "significance": "Establishes sensation's role in psychological development and functional compensation",
+    "relatedConcepts": [
+      "irrational functions",
+      "primitive psychology",
+      "functional compensation",
+      "psychological development"
+    ]
+  },
+  {
+    "positionId": "JUNG-AS-024",
+    "domain": "Archetypes and Symbols",
+    "thesis": "Soul represents a clearly demarcated functional complex best described as 'personality,' distinct from psyche as totality of all psychic processes.",
+    "keyArguments": [
+      "Psyche encompasses totality of conscious and unconscious processes",
+      "Soul is functional complex evidenced by somnambulism, double consciousness, split personality phenomena",
+      "Possibility of personality dissociation exists in germ within normal range",
+      "Character-splitting observable in normal individuals under varying environmental conditions"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Sections 797-798",
+    "significance": "Establishes fundamental distinction between psyche and soul as functional personality",
+    "relatedConcepts": [
+      "functional complex",
+      "personality dissociation",
+      "character-splitting",
+      "psychic totality"
+    ]
+  },
+  {
+    "positionId": "JUNG-AS-025",
+    "domain": "Archetypes and Symbols",
+    "thesis": "Persona is the mask or adopted attitude for adaptation and convenience, representing collective personality distinct from individual character.",
+    "keyArguments": [
+      "Different environments demand different attitudes creating duplication of character",
+      "Social character oriented by societal expectations and individual social aims",
+      "Domestic character molded by emotional demands and convenience",
+      "Individual has no real character when completely identified with attitude of moment"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Sections 799-800",
+    "significance": "Defines persona as adaptive mask distinct from authentic individuality",
+    "relatedConcepts": [
+      "social adaptation",
+      "character-splitting",
+      "collective personality",
+      "environmental demands"
+    ]
+  },
+  {
+    "positionId": "JUNG-AS-026",
+    "domain": "Archetypes and Symbols",
+    "thesis": "Anima represents the inner attitude toward unconscious processes, complementary to persona and containing qualities the conscious attitude lacks.",
+    "keyArguments": [
+      "Inner attitude is relation to inner object (unconscious) as difficult to discern as outer attitude",
+      "Anima is inward face turned toward unconscious, complementary to persona as outward face",
+      "Usually contains all common human qualities which conscious attitude lacks",
+      "Autonomous functional complex with well-knit structure like persona"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Sections 801-803",
+    "significance": "Establishes anima as fundamental archetype of inner personality",
+    "relatedConcepts": [
+      "inner attitude",
+      "unconscious processes",
+      "complementary function",
+      "autonomous complex"
+    ]
+  },
+  {
+    "positionId": "JUNG-AS-027",
+    "domain": "Archetypes and Symbols",
+    "thesis": "Anima and animus are sexually complementary - very feminine women have masculine souls, very masculine men have feminine souls.",
+    "keyArguments": [
+      "Man not wholly masculine but has feminine traits which appear in unconscious when outer attitude is masculine",
+      "Most virile men subject to characteristic weaknesses with womanish attitude to unconscious",
+      "Most feminine women display inner intractability and wilfulness comparable to man's outer attitude",
+      "Excluded sexual traits become qualities of soul creating compensatory inner character"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Section 804",
+    "significance": "Establishes the contrasexual nature of anima/animus archetypes",
+    "relatedConcepts": [
+      "sexual compensation",
+      "masculine-feminine polarity",
+      "unconscious traits",
+      "psychological balance"
+    ]
+  },
+  {
+    "positionId": "JUNG-AS-028",
+    "domain": "Archetypes and Symbols",
+    "thesis": "Soul-image is unconscious representation of anima/animus, creating intense affective relationships when projected onto real persons.",
+    "keyArguments": [
+      "Soul represented in unconscious by definite persons with corresponding qualities",
+      "When individuality unconscious, soul-image has character of same sex",
+      "When identity with persona exists, soul-image transferred to real person creating intense love/hate",
+      "Affects occur because conscious adaptation to person representing soul-image is impossible"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Section 808",
+    "significance": "Explains the mechanism of projection and intense emotional relationships",
+    "relatedConcepts": [
+      "projection",
+      "affective relationships",
+      "unconscious representation",
+      "adaptation failure"
+    ]
+  },
+  {
+    "positionId": "JUNG-AS-029",
+    "domain": "Archetypes and Symbols",
+    "thesis": "Soul-image projection creates magical relationships between sexes, while non-projection results in identification with soul and defective external adaptation.",
+    "keyArguments": [
+      "Impassioned, magical relationships invariably involve projected soul-image",
+      "When soul-image not projected, results in identification with soul",
+      "Soul identification produces attitude predominantly oriented to inner processes",
+      "Object deprived of determining power leading to defective adaptation and lack of relatedness"
+    ],
+    "sourceWork": "Complete Works Part 4",
+    "sourceLocation": "Sections 809-810",
+    "significance": "Describes the consequences of soul-image projection and identification",
+    "relatedConcepts": [
+      "magical relationships",
+      "soul identification",
+      "inner orientation",
+      "adaptation defects"
+    ]
+  },
+  {
+    "positionId": "JUNG-DA-001",
+    "domain": "Dream Analysis",
+    "thesis": "Entoptic phenomena in darkness serve as the material foundation for hallucinations and dream imagery, with imagination constructing definite figures from light sensations",
+    "keyArguments": [
+      "Light sensations of the retina, usually weak, are seen with great intensity when attention is directed to visual perceptions",
+      "Spots of light and changing colors in the dark visual field combine into shapes that imagination forms into recognizable figures",
+      "Hypnagogic hallucinations arise when fading judgment leaves imagination free to construct vivid forms from entoptic phenomena",
+      "Visual dreams may derive their formal elements from the light sensations of the retina"
+    ],
+    "sourceWork": "Complete Works Part 5",
+    "sourceLocation": "Section 100-101",
+    "significance": "Establishes neurophysiological basis for understanding the transition from normal perception to hallucinatory states",
+    "relatedConcepts": [
+      "hypnagogic hallucinations",
+      "visual imagination",
+      "retinal phenomena",
+      "dream formation"
+    ]
+  },
+  {
+    "positionId": "JUNG-CT-002",
+    "domain": "Complex Theory",
+    "thesis": "Hysterical splits of consciousness are surface disturbances that never completely sever the fundamental unity of the ego-complex",
+    "keyArguments": [
+      "Despite apparent dissociation, a bridge always exists spanning the seemingly impassable abyss between split personalities",
+      "Patients with amnesia still behave as though guided by obscure instinct in accordance with former knowledge",
+      "Even severe epileptic twilight states cannot sever the innermost threads binding different ego-complexes",
+      "The layers of unconscious beyond the split attempt to represent unity of the automatic personality"
+    ],
+    "sourceWork": "Complete Works Part 5",
+    "sourceLocation": "Section 130-131",
+    "significance": "Fundamental principle establishing the underlying unity of consciousness despite apparent dissociation",
+    "relatedConcepts": [
+      "ego-complex",
+      "dissociation",
+      "unconscious unity",
+      "hysterical amnesia"
+    ]
+  },
+  {
+    "positionId": "JUNG-IP-003",
+    "domain": "Individuation Process",
+    "thesis": "Somnambulistic phenomena in puberty represent attempts of the future personality to break through, serving a teleological function in character formation",
+    "keyArguments": [
+      "Somnambulistic symptoms are particularly common during puberty when future character is being formed",
+      "The second state character can gradually replace the first state, as seen in cases like Felida X. and Mary Reynolds",
+      "These phenomena give individuals who would otherwise succumb the means of victory over difficulties",
+      "Double consciousness represents new character formations attempting to emerge despite unfavorable circumstances"
+    ],
+    "sourceWork": "Complete Works Part 5",
+    "sourceLocation": "Section 136",
+    "significance": "Establishes developmental and teleological understanding of dissociative phenomena as serving individuation",
+    "relatedConcepts": [
+      "puberty development",
+      "character formation",
+      "teleological function",
+      "personality emergence"
+    ]
+  },
+  {
+    "positionId": "JUNG-TU-004",
+    "domain": "Theory of Unconscious",
+    "thesis": "Repressed thoughts and character aspects lead independent existence as autonomous personalities in the unconscious",
+    "keyArguments": [
+      "The patient seeks middle way between extremes, repressing unrefined aspects which then become autonomous",
+      "Repressed thoughts begin independent growth analogous to Freud's dream investigations",
+      "Hallucinatory persons are dramatized split-offs from the dream-ego representing idealized aspects",
+      "Automatic personalities represent the aspects to be overcome, divorced from the idealized spirit companions"
+    ],
+    "sourceWork": "Complete Works Part 5",
+    "sourceLocation": "Section 132-133",
+    "significance": "Explains the mechanism by which unconscious autonomous complexes form from repressed material",
+    "relatedConcepts": [
+      "autonomous complexes",
+      "repression",
+      "split-off personalities",
+      "dream-ego"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-005",
+    "domain": "Analytical Psychology",
+    "thesis": "Heightened unconscious performance demonstrates receptivity of the unconscious far exceeding that of conscious mind",
+    "keyArguments": [
+      "Thought-reading through table movements cannot be explained by routine or conscious inference alone",
+      "Binet's experiments show unconscious sensibility can be fifty times more acute than normal conscious perception",
+      "Cryptomnesia demonstrates unconscious access to memory material not available to conscious recall",
+      "Somnambulists consistently demonstrate perceptual and cognitive abilities beyond normal conscious capacity"
+    ],
+    "sourceWork": "Complete Works Part 5",
+    "sourceLocation": "Section 137-138",
+    "significance": "Establishes empirical foundation for understanding superior capabilities of unconscious processes",
+    "relatedConcepts": [
+      "unconscious perception",
+      "cryptomnesia",
+      "somnambulistic abilities",
+      "subliminal cognition"
+    ]
+  },
+  {
+    "positionId": "JUNG-CT-006",
+    "domain": "Complex Theory",
+    "thesis": "Cryptomnesic ideas are characterized by minimal associative connections to the ego-complex due to insufficient original interest",
+    "keyArguments": [
+      "Cryptomnesic images lack distinctive marks of memory and connection to supraliminal ego-complex",
+      "Two scenarios create cryptomnesia: worthy objects with slight interest, or unworthy objects with appropriate slight interest",
+      "Labile connection with consciousness causes rapid forgetting and sinking into unconscious",
+      "Re-emergence creates feeling of strangeness and original creation because entry path is no longer discoverable"
+    ],
+    "sourceWork": "Complete Works Part 5",
+    "sourceLocation": "Section 139-140",
+    "significance": "Provides detailed mechanism explaining how unconscious material re-emerges as apparently original content",
+    "relatedConcepts": [
+      "ego-complex associations",
+      "memory formation",
+      "unconscious retrieval",
+      "creative inspiration"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-007",
+    "domain": "Analytical Psychology",
+    "thesis": "Pathological dreaming with auto-suggestive falsifications represents a continuum from normal fantasy to complex hallucinations",
+    "keyArguments": [
+      "Patients create dramatic personages and enter correspondence with imaginary figures they have created",
+      "Auto-suggestive falsifications of memory can amount to actual delusions and hallucinations",
+      "Only a step exists from dreamy ideas with sensuous coloring to complex hallucinations proper",
+      "The pathological liar swept away by fantasies behaves like a child lost in play or actor surrendering to his part"
+    ],
+    "sourceWork": "Complete Works Part 5",
+    "sourceLocation": "Section 117",
+    "significance": "Establishes continuity between normal imagination and pathological dissociative states",
+    "relatedConcepts": [
+      "auto-suggestion",
+      "pathological dreaming",
+      "fantasy elaboration",
+      "hysterical identification"
+    ]
+  },
+  {
+    "positionId": "JUNG-RS-008",
+    "domain": "Religion/Spirituality",
+    "thesis": "Complex hallucinations of visionaries represent 'intuitive' hallucinations occurring in persons of high nervous excitability and spiritual development",
+    "keyArguments": [
+      "Macario distinguished 'intuitive' hallucinations from ordinary ones, occurring in persons of lively mind and deep understanding",
+      "Hecker viewed them as signs of 'immense spiritual power' and 'higher excitation' compatible with perfect health",
+      "These hallucinations are 'harbingers' of spiritual development rather than pathological symptoms",
+      "Complex hallucinations occur in partial waking states with complete absorption in the vision"
+    ],
+    "sourceWork": "Complete Works Part 5",
+    "sourceLocation": "Section 106",
+    "significance": "Distinguishes between pathological and spiritually significant visionary experiences",
+    "relatedConcepts": [
+      "visionary experiences",
+      "spiritual development",
+      "mystical states",
+      "religious hallucinations"
+    ]
+  },
+  {
+    "positionId": "JUNG-IP-009",
+    "domain": "Individuation Process",
+    "thesis": "The second personality represents an anticipatory dream of the future ideal self, embodying what the individual wishes to become",
+    "keyArguments": [
+      "Ivenes embodies what the patient wishes to be in twenty years - assured, influential, wise, gracious, pious",
+      "The patient 'dreams herself into' the higher ideal state rather than deluding herself",
+      "The construction represents the patient pouring her own soul into the role of an idealized prototype",
+      "This differs from therapeutic personality splits which restore natural capacities versus creating something beyond the self"
+    ],
+    "sourceWork": "Complete Works Part 5",
+    "sourceLocation": "Section 116",
+    "significance": "Explains how dissociative phenomena can serve prospective, developmental functions in personality formation",
+    "relatedConcepts": [
+      "ideal self",
+      "prospective function",
+      "personality development",
+      "future orientation"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-010",
+    "domain": "Analytical Psychology",
+    "thesis": "Puberty disturbances in psychopaths involve the emergence of inherited degenerate character features alongside normal developmental changes",
+    "keyArguments": [
+      "Normal puberty involves new sensations, ideas and feelings creating far-reaching ego changes",
+      "Adolescents show fitful moods, confused powerful feelings, romantic and mystical tendencies alongside childish relapses",
+      "In psychopaths, inherited degenerate features that were absent or sporadic in childhood become fixed during puberty",
+      "The case represents a specifically pubertal disturbance requiring consideration of both normal and pathological developmental factors"
+    ],
+    "sourceWork": "Complete Works Part 5",
+    "sourceLocation": "Section 113",
+    "significance": "Integrates normal developmental psychology with understanding of pathological character formation",
+    "relatedConcepts": [
+      "pubertal development",
+      "character formation",
+      "inherited disposition",
+      "ego constitution"
+    ]
+  },
+  {
+    "positionId": "JUNG-CT-001",
+    "domain": "Complex Theory",
+    "thesis": "Somnambulic personalities have differential access to the medium's consciousness, with complete access to memory but only superficial knowledge of ecstatic phantasies",
+    "keyArguments": [
+      "All somnambulic personalities can access the medium's memory, including unconscious portions",
+      "They are aware of visions during ecstatic states but have minimal knowledge of phantasies during ecstasy",
+      "They know only what they pick up from circle members about somnambulic dreams",
+      "On doubtful points they give contradictory information or refer to 'Ivenes'"
+    ],
+    "sourceWork": "Complete Works Part 6",
+    "sourceLocation": "Development of Somnambulic Personalities section",
+    "significance": "Demonstrates the hierarchical structure and limited integration of dissociated personality fragments",
+    "relatedConcepts": [
+      "dissociation",
+      "unconscious memory",
+      "personality fragmentation",
+      "mediumship"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-002",
+    "domain": "Analytical Psychology",
+    "thesis": "Hysterical automatisms arise from dispersed attention creating pathological dream-states with spontaneous production of unconscious phenomena",
+    "keyArguments": [
+      "Hysterical anesthesia is fundamentally based on loss of attention",
+      "Dispersed attention creates states where sense impressions are received but not properly integrated",
+      "Automatic substitution occurs when attention fails to correct errors in perception",
+      "These elementary automatisms are prototypical for more complex somnambulic manifestations"
+    ],
+    "sourceWork": "Complete Works Part 6",
+    "sourceLocation": "The Waking State section",
+    "significance": "Establishes the foundational mechanism by which unconscious contents emerge through attention deficits",
+    "relatedConcepts": [
+      "hysteria",
+      "attention",
+      "automatisms",
+      "unconscious perception"
+    ]
+  },
+  {
+    "positionId": "JUNG-TU-003",
+    "domain": "Theory of Unconscious",
+    "thesis": "Semi-somnambulism represents a state where subconscious activity operates independently alongside normal consciousness",
+    "keyArguments": [
+      "Consciousness maintains apparent integrity while complex operations occur outside awareness",
+      "Another personality acts, thinks, and wills without conscious knowledge",
+      "The somnambulic life during waking is reduced and depressed by overlying normal consciousness",
+      "Automatisms provide evidence of independent subconscious self activity"
+    ],
+    "sourceWork": "Complete Works Part 6",
+    "sourceLocation": "Semi-Somnambulism section",
+    "significance": "Defines a crucial intermediate state between normal consciousness and full dissociation",
+    "relatedConcepts": [
+      "dual consciousness",
+      "subconscious",
+      "automatisms",
+      "dissociation"
+    ]
+  },
+  {
+    "positionId": "JUNG-CT-004",
+    "domain": "Complex Theory",
+    "thesis": "Personality fragments in mediumship show distinct characterological patterns that reflect different aspects of the unconscious psyche",
+    "keyArguments": [
+      "The grandfather personality shows dry, tedious solemnity and pietistic virtue",
+      "P.R. demonstrates frivolous, banal characteristics with eloquent but superficial social behavior",
+      "Ulrich von Gerbenstein exhibits witty, idle, superficial traits as an exact copy of P.R.",
+      "Ivenes represents a mature, dignified personality with spiritual authority over other fragments"
+    ],
+    "sourceWork": "Complete Works Part 6",
+    "sourceLocation": "Development of Somnambulic Personalities section",
+    "significance": "Shows how unconscious complexes manifest as distinct personality types with consistent characteristics",
+    "relatedConcepts": [
+      "personality fragmentation",
+      "unconscious complexes",
+      "characterological types",
+      "mediumship"
+    ]
+  },
+  {
+    "positionId": "JUNG-IP-005",
+    "domain": "Individuation Process",
+    "thesis": "The somnambulic personality Ivenes represents a compensatory superior function that commands and integrates other personality fragments",
+    "keyArguments": [
+      "Ivenes is described as a serious, mature person with spiritual authority",
+      "She commands her spirits and despises the trivial chatter of other personalities",
+      "She serves as intermediary for all intellectual output of manifestations",
+      "She controls the semi-somnambulic state and provides guidance and protection"
+    ],
+    "sourceWork": "Complete Works Part 6",
+    "sourceLocation": "Development of Somnambulic Personalities section",
+    "significance": "Demonstrates how the unconscious can produce a superior organizing personality that compensates for conscious limitations",
+    "relatedConcepts": [
+      "compensation",
+      "superior function",
+      "personality integration",
+      "spiritual guidance"
+    ]
+  },
+  {
+    "positionId": "JUNG-AS-006",
+    "domain": "Archetypes and Symbols",
+    "thesis": "Mediumistic visions contain systematic symbolic representations of cosmic and spiritual realities organized around archetypal themes",
+    "keyArguments": [
+      "The medium describes 'that space between stars' containing spirit-worlds",
+      "Visions include archetypal landscapes like 'wondrous, moon-lit valley for races not yet born'",
+      "Systematic cosmology emerges with star-dwellers, spiritual hierarchies, and cosmic laws",
+      "Symbolic elements consistently appear: white garments, turbans, spiritual guides, cosmic journeys"
+    ],
+    "sourceWork": "Complete Works Part 6",
+    "sourceLocation": "Development of Somnambulic Personalities section",
+    "significance": "Shows how archetypal content spontaneously organizes visionary experience into coherent symbolic systems",
+    "relatedConcepts": [
+      "archetypal imagery",
+      "cosmic symbolism",
+      "visionary experience",
+      "spiritual cosmology"
+    ]
+  },
+  {
+    "positionId": "JUNG-AM-007",
+    "domain": "Alchemy and Mythology",
+    "thesis": "The medium's reincarnation system reflects mythological patterns of eternal return and spiritual evolution through historical cycles",
+    "keyArguments": [
+      "Ivenes must incarnate every 200 years, sharing this fate only with Swedenborg and Florence Cook",
+      "Past lives include archetypal roles: prophetess, witch, martyr, noblewoman, Jewish woman",
+      "Each incarnation serves as medium and intermediary between worlds",
+      "The system includes atonement patterns where suffering in one life compensates for transgressions in another"
+    ],
+    "sourceWork": "Complete Works Part 6",
+    "sourceLocation": "Development of Somnambulic Personalities section",
+    "significance": "Demonstrates how the unconscious spontaneously produces mythological patterns of spiritual development",
+    "relatedConcepts": [
+      "reincarnation mythology",
+      "eternal return",
+      "spiritual evolution",
+      "archetypal roles"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-008",
+    "domain": "Analytical Psychology",
+    "thesis": "Motor automatisms develop through progressive auto-suggestion beginning with unconscious tremors and escalating to complex intellectual phenomena",
+    "keyArguments": [
+      "Unconscious motor phenomena can be produced in normal persons with sufficient patience",
+      "Purposeful tremors act as agents provocateurs for automatic movements",
+      "Auto-suggestion increases step by step, isolating motor areas from consciousness",
+      "Intellectual content emerges when speech-areas become involved through collateral excitation"
+    ],
+    "sourceWork": "Complete Works Part 6",
+    "sourceLocation": "Automatisms section",
+    "significance": "Provides mechanical explanation for how unconscious contents emerge through motor pathways",
+    "relatedConcepts": [
+      "auto-suggestion",
+      "motor automatisms",
+      "unconscious movements",
+      "progressive hypnosis"
+    ]
+  },
+  {
+    "positionId": "JUNG-TU-009",
+    "domain": "Theory of Unconscious",
+    "thesis": "Partial hypnosis can isolate specific psychic functions while leaving normal consciousness intact, creating conditions for automatic phenomena",
+    "keyArguments": [
+      "Motor areas can be hypnotized while consciousness remains normal",
+      "Tactile stimuli act suggestively to produce partial hypnosis in specific body regions",
+      "Perception of movement-impulses becomes concealed from consciousness",
+      "Speech-areas can be gradually penetrated by partial hypnosis through motor pathways"
+    ],
+    "sourceWork": "Complete Works Part 6",
+    "sourceLocation": "Automatisms section",
+    "significance": "Establishes the mechanism by which unconscious functions can operate independently of conscious control",
+    "relatedConcepts": [
+      "partial hypnosis",
+      "functional isolation",
+      "unconscious motor activity",
+      "suggestive stimuli"
+    ]
+  },
+  {
+    "positionId": "JUNG-AS-010",
+    "domain": "Archetypes and Symbols",
+    "thesis": "The medium's mystic science system represents spontaneous symbolic organization of cosmic forces into a mandala-like structure with spiritual significance",
+    "keyArguments": [
+      "Forces are arranged in seven circles with three outer circles and ten inner ones",
+      "Primary spiritual force occupies the center as original cause of creation",
+      "Light and dark powers emerge from union of primary force with matter",
+      "The system includes moral dimensions with forces enabling souls to rise to light or fall to darkness"
+    ],
+    "sourceWork": "Complete Works Part 6",
+    "sourceLocation": "Mystic Science section",
+    "significance": "Demonstrates how the unconscious spontaneously creates systematic symbolic representations of cosmic order",
+    "relatedConcepts": [
+      "mandala symbolism",
+      "cosmic order",
+      "light-dark polarity",
+      "spiritual forces"
+    ]
+  },
+  {
+    "positionId": "JUNG-RS-011",
+    "domain": "Religion and Spirituality",
+    "thesis": "Mediumistic phenomena reveal the unconscious production of religious and spiritual content that compensates for conscious spiritual poverty",
+    "keyArguments": [
+      "Biblical maxims and edifying observations emerge spontaneously through automatic writing",
+      "Spiritual personalities provide guidance, prophecy, and moral instruction",
+      "The medium develops elaborate spiritual cosmology with hierarchies of spirits and cosmic laws",
+      "Religious content appears despite the medium's limited conscious religious knowledge"
+    ],
+    "sourceWork": "Complete Works Part 6",
+    "sourceLocation": "Development of Somnambulic Personalities section",
+    "significance": "Shows how the unconscious compensates for spiritual deficiency through autonomous religious content",
+    "relatedConcepts": [
+      "religious compensation",
+      "spiritual guidance",
+      "unconscious religiosity",
+      "autonomous spiritual content"
+    ]
+  },
+  {
+    "positionId": "JUNG-CT-012",
+    "domain": "Complex Theory",
+    "thesis": "The gradual decline and eventual fraudulent behavior in mediumship represents the exhaustion of genuine unconscious content and ego's attempt to maintain the phenomenon artificially",
+    "keyArguments": [
+      "Vividness of ecstasies gradually declined before cessation",
+      "Trivial personalities increasingly dominated serious spiritual content",
+      "Uncertainty appeared in trance talks as if seeking audience impression",
+      "Eventual conscious fraud attempt suggests ego takeover when unconscious content was depleted"
+    ],
+    "sourceWork": "Complete Works Part 6",
+    "sourceLocation": "Conclusion section",
+    "significance": "Demonstrates the natural lifecycle of unconscious phenomena and the danger of ego inflation",
+    "relatedConcepts": [
+      "unconscious depletion",
+      "ego inflation",
+      "fraudulent compensation",
+      "phenomenon lifecycle"
+    ]
+  },
+  {
+    "positionId": "JUNG-DA-001",
+    "domain": "Dream Analysis",
+    "thesis": "Dreams undergo systematic transformation through rumor transmission, revealing unconscious participation by listeners who share similar psychological complexes",
+    "keyArguments": [
+      "Each retelling of Marie's dream shows personal interpolations reflecting the narrator's own unconscious material",
+      "School companions aged 12-13 in puberty prodromata shared similar sexual complexes with the dreamer",
+      "The dream became 'le vrai mot de la situation' - expressing something already psychologically present in the group",
+      "Rumor analysis reveals the same mechanisms as dream analysis, with censorship, displacement, and symbolic representation"
+    ],
+    "sourceWork": "Complete Works Part 7",
+    "sourceLocation": "Chapter IV - A Contribution to the Psychology of Rumour",
+    "significance": "Demonstrates that dream interpretation extends beyond individual analysis to collective psychological phenomena",
+    "relatedConcepts": [
+      "complex theory",
+      "censorship",
+      "displacement",
+      "collective unconscious"
+    ]
+  },
+  {
+    "positionId": "JUNG-CT-002",
+    "domain": "Complex Theory",
+    "thesis": "Complexes create systematic resistance that manifests as intentional contrast behavior, not random ambivalency",
+    "keyArguments": [
+      "Psychoanalysis proves resistance always has intention and meaning, never capricious playing with contrasts",
+      "Negative reactions follow strict psychological causation to disturb contrasting intentions",
+      "Ambivalency is universal but resistance is the dynamic factor making it manifest",
+      "The complex is the cause of resistance, making negativism theory coincide with complex theory"
+    ],
+    "sourceWork": "Complete Works Part 7",
+    "sourceLocation": "Chapter VI - A Criticism of Bleuler's Theory of Schizophrenic Negativism",
+    "significance": "Establishes complex theory as fundamental to understanding psychiatric symptoms beyond simple ambivalency",
+    "relatedConcepts": [
+      "resistance",
+      "ambivalency",
+      "schizophrenia",
+      "psychic splitting"
+    ]
+  },
+  {
+    "positionId": "JUNG-SY-003",
+    "domain": "Synchronicity",
+    "thesis": "Number symbolism in dreams represents unconscious mathematical operations encoding personal relationship dynamics and temporal patterns",
+    "keyArguments": [
+      "Dream number 2477 precisely equals sum of all family members' birth dates when converted to numerical form",
+      "Number 152 corresponds exactly to monthly expenses and sequential house addresses of mistress",
+      "Biblical reference 'Luke 137' contains cryptomnesic access to relevant passages addressing the dreamer's fertility concerns",
+      "Unconscious performs complex calculations to create meaningful numerical symbols"
+    ],
+    "sourceWork": "Complete Works Part 7",
+    "sourceLocation": "Chapter V - On the Significance of Number-Dreams",
+    "significance": "Reveals unconscious capacity for sophisticated symbolic encoding using mathematical relationships",
+    "relatedConcepts": [
+      "cryptomnesia",
+      "symbolic representation",
+      "unconscious calculation",
+      "wish fulfillment"
+    ]
+  },
+  {
+    "positionId": "JUNG-DA-004",
+    "domain": "Dream Analysis",
+    "thesis": "Dream censorship operates through progressive displacement, pushing complex content through ever-renewed disguises until final symbolic expression",
+    "keyArguments": [
+      "The improper scene could have occurred in the bathing-room but gets displaced through multiple transformations",
+      "Censorship pushes the complex away through innocent renderings, displacements, and substitutions",
+      "Final dream thoughts contain exactly what first images were trying to represent",
+      "All dream images and situations are directed toward expressing the underlying complex despite censorship"
+    ],
+    "sourceWork": "Complete Works Part 7",
+    "sourceLocation": "Chapter IV - A Contribution to the Psychology of Rumour",
+    "significance": "Demonstrates systematic operation of dream censorship mechanisms across narrative transformations",
+    "relatedConcepts": [
+      "censorship",
+      "displacement",
+      "complex",
+      "symbolic disguise"
+    ]
+  },
+  {
+    "positionId": "JUNG-CT-005",
+    "domain": "Complex Theory",
+    "thesis": "Multiplication of personalities in psychotic states expresses stored-up libido and prevents overwhelming emotional impressions through analytic degradation",
+    "keyArguments": [
+      "Duplication of persons indicates their psychological significance and stored libido investment",
+      "In schizophrenia, multiplication prevents arousing too violent impressions through splitting",
+      "Person with transference relationship invariably becomes subject to multiplication",
+      "Splitting serves as analytic degradation corresponding to general schizophrenic tendency"
+    ],
+    "sourceWork": "Complete Works Part 7",
+    "sourceLocation": "Chapter IV - A Contribution to the Psychology of Rumour",
+    "significance": "Explains psychotic symptom formation as defensive mechanism against overwhelming affect",
+    "relatedConcepts": [
+      "libido",
+      "transference",
+      "schizophrenia",
+      "psychic splitting"
+    ]
+  },
+  {
+    "positionId": "JUNG-TU-006",
+    "domain": "Theory of Unconscious",
+    "thesis": "Unconscious creative phantasy operates through sportive fancy and play impulses that have historical precedent in human symbolic thinking",
+    "keyArguments": [
+      "Unconscious products are creations of sportive fancy and psychic play impulses",
+      "Human mind has amused itself with numerical games for thousands of years",
+      "Historic past compels admission of similar tendencies in dreams",
+      "Free creative phantasy requires broad empiricism rather than rigid scientific proof"
+    ],
+    "sourceWork": "Complete Works Part 7",
+    "sourceLocation": "Chapter V - On the Significance of Number-Dreams",
+    "significance": "Validates unconscious creativity as legitimate psychological phenomenon with historical continuity",
+    "relatedConcepts": [
+      "creative phantasy",
+      "play impulse",
+      "historical continuity",
+      "symbolic thinking"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-007",
+    "domain": "Analytical Psychology",
+    "thesis": "Psychoanalysis represents a new psychological science requiring both medical and psychological knowledge, distinct from traditional experimental psychology",
+    "keyArguments": [
+      "Method is exquisitely psychological, belonging neither to medicine nor experimental psychology alone",
+      "Medical practitioners lack psychological knowledge while psychologists lack medical knowledge",
+      "Technical foundations remain unknown due to interdisciplinary nature",
+      "Scientific character of method must be acknowledged before results can be accepted"
+    ],
+    "sourceWork": "Complete Works Part 7",
+    "sourceLocation": "Chapter VII - Psychoanalysis",
+    "significance": "Establishes analytical psychology as distinct scientific discipline requiring interdisciplinary approach",
+    "relatedConcepts": [
+      "interdisciplinary method",
+      "technical foundations",
+      "scientific validation",
+      "psychological science"
+    ]
+  },
+  {
+    "positionId": "JUNG-CT-008",
+    "domain": "Complex Theory",
+    "thesis": "Schizophrenic thought disturbance results from complex-induced censorship rather than primary cognitive deficit, following same laws as dream psychology",
+    "keyArguments": [
+      "Painfulness of complex necessitates censorship of expression in schizophrenic thinking",
+      "Laws of Freudian dream psychology apply to schizophrenic mental processes",
+      "Hypnagogic states produce results indistinguishable from schizophrenic conditions",
+      "Attention disturbances in schizophrenia attributed to special character of complex"
+    ],
+    "sourceWork": "Complete Works Part 7",
+    "sourceLocation": "Chapter VI - A Criticism of Bleuler's Theory of Schizophrenic Negativism",
+    "significance": "Unifies understanding of normal and pathological mental processes under complex theory",
+    "relatedConcepts": [
+      "censorship",
+      "dream psychology",
+      "attention disturbance",
+      "hypnagogic states"
+    ]
+  },
+  {
+    "positionId": "JUNG-RS-009",
+    "domain": "Religion/Spirituality",
+    "thesis": "Cryptomnesic biblical references in dreams provide unconscious access to archetypal solutions for personal psychological conflicts",
+    "keyArguments": [
+      "Dream citation 'Luke 137' leads to Annunciation passage addressing fertility wishes",
+      "Biblical passages about resurrection offer symbolic cure for husband's impotency",
+      "Unconscious selects relevant religious material despite conscious biblical ignorance",
+      "Religious symbolism provides wish-fulfillment and conflict resolution"
+    ],
+    "sourceWork": "Complete Works Part 7",
+    "sourceLocation": "Chapter V - On the Significance of Number-Dreams",
+    "significance": "Demonstrates unconscious access to religious archetypal material for psychological healing",
+    "relatedConcepts": [
+      "cryptomnesia",
+      "archetypal symbols",
+      "wish fulfillment",
+      "religious imagery"
+    ]
+  },
+  {
+    "positionId": "JUNG-IP-010",
+    "domain": "Individuation Process",
+    "thesis": "Psychological development involves compensation between conscious attitudes and unconscious contents, as seen in Marie's dream following conscious disappointment",
+    "keyArguments": [
+      "Marie's conscious hatred of teacher compensated by unconscious sexual union dream",
+      "Repressed positive feelings announced themselves when conscious attitude became negative",
+      "Dream fulfilled desire as compensation for daytime hate and disappointment",
+      "Unconscious provides balance when conscious attitude becomes one-sided"
+    ],
+    "sourceWork": "Complete Works Part 7",
+    "sourceLocation": "Chapter IV - A Contribution to the Psychology of Rumour",
+    "significance": "Illustrates compensatory function of unconscious in psychological balance and development",
+    "relatedConcepts": [
+      "compensation",
+      "conscious-unconscious balance",
+      "psychological development",
+      "attitude regulation"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-001",
+    "domain": "Analytical Psychology",
+    "thesis": "Modern experimental psychology is inadequate for understanding the human soul and treating psychological illness because it isolates elementary phenomena rather than comprehending the infinite variation of mental life",
+    "keyArguments": [
+      "Experimental psychology tries to isolate simple elementary phenomena bordering on the physiological",
+      "It ignores the infinite variation and movement of individual mental life",
+      "Its knowledge consists of isolated details without comprehensive organizing ideas",
+      "A physician treating soul sickness needs psychological understanding, not isolated facts"
+    ],
+    "sourceWork": "Complete Works Part 8",
+    "sourceLocation": "Opening section",
+    "significance": "Establishes Jung's critique of academic psychology and justification for analytical psychology",
+    "relatedConcepts": [
+      "psychoanalysis",
+      "depth psychology",
+      "unconscious",
+      "neurosis"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-002",
+    "domain": "Analytical Psychology",
+    "thesis": "Analytical psychology represents a new type of psychology that emerged from Freud's work on functional nervous disease and focuses on the deeper regions of the soul",
+    "keyArguments": [
+      "The new psychology arose from practical needs in treating neurosis",
+      "Freud's genius in researching functional nervous disease was the starting point",
+      "Bleuler termed it 'Deep Psychology' indicating focus on the unconscious 'hinterland'",
+      "It addresses the gulf between academic psychology and practical psychological needs"
+    ],
+    "sourceWork": "Complete Works Part 8",
+    "sourceLocation": "Section introducing analytical psychology",
+    "significance": "Defines analytical psychology as distinct from experimental psychology",
+    "relatedConcepts": [
+      "Freudian psychology",
+      "unconscious",
+      "neurosis",
+      "psychoanalysis"
+    ]
+  },
+  {
+    "positionId": "JUNG-TU-003",
+    "domain": "Theory of Unconscious",
+    "thesis": "Hysterical symptoms are psychogenic and arise from unconscious psychic experiences, not organic causes",
+    "keyArguments": [
+      "Neurotic symptoms have their origin in the psyche (psychogenic)",
+      "Hysterical symptoms can be reproduced through suggestion",
+      "Anatomical theories fail to explain hysterical symptomatology",
+      "Cases show consciousness doesn't perceive while sense-function remains intact"
+    ],
+    "sourceWork": "Complete Works Part 8",
+    "sourceLocation": "Discussion of Charcot and hysteria",
+    "significance": "Establishes psychogenic basis of neurotic symptoms",
+    "relatedConcepts": [
+      "hysteria",
+      "psychogenic symptoms",
+      "consciousness",
+      "repression"
+    ]
+  },
+  {
+    "positionId": "JUNG-TU-004",
+    "domain": "Theory of Unconscious",
+    "thesis": "The unconscious contains not only personal infantile memories but also 'racial' memories extending beyond individual existence",
+    "keyArguments": [
+      "Latest Zürich school research shows unconscious contains racial memories",
+      "These memories extend far beyond limits of individual existence",
+      "Unconscious material consists chiefly of infantile memories",
+      "The unconscious bears an infantile stamp in its expressions"
+    ],
+    "sourceWork": "Complete Works Part 8",
+    "sourceLocation": "Discussion of dream analysis and unconscious content",
+    "significance": "Introduces concept of collective unconscious elements",
+    "relatedConcepts": [
+      "collective unconscious",
+      "infantile memories",
+      "racial memories",
+      "dream symbolism"
+    ]
+  },
+  {
+    "positionId": "JUNG-CT-005",
+    "domain": "Complex Theory",
+    "thesis": "Neurotic symptoms arise from autonomous complexes formed when unconscious impulses are repressed from conscious control",
+    "keyArguments": [
+      "Repressed impulses become autonomous complexes outside conscious hierarchy",
+      "These complexes can only be brought under control through analysis of the unconscious",
+      "Symptoms are indirect expressions of unrecognized desires",
+      "The process involves great resistance when attempting to regain control"
+    ],
+    "sourceWork": "Complete Works Part 8",
+    "sourceLocation": "Discussion of symptom formation",
+    "significance": "Explains mechanism of neurotic symptom formation through complex theory",
+    "relatedConcepts": [
+      "autonomous complexes",
+      "repression",
+      "unconscious impulses",
+      "resistance"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-006",
+    "domain": "Analytical Psychology",
+    "thesis": "The trauma theory is insufficient; neurosis arises from erotic conflicts rather than traumatic experiences alone",
+    "keyArguments": [
+      "Traumatic experiences require predisposition to become pathogenic",
+      "Investigation reveals erotic conflicts co-exist with all traumatic experiences",
+      "The trauma becomes merely the occasion for unconscious factors to manifest",
+      "The erotic conflict, not the trauma, is the true pathogenic agent"
+    ],
+    "sourceWork": "Complete Works Part 8",
+    "sourceLocation": "Critique of trauma theory",
+    "significance": "Shifts focus from external trauma to internal psychological conflicts",
+    "relatedConcepts": [
+      "trauma theory",
+      "erotic conflict",
+      "predisposition",
+      "sexual theory"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-007",
+    "domain": "Analytical Psychology",
+    "thesis": "In neurosis, two erotic tendencies exist in extreme opposition, with at least one being unconscious",
+    "keyArguments": [
+      "Neurotic cases show conscious and unconscious erotic tendencies in opposition",
+      "The real passion often remains unknown while a postulated affection is conscious",
+      "This creates internal conflict between opposing erotic drives",
+      "The unconscious erotic relation remains unilluminated while consciousness is dominated by assumption"
+    ],
+    "sourceWork": "Complete Works Part 8",
+    "sourceLocation": "Formulation of erotic conflict theory",
+    "significance": "Defines the structural basis of neurotic conflict",
+    "relatedConcepts": [
+      "erotic conflict",
+      "unconscious tendencies",
+      "neurotic opposition",
+      "sexual theory"
+    ]
+  },
+  {
+    "positionId": "JUNG-RS-008",
+    "domain": "Religion and Spirituality",
+    "thesis": "Civilization progresses through mastering the animal element in man, but this domestication process creates rebellion and periodic bursts of freedom",
+    "keyArguments": [
+      "Civilisation consists in progressive mastering of animal nature in humans",
+      "This domestication cannot occur without rebellion from the animal nature",
+      "History shows periodic waves of Dionysian impulses toward freedom",
+      "These waves influenced ancient culture, ascetic religions, and Renaissance movements"
+    ],
+    "sourceWork": "Complete Works Part 8",
+    "sourceLocation": "Discussion of civilization and instinct",
+    "significance": "Explains cultural and religious movements as responses to civilizational repression",
+    "relatedConcepts": [
+      "civilization",
+      "animal nature",
+      "Dionysian impulses",
+      "asceticism"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-009",
+    "domain": "Analytical Psychology",
+    "thesis": "Modern urban life deprives humanity of natural emotional outlets, creating surplus energy that seeks expression through sexuality",
+    "keyArguments": [
+      "Urban industrialization removes opportunities for natural emotional expenditure",
+      "Modern work lacks the symbolic satisfaction of agricultural life",
+      "Artificial birth control deprives people of natural reproductive satisfaction",
+      "Surplus energy from reduced dangers and monotonous work seeks sexual outlets"
+    ],
+    "sourceWork": "Complete Works Part 8",
+    "sourceLocation": "Analysis of modern sexual problems",
+    "significance": "Links neurosis to broader social and economic conditions",
+    "relatedConcepts": [
+      "modern civilization",
+      "sexual question",
+      "surplus energy",
+      "urbanization"
+    ]
+  },
+  {
+    "positionId": "JUNG-DA-010",
+    "domain": "Dream Analysis",
+    "thesis": "Dreams are the via regia to the unconscious and serve as symbolic wish-fulfillments of repressed desires",
+    "keyArguments": [
+      "Dreams conceal unconscious contents behind a manifest façade",
+      "Free associations about dream details reveal underlying conflicts",
+      "Dream symbolism connects to personal conflicts in subtle ways",
+      "Repressed desires, usually erotic, find symbolic substitution in dreams"
+    ],
+    "sourceWork": "Complete Works Part 8",
+    "sourceLocation": "Section on dream analysis technique",
+    "significance": "Establishes dream analysis as primary method for accessing unconscious",
+    "relatedConcepts": [
+      "dream symbolism",
+      "wish-fulfillment",
+      "manifest content",
+      "latent content"
+    ]
+  },
+  {
+    "positionId": "JUNG-DA-011",
+    "domain": "Dream Analysis",
+    "thesis": "Anxiety dreams invariably symbolize strong erotic desires and reveal the dreamer's deepest secrets",
+    "keyArguments": [
+      "Anxiety dreams are common and consistently represent erotic symbolism",
+      "Dreams often deal with apparently irrelevant details to disguise meaning",
+      "Patient analysis reveals dreams deal with extraordinarily important soul problems",
+      "Dream analysis mercilessly uncovers deceptive morals and character's underside"
+    ],
+    "sourceWork": "Complete Works Part 8",
+    "sourceLocation": "Discussion of anxiety dreams",
+    "significance": "Identifies specific dream types as indicators of unconscious erotic content",
+    "relatedConcepts": [
+      "anxiety dreams",
+      "erotic symbolism",
+      "dream disguise",
+      "moral deception"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-012",
+    "domain": "Analytical Psychology",
+    "thesis": "Neurosis represents an unsuccessful individual attempt to solve the general problems of society and epoch",
+    "keyArguments": [
+      "Individual conflicts connect to great problems of society at particular points",
+      "Analysis reveals apparently individual conflicts as universal environmental conflicts",
+      "General problems only exist in hearts and heads of individuals",
+      "Neurosis is an unsuccessful attempt at solving the general problem personally"
+    ],
+    "sourceWork": "Complete Works Part 8",
+    "sourceLocation": "Connection between individual and social problems",
+    "significance": "Links individual psychology to broader social and cultural issues",
+    "relatedConcepts": [
+      "social problems",
+      "individual conflict",
+      "universal conflict",
+      "cultural neurosis"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-013",
+    "domain": "Analytical Psychology",
+    "thesis": "Psychoanalytic treatment involves a process of self-sacrifice and rebirth, comparable to ancient wisdom and Socratic technique",
+    "keyArguments": [
+      "Treatment requires giving up cherished illusions for something deeper and greater",
+      "The process follows the ancient wisdom of self-sacrifice for rebirth",
+      "Psychoanalysis can be compared to Socratic technique but penetrates greater depths",
+      "This psychic re-education proves necessary at the height of modern culture"
+    ],
+    "sourceWork": "Complete Works Part 8",
+    "sourceLocation": "Description of psychoanalytic process",
+    "significance": "Frames psychoanalysis as spiritual/philosophical transformation process",
+    "relatedConcepts": [
+      "self-sacrifice",
+      "rebirth",
+      "ancient wisdom",
+      "Socratic method"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-014",
+    "domain": "Analytical Psychology",
+    "thesis": "Analysis liberates animal instincts not to release them but to make them available for higher application and sublimation",
+    "keyArguments": [
+      "Analysis doesn't liberate instincts just to let them loose",
+      "The goal is making instincts available for higher application when possible",
+      "Sublimated application is required according to individual capacity",
+      "Full possession of personality prevents repressed desires from causing serious disruption"
+    ],
+    "sourceWork": "Complete Works Part 8",
+    "sourceLocation": "Defense against criticism of psychoanalysis",
+    "significance": "Clarifies therapeutic goals regarding instinctual liberation",
+    "relatedConcepts": [
+      "sublimation",
+      "instinct liberation",
+      "personality integration",
+      "higher application"
+    ]
+  },
+  {
+    "positionId": "JUNG-AP-015",
+    "domain": "Analytical Psychology",
+    "thesis": "Both overly moral and immoral individuals can be neurotic, with the immoral person having repressed their decency",
+    "keyArguments": [
+      "Freud's theory seems to postulate only overly moral people repress immorality",
+      "Daily experience shows immoral people can be equally neurotic",
+      "Analysis of immoral neurotics reveals their decency has been repressed",
+      "This represents what Nietzsche called 'the pale criminal' - repressed morality"
+    ],
+    "sourceWork": "Complete Works Part 8",
+    "sourceLocation": "Critique and expansion of Freudian repression theory",
+    "significance": "Expands understanding of repression beyond moral/immoral dichotomy",
+    "relatedConcepts": [
+      "repression theory",
+      "moral neurosis",
+      "pale criminal",
+      "bidirectional repression"
+    ]
+  }
+]

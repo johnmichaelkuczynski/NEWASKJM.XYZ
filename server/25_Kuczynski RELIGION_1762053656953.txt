@@ -1,0 +1,423 @@
+Chapter 25
+Religion
+1.0 What does philosophy have to teach us about religion?
+Nothing. The so-called philosophy of religion doesn’t concern religion. It concerns puzzles that can be illustrated in connection with religious questions but are really of a strictly logical nature. Here is one such puzzle:
+
+(OG1) Many hold that God is omnipotent—that, in other words, She can do anything. Let’s suppose that this is true. In that case, God can create some task that She cannot perform. But if She can do that, She’s not omnipotent.
+
+   OG doesn’t have anything to do with God. It has to do with subtleties of logic that, although they can be illustrated in connection with statements concerning God, have nothing to do with Her. We know this because OG perfectly parallels the following argument.
+
+(SG) Smith shaves all and only those who don’t shave themselves. Question: Does Smith shave himself? If he does, then he doesn’t, since he shaves only those who don’t shave themselves. If doesn’t, then he does, since he shaves all those who don’t shave themselves.
+
+   OG is no more about God than SG is about barbers. Both paradoxes expose logical problems relating to the use of quantifiers.
+   Although one of the objectives of the philosophy of religion is to figure out whether or not God exists, its efforts to do this quickly veer off course and end up bogging down in logical minutiae that are of no relevance to religion at all. Consider the following argument, which was given by St. Thomas Aquinas (1225–1274):
+
+(AG12) Every event has a predecessor. Therefore, there is some event that is the predecessor of every event. In other words, there is a first event. Causes precede their effects. Therefore, that first event, not being preceded by anything, was uncaused. Since all events must be caused, that first event was a miracle and, therefore, the act of a deity. Therefore, there is a God.3
+
+   The first sentence of AG1, which we’ll refer to as (a), is ambiguous.4 It could mean either:
+   
+(a1) Given any event x, there is some event y, such that y precedes x
+
+or
+
+(a2) there is some event x such that, for any event y, x precedes y.
+   
+   (a1) says that any given event has a predecessor. (a2) says that there is some event that is the predecessor of every event.
+   (a1) does not entail that
+   
+(b) there is some event that is the predecessor of every event.
+   
+Any given integer has a predecessor. Given only that any given integer has a predecessor, it doesn’t follow that some one integer precedes every other—nor is it the case. Similarly, given only that any given event has a predecessor, it doesn’t follow that some one event precedes every other.
+   So (a) fails if (a) is taken to have (a1) for its meaning, and AG1 must therefore be assumed to have (a2) for its meaning. But (a2) and (b) are the very same statement. So Aquinas has simply assumed that there was a first event, and he thus hasn’t established it at all.
+   But supposing, if only for argument’s sake, that there was a first event, it doesn’t follow, at least not for any obvious reason, that it was an act of God. Why did I hedge with the phrase “at least for any obvious reason”? Because it may be that, if there was a first event, there is a God. (I personally do not know this to be false.) It may be that atheists cannot, without being guilty of inconsistency, believe in a first event (such as the Big Bang). But even if this is true, it cannot be taken for granted; it must be demonstrated. And Aquinas hasn’t demonstrated it.5
+   Aquinas gave another, similarly flawed argument for God’s existence:
+   
+(AG2) There can’t be comparatives unless there are absolutes. I’m wealthier than you if I’m more like some absolutely wealthy entity than you are. I’m better than you if I’m more like some absolutely good entity than you are. Some things are better than others. Therefore, some things are more like some absolutely good thing than others. Therefore, there is some absolutely good thing. In other words, there is a God.
+
+   AG2 is a failure. If Smith’s complexion is better than Brown’s, then
+   
+(i) Smith’s complexion is more like that of a person with a perfect complexion than Brown’s.
+
+But what follows is not that
+
+(ii) somebody has a perfect complexion, and Smith’s complexion is more like that person’s complexion than Brown’s,
+
+What actually follows from (i) is that:
+
+(iii) were there to be a person with a perfect complexion, then, other things being equal, Smith’s complexion would be more like that person’s complexion than Brown’s.
+   
+   Similarly, given only that:
+   
+(#) Smith’s condition is more like of that some perfect entity’s than Brown’s,
+
+what follows isn’t that
+
+(##) there exists some maximally good entity whose condition Smith’s resembles more than Brown’s 
+
+and is instead that:
+
+(###) were there to be some maximally good entity, then, other things being equal, Smith’s condition would be more like that entity’s condition than Brown’s.
+
+(iii) doesn’t entail that anyone’s complexion is perfect, and (###) doesn’t entail that anything’s condition is perfect. Contrary to what Aquinas believes, there don’t have to be absolutes for there to be comparatives.
+   
+Although (#) is ambiguous, it isn’t ambiguous in the same way as:
+
+(JB) Jerry is at the bank.
+   
+   JB is ambiguous because one of its constituents has two different meanings. In other words, it’s lexically ambiguous. By contrast, (#) is ambiguous not because it contains an ambiguous constituent, but because there are two different ways of parsing it. The same is true of (a). Thus, (#) and (a) are syntactically ambiguous. An expression is syntactically ambiguous iff it can be parsed in more than one way.6 (An expression can be both syntactically and lexically ambiguous (for example, “some banks are more like some maximally beautiful bank than others”). Pre-modern philosophers, such as Aquinas, were only dimly aware of the phenomenon of syntactic ambiguity. Hence the problems with AG2.
+   Let’s take stock. In the course of studying these two arguments, we’ve learned a lot about sentencestructure and about argumentation in general. But we didn’t learn anything about God or religion.
+   “But we learned that Aquinas failed to prove God’s existence.” Yes. But his arguments don’t fail in a way that gives us any indication as to whether God does or does not exist.
+1.1 The futility of trying to provide rational arguments for or against 	religious belief
+Religion is not science or logic, and to the extent that one’s beliefs are based on rational consideration of the relevant evidence, one is a person of science, not of religion.
+   A story will clarify this. Smith hasn’t a religious bone in his body. But he’s an open thinker and doesn’t want to assume, without first exercising due diligence, either that God exists or that God does not exist. On Monday, Smith uncovers what he thinks is evidence of God’s existence. But on Tuesday, he finds out that this evidence was manufactured by a religious person and is therefore bogus. Smith doesn’t conclude that God doesn’t exist. Being a scientifically minded person, he rightly concludes only that he doesn’t yet have reason to believe otherwise. On Wednesday, he uncovers more apparent evidence of God’s existence. Since he finds it convincing, he begins to warm to the idea that God exists. But, being a rigorous and cautious thinker, he makes sure that his zeal for that hypothesis never outruns the evidence he has for it. And if new evidence turns up, he’ll modify his views accordingly.
+   Smith’s belief in God goes only as far as the available evidence permits. For this reason, even if Smith does finally arrive at the belief that God exists, he isn’t religious. As long as his belief is contingent on its consistency with future findings, he’s prepared to reject it, which is the mark of a scientific, not a religious, person.
+   Of course, one can be both religious and scientific. Newton was very religious. But to the extent that one’s attitude towards a position is characterized by the just-described attitude of deference to future findings, one is not a religious person. Had Newton’s beliefs about God been as evidence-based as his beliefs about physics, he would not have been a religious person. A person who believes in God isn’t religious if that person’s acceptance of that position is contingent on its being consistent with the data.
+   This is why it’s silly to try to undermine religious belief by arguing that it doesn’t square with the facts. What distinguishes religious from scientific belief is precisely that the former, unlike the latter, isn’t subject to one’s views as to what inferences the available data warrants.
+   Religious people know this. That’s why they are unmoved by anti-religious arguments. And they’re right to be unmoved. To the extent that it’s a religious attitude they wish to hold onto, it would be incoherent of them to regard recalcitrant data as giving them a reason to jettison that attitude, since a religious attitude is precisely one that isn’t marked by the subservience to data and logic characteristic of the scientific view.7
+
+1.2 My biases
+I am not a religious person and I don’t believe in God. (Or so I say—but see Section 1.4.) I say this not because I have any special insight into these matters. I do not. My views on these matters are no more authoritative than anyone else’s. I am stating these facts about myself only so that the reader can know that, because of them, what I say about religion is biased in favor of an anti-religious perspective.
+   That said, this chapter won’t target religious belief. I will put forth some arguments that might appear to have anti-religious consequences. But, though I obviously accept those arguments, what they prove, in my opinion, doesn’t really have anything to do with religion. It has to do with certain attempts to doctrinalize religious sentiment—that is, with attempts to identify religious sentiment with acceptance of well defined contentions as to how the world is. Since, as we saw in Section 1.1, religious sentiment necessarily outstrips any logical or evidential reasons one has for accepting any given contention, the logical and evidential demerits of such doctrinalizations are irrelevant to whether the religious outlook is, when evaluated on its own terms, a viable one. So far as one accepts the yardsticks relative to which such doctrinalizations fall short, one isn’t religious. After all, the religious mentality is a rejection of those yardsticks. (To be sure, there are religious people who are utterly rational and who are superlative scientists, businessmen, and so on. But to the limited extent to which a given person’s mental life is to be understood in terms of his or her having a religious outlook, that individual’s psychological situation is not to be understood in terms of his or her ratiocinative abilities, however active those abilities may be outside of religious contexts.) So in attempting to invalidate religion by showing that it fails relative to those yardsticks, one is guilty of “begging the question”—that is, of assuming the truth of the very thing one is trying to prove. Further, given that there is at least one component of religious sentiment to which any given doctrinalization of it ipso facto fails to do justice, the contentions that are associated with acceptance of a given religion are really just foils of some kind—that is, they are stand-ins for some attitude or conviction that, for some reason, isn’t making an appearance in propria persona. Instead of asking “how can I disprove the contentions put forth by religious folk?”, those who aspire to undermine religious sentiment should ask, “what do such contentions represent? What are the sentiments underlying acceptance them?”
+   To be sure, the integrity of a given religion may depend up to a point on the integrity of the doctrines associated with it. Acceptance of a religion typically involves acceptance of well-defined contentions (concerning morality, the structure of the universe, etc.). That said, those who attack religion on scientific or logical grounds—on the grounds that what Darwin or Einstein said is inconsistent with this or that religious contention— are misguidedly trying to understand religious sentiment in epistemological terms, when in fact it is to be understood in psychoanalytic terms. And this, I believe, is part of the reason why the philosophy of religion tends to be so sterile.
+1.3 The futility of attempts to liberalize religious belief
+A friend of mine who says that she believes in God recently told me that, in her view, “God is love.” When I asked her to explain what she meant, she said that, if there is love in the world, there is, for that very reason, a God. God isn’t some hyper-person, she explained. He or She or It is nothing other than the fact that people love other people.
+   This is all very well. But it isn’t the view of somebody who believes in God. Freud was an atheist, and he certainly believed that people sometimes love other people. In fact, he said that “libido” is one of the basic forces of human psychology.
+   Many philosophers have advocated similar positions, saying that God is nothing other than logic, or truth, or reason. I admire the rationalist sensibility underlying these views. But they’re not the views of a religious person, since there is no shortage of dedicated atheists who believe in logic—that is, who believe that some statements entail some other statements.
+   I don’t know whether there is a God. I don’t even know what it means to say that there is a God. But I know what it doesn’t mean. It doesn’t mean that some inferences go through; it doesn’t mean that some peo- 
+
+ple love some people. So God isn’t truth, logic, or love—even though, if God exists, that entity, whatever it is, may well be maximally logical, perceptive, and caring.
+   Attempts to identify God with reason or truth or love are dishonest and incoherent, and so is every other attempt to show that religious sentiment is compatible with 21st century intellectualism. People should cop to what they really believe. If your belief in God extends no further than your belief in logic or libido, then you do not believe in God.
+1.3.1 “Never explain, never complain”
+Given that religious belief is of its very nature free of the tentativeness and evidence-dependence of scientific belief, religious people have no obligation to defend their views.
+   Many religious people have done so, of course. Many religious people are also scientists, logicians, and philosophers, who, like all other members of those professions, enjoy finding support for their positions. Indeed, some very great philosophers and scientists (e.g., Kant, Newton) have been devoutly religious, and some (e.g., Augustine, Aquinas) have themselves been important religious figures. But to the extent that one is religious and that one’s views are religious views, one is not only not required to defend one’s views, but is actually required to hold that they need no defense. This is because a view that is only as good as the logic and evidence underlying it is ipso facto a non-religious view.
+   Rockefeller said: “never explain, never complain.” In defending a view that one holds, one is conceding that it needs a defense and therefore that it is to be presumed false until proven correct. When one complains, one is saying that one is powerless, and therefore unworthy, since it is by acting, not whining, that the powerful express themselves.
+   Obviously there are contexts where Rockefeller’s dictum is inappropriate. A doctor or lawyer should surely explain, and a person who is abused should surely complain. But that dictum does hold where religious belief is concerned. Defending a religious view is the same as explaining why one holds it, and explaining why one holds it is almost the same as apologizing for it. So, if you are a religious person, you are entitled to explain your beliefs, if you wish to do so. But know that, in doing so, you are conceding that they are only as good as the arguments for them. And in making that concession, you are saying, however unwittingly, that there but for the grace of the mercurial and unpredictable winds of evidential change go they.
+1.4 A conjecture
+In his book Compulsion and Doubt, Wilhelm Stekel (1868–1940), a psychoanalyst with a gargantuan intellect, said that many self-described atheists are actually crypto-believers. I suspect that, when some philosophers speak of the logical or ethical standards to which judgments and acts ought to conform, they are at some level speaking about God. Acceptance of such rarefied and depersonalized arbiters and right and wrong is sometimes, I would conjecture, a distorted and oblique expression of a belief in God.
+1.5 Is there a relationship between the degree to which one is religious and 	the extent to which one is intelligent?
+No. Some of the most intelligent people I know, or know of, are religious and some of the least intelligent are non-religious. (I’ve known many people who were decidedly unintelligent who, in an effort to convince themselves and others of their intelligence, became rabidly anti-religion.) One of the most brilliant philosophers alive is Michael Dummett. Even though he’s devoutly religious, you wouldn’t know it from his work. I myself didn’t know it until after I’d read most of his works; and I found it out, not by reading one of his books, but by reading an interview with him.
+   The reason why people of such intelligence may believe in religious doctrines that are insufficiently supported by facts and logic is that religious belief isn’t about facts or logic. It’s independent of them and isn’t
+
+answerable to them. The part of the mind that mediates religious sentiment is only in very imperfect communication with the parts that mediate rational thought; and religious sentiment being what it is, it is right that this is so, at least after a fashion.
+1.6 The one thing that philosophy has to say about religion
+There is only one qualification to my previous statement that philosophy has nothing to teach us about religion. Plato put forth a very clever argument to the effect that, so far as there are moral truths, their basis lies in the structures of properties, and not in God’s decrees. That argument is known as the “Euthyphro argument,” since it was first put forth in Plato’s dialogue the Euthyphro. I consider that argument to be cogent.
+   Anthony Flew, a contemporary philosopher, said that there is an easy and reliable way to determine whether a person has an aptitude for philosophy: she does if she understands the Euthyphro Argument; she doesn’t if she doesn’t. Having had thousands of students, and having gone over the Euthyphro argument many times in class, I agree with Flew.
+   There is an easy and reliable way to determine whether a person is religious. (But this test only works for people who have studied the Euthyphro argument and who also understand it.) If she agrees with the conclusion of the Euthyphro argument, she’s not religious; and if she disagrees with it, she is.8 Let us now discuss that argument.
+2.0 The Euthyphro dilemma
+Some acts are good and others are bad. Giving money to the needy is good and killing babies is bad. But what makes good acts good, and what makes bad acts bad? Here is one answer:
+
+(G) If an act is good, that is because God likes it. In other words, God’s liking it is what causes it to be good. If an act is bad, God’s disliking it is what causes it to be bad. Until God likes or dislikes an act, it remains neutral.
+
+Basically, to be good is to be liked by God, and to be bad is to be disliked by God.
+   Of course, G assumes that God exists. For argument’s sake, let’s grant that assumption.
+   Is G correct?
+   No. What if God liked rape? Would that make it good? No. Rape would be bad even if God liked it, and God would be bad for liking it.
+   What if God disliked acts of kindness? Would that make such acts bad? No. They would still be good, and God would be bad for disliking them.
+   So G is false.
+   But one might object to this argument:
+   
+   (CG) There’s no way that God would like rape and no way he wouldn’t like acts of kindness. You see, God is maximally good; and it isn’t even a theoretical possibility that something maximally good should like rape or dislike acts of kindness. Your argument therefore fails, since it presupposes that God could like rape and dislike acts of kindness.
+   
+   CG doesn’t work. Let’s suppose, if only for argument’s sake, that God is maximally good and therefore dislikes rape and likes acts of kindness. Why does God dislike rape? Does he just dislike it? Is his dislike of it without any foundation?
+   No. Surely God has a good reason for disliking rape. But what could that reason be? The answer is clear: rape is bad; rape is wrong. So God’s reason for disliking rape is that it is bad and wrong. He sees the fact that rape is wrong; and, on the basis of that knowledge, he judges that rape is wrong.
+   Rape is wrong. God sees that. And God therefore dislikes rape.
+   
+So the fact that rape is wrong is what makes God dislike it. Therefore, it isn’t God’s dislike of rape that makes it wrong.
+   For exactly similar reasons, the fact that kind acts are morally right is what makes God like them. Therefore, it isn’t God’s approval of such acts that makes them right.
+   Conclusion: Morality is independent of God’s views. If, as many of us believe, God is morally perfect and intellectually infallible, then God will like all morally good acts and dislike all morally bad ones. But it isn’t God’s liking an act that makes it good or bad. That act is good or bad all by itself.
+   Question: Could God make rape to be morally good? No. Even God cannot make rape be good. But can’t God do anything? So can’t he make rape morally good? No, and the reasons are similar to those that make God unable to make a square circle. For an elucidation and defense of this point, see Section 4.0.
+2.1 Why, even if correct, the Divine Command Theory is irrelevant to what 	even maximally religious people believe
+Many a sociopathic ghoul has claimed that “God” ordered him to kill. We don’t believe such people. But why not? (In this context, it will be assumed for argument’s sake that we believe there to be a God and also that we believe God to be morally good.)
+   One reason is that what the ghoul in question is claiming is inconsistent with our views about morality. “God would have to be evil to tell Hitler to do those things,” we believe. “Therefore, contrary to what Hitler claimed, God didn’t tell Hitler to do those things.”
+   Of course, there are often other reasons to distrust such people. There is independent evidence of mental illness or of political ambition or of some other factor that would explain why, even though God did not speak to him, the evil-doer in question would say otherwise.
+   That said, if some otherwise utterly normal person were to tell you that God told him to blow up a school bus, you would, for that very reason, question the credibility of his claim. This shows that even if God speaks to certain individuals, it isn’t because of what He told them that we believe that rape, theft, and so on, are wrong. If I tell people that God personally told me that x is wrong, I’ll be seen as a fraud or a madman by those who think that x is good and who therefore think that God would never condemn it, and I’ll have no effect on those who already think that x is wrong.
+   If somebody claims that God said X, it is only by considering the merits of X itself that we can determine whether that claim is legitimate or not. This means that our decision to accept or reject X is not based on what God says. So even if God believes that X is good and directly tells certain people this, that isn’t why we believe that X is good. Our views as to what is right and wrong don’t have anything to do with what God believes. So even if it’s correct, the Divine Command Theory can do nothing in the way of legitimating existing religious practices or beliefs.
+3.0 The problem of evil
+Many people hold that there is a God and that He is all-powerful, all-good, and all-knowing. For argument’s sake, let us suppose that this is true. In that case, we are stuck with a problem. Many bad things happen in this world (e.g., murder, disease, physical and emotional pain). But if God is all-knowing, all-powerful, and all-good, then whenever something bad is going to happen, He’ll know it (since He’s all-knowing); He’ll also want to prevent it (since He’s all good); finally, He’ll be able to prevent it (since He’s all-powerful). Nonetheless, there obviously are many bad things in this world. This suggests that there is no God or that, if there is a God, He isn’t all-powerful, all-good, and all-knowing.
+   Here are some views that people adopt in order to make sense of the information just put forth:
+   
+   (a) There is no God.
+   (b) There is a God, but He’s not all-powerful, all-good, and all-knowing.
+
+(c) There is no badness—there is only the illusion of badness. If we were to know God’s master-	plan, we’d see that it’s okay that people have their arms and legs blown off.
+
+But there’s a fourth view, and it is the view that, from a philosophical standpoint, is the most interesting:
+
+(d) God exists, and He is all-powerful, all-good, and all-knowing. Furthermore, there is much evil in the world. And these statements are consistent with one another. There is nothing absurd in believing in the existence of badness and in the existence of all-powerful, all-good, and all-knowing God.
+
+   But we saw earlier that (d) appears to be incoherent. If there is a God, and He’s all-powerful, all-good, and all-knowing, then He’ll prevent bad things from happening. But bad things do happen. So it seems to follow that either God isn’t all-powerful, all-good, and all-knowing or He simply doesn’t exist. 
+   But many fine thinkers hold that (d) is not incoherent. They hold, in other words, that (d) makes perfectly good sense. In their view, it is perfectly reasonable to hold that, despite all the badness in this world, there exists an all-powerful, all-good, and all-knowing God.
+   Attempts to show that (d) is coherent are known as theodicies. Following are the two most plausible theodicies.
+3.1 Theodicy #1—The Free-Will Defense
+Because He is good, God wants the world to be a good place. In fact, He wants it to be as good as possible. A world where nothing has free will wouldn’t be a very good world, and it wouldn’t be as good as one where there were creatures with free will. A world of robots who do no wrong isn’t as good as a world of free creatures that do some wrong. (Would you rather have a son or daughter who is a robot who never does anything wrong but doesn’t have a soul? Or would you rather have a son or daughter who has a soul but sometimes parties too hard?) Not wanting us to be soulless robots, God gave us free will. But now that we have free will, we’re free to commit bad acts—to steal, kill, and so on. And that’s why, despite God’s goodness, there’s badness in the world.
+
+There are three problems there.
+3.1.1 First problem: Theodicy #1 isn’t compatible with the compatibilist 	conception of freedom
+In Chapter 15, we saw reason to believe that, not only is determinism compatible with freedom but is actually a prerequisite for it. If this is the case, then, even if we are free, God is still responsible for the badness that we, in our freedom, inject into the world.
+   But even if we set aside this problem, there are two other grave problems with Theodicy #1, as we’ll now see.
+3.1.2 Second problem: There’s too much evil for Theodicy #1 to be correct
+Couldn’t God allow us to have free will in general but intervene in cases where somebody was going to commit particularly horrible acts or was going to commit horrors on a mass scale?
+
+Here’s how advocates of Theodicy #1 deal with this:
+
+(AF9) Suppose that God thwarted every would-be Hitler and Stalin. Suppose, in other words, that God always saved us from ourselves at the moment of truth. In that case, we’d be in a state of perpetual infancy—we’d never have to learn to manage our own affairs. God doesn’t abridge the free will of Hitler and Stalin because, were he to do so, he’d be running the show, instead of giving us a chance to demonstrate and develop our characters by running the show for ourselves. 
+
+Whatever its merits, there is a very obvious problem with AF, which we’ll now discuss.
+3.1.3 Third problem: not all badness is our doing
+The third problem is not all badness results from human activity or, therefore, from the exercise of free will. There are diseases, floods, earthquakes, etc. The Free-Will defense has nothing to say about these, since it isn’t our free will that causes these bad things to happen. So couldn’t God spare us these horrors? And wouldn’t he do so if he really were all-good, all-powerful, and all-knowing? The response to this question lies in: 
+3.2 Theodicy #2—the no pain/no gain defense
+Suppose that every time a disaster was about to strike, God stepped in. In that case, life would be a big cakewalk, and we, as a species, would never develop any character. We’d have it too easy. Our ingenuity and fortitude would never be put to the test. We’d be deprived of a chance to prove and improve ourselves, which would strip life of much of its meaning. 
+   If life were easy, it wouldn’t be a challenge; if it weren’t a challenge, it wouldn’t be meaningful.
+   
+   A certain amount of strife enriches life. But too much impoverishes it. There’s too much strife for this theodicy to work. That’s my position, anyway. Others disagree.
+4.0 Can God do the impossible?
+Even if, as we’ll assume in this section, God exists and is omnipotent, She is unable to make 1 + 1 = 3.
+   For something to be impossible is not for it to be very hard to do: it is for the very idea of doing that thing to be an incoherent one. It is, in other words, for there to be no such thing as doing that thing. Something is impossible just in case nothing would count as doing it—just in case, in other words, no meaningful statement that would describe the occurrence of that thing.
+   Nobody can read a thousand-page book in two seconds. But there is some sense in which it would be possible, albeit very hard, to do so. The reason it is possible to read such a large book in so little time is that the idea of doing so is not incoherent. We know what it is to read a long book in (e.g.) a week. On that basis, we know what it would be to read such a book in a day or an hour or even a second. So, even though nobody can read a thousand-page book in two seconds, the idea of somebody’s doing so is not an incoherent one; and that is why somebody’s doing so is possible. (Of course, to say that it is possible is not to say that it is practically possible. It is only to say that it is logically possible.)
+   By contrast, it seems impossible—not just practically, but logically—that something should preexist itself. It seems impossible, in other words, that something should come into existence before it comes into existence or, if it is an event, that it should occur before it occurs. What is the difference between somebody’s reading a thousand-page book in two seconds and an event’s occurring before it occurs? Why is the one possible and the other impossible?
+
+4.1 Impossibilities are expressed by self-undermining statements and, 	therefore, by non-statements
+The answer is not hard to find. The statement:
+
+(PE) X preexists itself
+   
+   denies the very thing that it affirms. It says (1) that, for some time t, X began to exist at t and (2) that, for some earlier time t*, X began to exist at t*. In saying (2), PE is saying that X did not, in fact, begin to exist at t. So PE says that X begins to exist at t, and it then says that X does not begin to exist at t. PE therefore says that the very thing (or, in any case, one of the very things) that it says is false.
+       Thus, the reason why it is impossible that X should preexist itself is that the very idea of X’s doing so is self-defeating. To think that X preexists itself is to think (A) that X begins to exist at time t and also (B) that (A) is false. Since such an idea is self-contradictory, it fails to say anything coherent about reality.
+   What we just said about the statement “God preexisted himself ” is true of any other statement that describes an impossibility. For example, nothing can be a square and a circle at the same time. Therefore: 
+
+(SC) “X is a square circle”
+
+describes an impossibility.
+   But can God do the impossible? Can God create a square circle? I say “no.” And I also say that, even though God cannot create a square circle, this does not show that Her powers are in any way limited. 
+   Let us look at SC more closely. A square is by definition something that has four straight sides. A circle is by definition something that has no straight sides. So (SC) makes two statements: first, that X has four straight sides; second, that it has no straight sides (and therefore doesn’t have four straight sides). So SC says that the very statement (or, at any rate, one of the very statements) that it affirms is false. So it affirms a statement and then withdraws it, thus failing to make any statement.
+   Thus, when we say that God cannot make SC be true—when we say, in other words, that God cannot create a square circle—there is no coherent statement that we are saying that God cannot make true; and there is, therefore, nothing that we are saying that God cannot do. So in saying that God cannot create a square circle, there is no coherent statement that we are negating, and we are therefore not managing to ascribe any genuine limitation to God’s powers.
+4.2 The confusion underlying the traditional conception of what it is to be 	impossible
+We pre-theoretically tend to think of impossibility as a property of things. Consider the following statements:
+
+(SC) Square circles are impossible—so are perpetual motion machines, self-causing events, and even primes greater than two.
+
+SC is a true statement. But, at first glance, SC seems to be self-defeating. For it seems to be saying that there exist certain things—namely, square circles, perpetual motion machines, and even primes greater than two— that cannot, and therefore do not, exist. In other words, SC seems to be saying that there exist things that don’t exist. But if that is what SC is saying, then it is not only false, but incoherent.
+   But it is not incoherent. In fact, it is true. How can we make sense of all this?
+   The key here is to distinguish between objects and statements. SC doesn’t make a statement about objects: it makes a statement about statements. It says that all statements of the form X is a square circle (and X is a perpetual motion machine and X is an even prime greater than two) are false.10 So SC doesn’t say of any object that it is, or is not, a perpetual motion machine. It couldn’t possibly say this, since there are no perpetual motions
+
+and there are therefore no perpetual motion machines of which to say that they are impossible (or, for that matter, of which to say anything). Rather than making a statement about non-existent perpetual motion machines—and thus about things that don’t exist to have statements made about them (or, for that matter, to have anything else done to them)—SC makes a statement about very much existing statements. More specifically, it says that every statement having the form X is a perpetual motion machine is untrue. 
+   In general, impossibility is not a property of things. After all, if something is impossible, then it cannot, and therefore does not, exist. And if it does not (let alone cannot) exist, then there exists no thing to have the property of being impossible. Impossibility is a property, not of things, but of statements. And, as we saw in the previous section, a statement is impossible if it is incoherent—if, in other words, it contradicts itself. 
+4.3 Explicit versus implicit self-contradiction
+We must bear in mind that most incoherent statements contradict themselves implicitly, not explicitly. The statement:
+
+(KB) X is knowledge, but it isn’t true belief
+
+is incoherent. But it does not overtly or explicitly have the form P and not-P. Nonetheless, it implicitly has that form. Since any instance of knowledge is necessarily an instance of true belief, KB does, albeit implicitly, say that X simultaneously is, and is not, true belief. Therefore, KB does, albeit implicitly, say X is true and it is not the case that X is true belief. So KB does in fact have the form P and not-P, that being why it is incoherent. 
+   Let us revisit the topic of God’s omnipotence. To say that God cannot do the impossible is therefore not to say that there exist certain things that God cannot do or objects that He cannot create. There exist no impossible objects. If something exists, then it isn’t impossible. But there are incoherent statements. And when we say that “square circles” are impossible, we are saying that statements of the form X is a square circle are selfundermining. An incoherent statement is one that does not, ultimately, say anything (since it denies, and therefore retracts, what it affirms). So there is nothing that God’s “inability,” so to speak, to create square circles is an inability to create.
+4.4 Incoherence versus meaninglessness
+A moment ago, I said that, ultimately, an incoherent statement is one that doesn’t say anything. This statement must be understood aright. The statement:
+
+(A) X is a square circle
+
+is obviously, at some level, meaningful; and it obviously does say something. An example of a completely meaningless utterance—one that simply fails to say anything at all—would be:
+
+(B) Frog the marathon pool clearly dabble.
+
+It is clear that (A) is incoherent. But it is not clear that (A) is meaningless. Indeed, (A) seems to be far from meaningless. By contrast, (B) seems to be quite meaningless—so meaningless, in fact, that it’s not even clear if it can be described as “incoherent.” (A) and (B) are obviously not in the same category.
+   A related point is that, whereas (B) doesn’t say anything, (A) very much does seem to say something, albeit something defective. And this, of course, is why (A) and (B) are clearly not in the same category, notwithstanding that they are both failed statements. What, then, is the difference between incoherence and meaninglessness? And in what sense, if any, does (A) fail to say anything?
+   For a statement to be meaningless is for it to have no meaning. For a statement to be incoherent is for it to have two (or more) opposed meanings. (B) has no meaning. It doesn’t say anything. By contrast, (A) has two
+
+meanings. (It says, on the one hand, that X has four sides and, on the other, that X has no sides and therefore less than four sides.) So, in the short term, (A) does have a meaning—indeed, it has two of them. But ultimately it has no meaning, since those two meanings cancel each other out. So ultimately (A) fails to say anything. (Saying two opposed things is a way of failing to say anything—just as taking one step forward and one step backwards is a way of failing to go anywhere, even though it is a way of failing to go anywhere that involves going to two places.) Therefore, my previous statement—that incoherent statements ultimately fail to say anything— has turned out to be true, and also capable of being reconciled with the fact that it clearly does, at some level, have some kind of meaning (unlike (B)).
+5.0 Anselm’s version of the ontological argument for God’s existence
+The so-called “ontological argument” for the existence of God was first put forth explicitly by St. Anselm. There are different versions of this argument. We’ll consider three, starting with Anselm’s own.
+(AG11) Let us define “God” as a “maximally great being.” (In this context, a being is “maximally great,” if it isn’t possible for me, or you or whoever, to conceive of anything greater than it.)With this in mind, consider the following argument. I can conceive of a maximally great being. Thus, a maximally great being exists in my mind. For argument’s sake, suppose that such a thing existed in my mind, but not also in reality. In that case, it would be possible to conceive of something greater than that thing—namely, something existing in reality but otherwise just like that thing. (A real mansion is better than an otherwise identical imaginary mansion. Similarly, a real maximally great thing is better than a merely imaginary one.) It is therefore incoherent to suppose that a maximally great thing exists in my mind but not also in reality. So given that such a thing exists in my mind, it must also exist in reality. Conclusion: a maximally great thing exists. In other words, God exists.
+
+AG is a spurious argument. The problem lies in the italicized statement, which we’ll call “MG.” Correctly interpreted, MG doesn’t say that God exists in my mind. If God exists, She is out there, in the world, not in my mind. No idea of mine is God. The only things that exist in my mind are thoughts, feelings, etc. Some of these things are representations of things that exist outside of my mind. But the fact that a representation of the Sun exists in my mind obviously doesn’t entail that the Sun itself exists in my mind. And the statement “the Sun exists in my mind” is a brazen falsehood, unless it’s misleading of saying that a Sun-idea so exists. Similarly, the statement that God exists “in my mind” is patently false, unless it’s a misleading way of making the irrelevant point that a God-idea so exists. So, to the extent that it’s true, MG doesn’t entail that God exists in any way, shape, or form; and, therefore, no contradiction from the supposition that MG is true but that God doesn’t exist “in reality.”
+   Here’s a similar line of thought. Correctly interpreted, MG says that I know how a thing must be if it is to be maximally great. In other words, it says that I know what conditions a thing must fulfill in order to be maximally great. 
+   But given only that I have this knowledge, it doesn’t follow that there exists anything that has any of the requisite properties. It doesn’t follow that there is anything that is all-powerful or all-knowing or all-good or that has any other virtue specific to God. AG goes through only if there exists something that has these properties. The italicized statement must guarantee that there is such a thing; otherwise the argument collapses. It doesn’t, and the argument collapses.
+
+5.1 A simpler version of the ontological argument
+Step 1. God is a maximally excellent thing.
+   Explanation: Just as squares are, by definition, four-sided, so God is, by definition, maximally excellent. If we found that object X was deficient in some way—that it was ill-willed or stupid or lazy—then it would, for that very reason, fail to be God.
+
+Step 2: Because he is a maximally excellent thing, God has all excellences, and he has them to the highest degree.
+   Explanation: Consider some excellence—for example, physical strength. And suppose that X is puny and weak; that is, that X has physical strength only to a small degree. Obviously X isn’t God. So God must be maximally strong and, for similar reasons, must be maximally smart, kind, good-looking, etc. 
+
+Step 3. Existence is an excellence.
+   Explanation: There are a lot of ways that one can fail. One can be lazy, stupid, mean, etc. But no failure is as bad as the failure to exist. If you don’t exist, you are a nothing, a complete and total zero, and you are therefore a nothing compared to anyone—even the biggest loser you know.
+
+Conclusion: God must have existence. God is, by definition, maximally excellent and therefore has every excellence. Since existence is an excellence, it follows that God has existence.
+5.1.1 This argument evaluated
+No good argument can assume the truth of its conclusion: arguments mustn’t “beg the question.” But the ontological argument appears to do just this. The problem lies in the first two steps. Step 1 is just another way of saying:
+
+Step 1*: There exists a certain thing, namely God, which is maximally excellent.
+
+And Step 2 is a way of saying:
+
+Step 2*: There exists a certain thing, namely God, which, because he is maximally excellent, has every excellence to the highest possible degree.
+
+But if Steps 1 and 2 are taken in this way, then the argument question-beggingly assumes that God exists, and thus fails to prove it.
+   So, if the Ontological argument is to go through, Steps 1 and 2 must be interpreted in such a way that they don’t assume that God exists. Thus interpreted, their meanings are:
+
+Step 1#: If God existed, then She would be a most excellent being.
+
+Step 2#: If God existed, then God would have every excellence to a maximally high degree.
+
+   So if the ontological argument is to avoid begging the question—in other words, if it is to avoid simply assuming God’s existence—then we must replace Steps 1 and 2 with Steps #1 and #2. So the first three steps must become:
+
+Step 1#. If God existed, She would be a most excellent being.
+
+Step 2#: If God existed, then God would have every excellence to a maximally high degree.
+
+Step 3. Existence is an excellence.
+
+What follows from these three statements is that:
+
+Conclusion*: If God exists, then He has every excellence, including existence.
+   
+   In other words, if God exists, She exists.
+   But that statement is completely innocuous. Even atheists grant that if God existed, then She would exist.
+So the ontological argument proves nothing.
+5.1.2 The simplest possible version of the ontological argument (SOA)
+Failing to exist is a way of being imperfect. God is perfect. Therefore, God doesn’t fail to exist.
+5.1.3 This argument evaluated
+SOA presupposes that a given thing’s failing to exist makes it imperfect. SOA therefore presupposes that a given thing can fail to exist. This seems reasonable enough at first. (“Wouldn’t I be a lesser person if I failed to exist?”) But it’s incoherent. If you didn’t exist, you wouldn’t be a lesser person. There would be no you to begin with; and there would thus be no you to fail to do or be this or that. 
+   For there to be something that failed to exist would be for there to exist something x such that x did not exist. And that, clearly, is not possible.
+   “But surely there are things that don’t exist,” it will be said. “Square circles don’t exist. Neither does Zeus.”
+
+This position is dealt with at length in Chapters 1 and 8. But it’s easy to say what’s wrong with it.
+The sentence:
+
+(SC) “square circles don’t exist”
+
+doesn’t say that
+
+(SC#) there exist objects that are both square and circle; and those objects don’t exist, which would be nonsense. Rather, SC says that
+
+(SC*) any given thing is a non-square if it’s a circle
+   
+   In other words, pick any given object: if it’s a circle, it isn’t a square. And the sentence
+
+(ZE) “Zeus doesn’t exist”
+
+doesn’t mean that:
+
+(ZE#) there exists is a certain thing, viz. Zeus, that doesn’t exist.
+
+ZE makes the innocuous claim that given any object x, x doesn’t have the property of being a unique,
+lightning-bolt hurling god [etc.].
+   Thus, SC and ZE attribute properties to properties. They don’t attribute non-existence to objects.
+   And:
+
+(CS) square circles do exist
+
+and
+
+(EZ) Zeus exists
+
+are to be understood similarly. There isn’t some square circle x such that CS is to the effect that:
+
+(MCS12) x exists.
+
+Rather, CS is to the effect that:
+
+(MCS1) it isn’t true that everything that is a square isn’t also a circle
+
+or, alternatively,
+(MCS2) the set of circles overlaps with that of squares.
+
+And there isn’t some god x such that x hurls lightning bolts (etc.) such that EZ is to the effect that:
+
+(MEZ) x exists.
+
+Rather EZ is to the effect that:
+
+(MEZ) it isn’t true of any given thing x that x doesn’t uniquely have the property of being something that lives on Mt. Olympus and hurls lightning bolts [etc.].
+   
+   It isn’t even possible to attribute non-existence to a non-existent object. One’s doing would so would involve there existing some non-existent object to which one attributed non-existence. But that isn’t possible. Nor is it possible to attribute existence to a non-existent object. One’s doing so would involve there existing some non-existent object to which one attributed existence. But that isn’t possible.13
+   Thus, nothing to which existence or non-existence is attributed is non-existent. This is a pretty innocuous claim, as it’s identical with the obvious truth that there is no object x such that existence or non-existence is attributed to x and such that x doesn’t exist. 
+   It follows that a precondition for a thing’s being described as existent or non-existent is its existing. This means that, if P is the proposition one affirms when one describes a given object as existent, there is no negation of P. Since any given proposition can be negated, it follows that, in attributing existence to a given thing, one isn’t affirming anything. It is meaningless to say of specific individuals that they exist or don’t exist.14
+
+ENDNOTES
+
+Name:_______________________________________ Date: _______________________________
+EXERCISES
+1.	Consider the following argument:
+
+(*) Since God is by definition something that lacks no perfection, and since lacking existence would be a rather extreme way of lacking a perfection, it follows that God exists.
+
+Is (*) a cogent argument? In other words, does it establish the conclusion that it is meant to establish?
+
+a.	Yes.
+b.	As posed, that question cannot be answered in a principled manner, since one could provide a correct response to it only if one knew things (e.g., what does “God” mean precisely? what is a “perfection”?) concerning which the question provides insufficient relevant information.
+c.	Both of the above.
+d.	None of the above.
+
+2.	 For argument’s sake, let’s assume that killing babies is always unconditionally wrong. Let’s also assume that there is an all-knowing, all-good, all-powerful God. In light of these assumptions, consider the following proposition:
+
+(*) Killing innocent and healthy babies, when nothing other than sadistic pleasure can come of it, is at least sometimes morally good.
+
+Could God make (*) be true? (Note: this question doesn’t concern the sentence used to express (*), but rather the principle expressed by that sentence.)
+
+a.	Yes. After all, God can do anything.
+b.	No. Even if God is all-powerful, He/She cannot make (*) be true.
+	c.	Possibly, but not necessarily. It depends on psychological facts about babies and also about morality information which is absent from the question, making that question unanswerable in its current form.
+3.	Let’s assume that the number seven necessarily exists and is also necessarily an odd number. Let’s also assume that there is an all-knowing, all-good, all-powerful God. Relative to these assumptions, could God destroy the number seven or make it be even?
+a.	Possibly. The answer depends on the outcome of carefully executed physical experiments, the reason being that arithmetical facts are high-level generalizations about the physical world. Since no information as to the nature of such experiments is provided in the question, no answer can be given to that question in this context.
+b.	Absolutely.
+c.	None of the above.
+
+4.	Which of the following propositions, if any, could an omnipotent God make true?
+a.	Some events occur before they occur.
+b.	There are finitely many even numbers.
+c.	All people are benevolent.
+
+5.	Put forth an argument FOR the Divine Command Theory (DCT).
+   But make sure that, before doing so, you do the following. First, clearly state (in your own words) the arguments that we considered against DCT. Make sure that you make it clear what it  means to say that “normative questions must be distinguished from historical questions”; and make sure that you also explain why that precept is relevant in the present context. Explain what the “Euthyphro” problem is. 
+   Also, some advocates of DCT sometimes argue that, so far as DCT seems to have counterintuitive consequences, that is not because DCT is wrong, but is instead because our ethical judgments reflect idiosyncrasies of our cultures and upbringings. Explain why, even though that maneuver has merit, it comes with a heavy price. (Hint: if you say that our ethical judgments are by-products of our upbringing, and therefore aren’t hewed to anything objective, then you are ipso facto denying that your judgments are any good, in which case you forfeit your right to assert anything—whether it be DCT or Newtonian physics.) 
+   Having done all of that, say why, in your judgment, DCT prevails against all of problems that have been identified.
+   Fun fact: St. Thomas Aquinas (who lived in the 13th century) argues against DCT (along lines similar  to the ones we’ve discussed). Since Aquinas’ time, it has been heresy in the Catholic Church to accept DCT. (Incidentally, this strongly suggests that, contrary to what I said in Section 1.6, one can reject DCT and be religious. In fact, Aquinas argues that, to be genuinely religious, one must reject DCT. My feeling is that to the extent that Aquinas rejected DCT, he wasn’t religious and that to the extent that he was religious, he actually did accept DCT, even though, evidently, he didn’t admit it to himself. Religious intellectuals are masters of compartmentalization.)
+   
+6.	One of the two theodicies that we discussed presupposes that there is such a thing as free will. State that theodicy. Then say why it is questionable whether there is such a thing as free will. Also say why, supposing that there is free will, it wouldn’t necessarily help the theodicy in question.
+
+7.	According to many, God is omniscient. For the purposes of this question, suppose this to be correct. Given that God is omniscient, He/She has always known exactly what each person—past, present, and future— would do at each moment of his/her life. Does this mean that you have no free will? If “yes,” does that entail that nobody is morally responsible for their actions? If “no,” does that mean that people are necessarily responsible for their actions?
+
+8.	The free-will theodicy presupposes that God is omniscient and therefore knows exactly what the future holds. But if Gods knows now what I will do 10 years from now, it’s hard to see how I could possibly have any free will. The Free Will defense thus seems to have the absurd consequence that people both do, and do not, have free will. Say what a proponent of the Free Will defense might say in response to this charge. Make sure that the argument that you attribute to this person is substantial—don’t saddle them with a “straw” argument. Then evaluate that person’s argument.
+
+9.	According to Descartes, God, being omnipotent, can make 1 + 1 = 3. According to Wittgenstein, even if God is omnipotent, He/She cannot make 1 + 1 = 3. In other words, even an omnipotent being cannot make 1 + 1 = 3. The idea, basically, is that the very idea that 1 + 1 should equal 3 is so incoherent that there isn’t anything to be done—if x + y = 3, then ipso facto either x or y isn’t equal to one. Just as the world’s greatest athlete couldn’t score a touchdown in tennis (since a game where a touchdown is scored is ipso facto not tennis), so even the most powerful being couldn’t make 1 + 1 = 3 (or triangles have four sides). In this chapter, I argued that, for similar reasons, even an omnipotent being couldn’t make rape, wanton torture, etc., morally correct.
+   
+In your own words, reproduce my argument. Then put forth your own view of the matter. In other words, argue that, contrary to what I say, an omnipotent being could make rape be morally okay (and could make 1 + 1 = 3). Or, alternatively, argue that, just as I argue, such a being couldn’t do those things. If you argue the latter, make sure to consider arguments against my position.
+
+10.	What is a theodicy? Identify two theodicies. These theodicies don’t have to be the ones discussed in this chapter; nor do they have to be especially compelling. They must simply satisfy the formal requirements laid down in the definition of the term “theodicy.”
+
+11.	Explain the reasoning behind the two theodicies discussed in class. (Your complete answer should be no more than five sentences.)
+
+12.	Identify one important problem with the “free-will” theodicy. Your answer cannot be that the concept of free will is incoherent, or anything along those lines. (Your answer can be anywhere from one to three sentences.)
+
+13.	Explain why, even if God is omnipotent, He/She cannot create two distinct, straight objects (in a Euclidean space) that are parallel but intersect.
+
+14.	Identify some problems with rule-utilitarianism (RU), which is to be distinguished from act- utilitarianism (AU). In your paper, say what utilitarianism is in general. Then say how AU and RU differ from each other, saying also how RU avoids many of the problems with AU. Then say why RU has (or at least appears to have) some problems of its own that warrant its rejection.
+
+15.	What is the problem of evil (POE)? What are two proposed solutions to it? How do those solutions fall short (or appear to do so)?
+
+16.	One of the solutions we considered to the problem of evil (POE) presupposes that we have free will. But there are two conceptions of free will: the compatibilist and the incompatibilist. Explain why a compatibilist (see Chapter 15) conception of free will doesn’t help the aforementioned solution to POE. Then say whether an incompatibilist solution can make that solution work.
+
+17.	What is Divine Command Theory, and what are two problems with it?
+
+1.	“OG” is short for “omnipotent God.”
+2.	“AG” is short for “Aquinas on God.”
+3.	This argument and the next are found in Aquinas’ Summa Theologica.
+4.	So is its Latin equivalent. (Aquinas wrote in Latin.)
+5.	There are other problems with AG1. For example: It starts off by saying that every event has a predecessor, and ends by saying that there is a first event (i.e., that not every event has a predecessor).
+6.	What does it mean to say that it can be parsed in more than one way? Sentences aren’t strings of words. They’re strings of phrases. A phrase is the largest grammatically cohesive unit that is smaller than a sentence. To say that a sentence can be parsed in different ways is to say that there are different ways of grouping the words composing it into phrases.
+7.	“Credo quia absurdam”—I believe because it’s absurd. The medievals said this. They were right—after a fashion. I learned of this expression from reading Freud’s (1933) book Civilization and its discontents.
+8.	St. Thomas Aquinas (1225–1274) accepted the argument about to be presented. This would obviously seem to be inconsistent with my statement that religious people reject it. But—and I say this with all due to respect to devout Catholics—my suspicion is that, ultimately, he was a philosopher who, living when he did, had to express his philosophical views in religion-friendly terms. True religion is fundamentalism, and fundamentalists don’t accept the Euthyphro argument. (Given their views, they are right not to accept that argument.)
+9.	“AF” stands for “advocate of the Free-Will defense.”
+10.	This point was made by Bertrand Russell (1920).
+11.	“AG” is short for “argument for God’s existence.”
+12.	“MCS” stands for “meaning of CS.”
+13.	Nathan Salmon (2005: Chapters 1–3) argues that it can meaningfully and correctly be said of nonexistent entities that they exist—and also don’t.
+14.	Russell rejects the ontological argument for much the reasons just given. The argument just given is a refinement of one that he put forth. Kant too rejected the ontological argument. The problem with it, he said, is that it falsely assumes that “existence is a predicate.” It isn’t clear exactly what he meant by this, but what he had in mind was obviously similar to what we, following Russell, have been saying.
+---------------
+
+------------------------------------------------------------
+
+---------------
+
+------------------------------------------------------------
+

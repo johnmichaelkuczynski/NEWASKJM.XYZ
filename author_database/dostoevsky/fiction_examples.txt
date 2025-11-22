@@ -1,0 +1,258 @@
+FYODOR DOSTOEVSKY - FICTION EXAMPLES
+
+=========================================
+NARRATIVE OPENING - CRIME AND PUNISHMENT
+=========================================
+
+**Immersion into Consciousness**:
+
+"On an exceptionally hot evening early in July a young man came out of the garret in which he lodged in S. Place and walked slowly, as though in hesitation, towards K. bridge.
+
+He had successfully avoided meeting his landlady on the staircase. His garret was under the roof of a high, five-storied house and was more like a cupboard than a room. The landlady who provided him with garret, dinners, and attendance, lived on the floor below, and every time he went out he was obliged to pass her kitchen, the door of which invariably stood open. And each time he passed, the young man had a sick, frightened feeling, which made him scowl and feel ashamed. He was hopelessly in debt to his landlady, and was afraid of meeting her."
+
+**TECHNIQUE**:
+- Third-person deep (inside Raskolnikov's consciousness)
+- Physical details (heat, garret, stairs) set mood
+- Psychological state immediately visible (shame, fear)
+- Social circumstance (debt, poverty) established
+- Tension building from first paragraph
+
+=========================================
+PSYCHOLOGICAL DISINTEGRATION
+=========================================
+
+**After the Murder** (Crime and Punishment, Part II):
+
+"He was in full possession of his faculties, free from confusion or giddiness, but his hands were still trembling. Afterwards, when he recalled that time, every detail stood out with sharp precision. The moments fixed themselves in his mind, as if forever, and the more completely the less conscious he had been at the time. He looked about: the door to the stairs was locked; from the courtyard came not a sound. The old woman was dead. He turned to the body...
+
+He pulled off the [blood-soaked] sock and suddenly, as though at a command, gave himself up. He sat down on the sofa again. Immediately thereafter, feeling unbearably oppressed, he lay down again on the bed without any thought, and gave himself up.
+
+Why? There was no one to blame; he had decided it all himself. What made him do it? There was nothing to be done about it!"
+
+**TECHNIQUE**:
+- Fragmented consciousness (sharp details amid confusion)
+- Physical state mirrors psychological (trembling hands)
+- Immediate disintegration (cannot understand own actions)
+- Inner voice questioning ("Why?")
+- No distance between narrator and character's torment
+
+=========================================
+SONYA READS LAZARUS
+=========================================
+
+**Crime and Punishment, Part IV, Chapter 4**:
+
+"Sonya opened the book and found the place. Her hands were shaking; she had not the voice to read. For some moments she could not bring out the first syllable.
+
+'Jesus therefore again groaning in himself cometh to the grave. It was a cave, and a stone lay upon it...'
+
+Her voice rang out, firm and clear... Raskolnikov understood why she had been reluctant to read to him, and the more he understood, the more he urged her on. He understood all the hidden meaning... She was trembling in real physical terror at what she was doing... And at the same time he knew now, and knew for certain, that although it filled her with dread and suffering, yet she had a tormenting desire to read and to read to him... at whatever cost to herself...
+
+'And he that was dead came forth.'
+
+She read loudly and distinctly... underlining every word. The candle-end was flickering out in the battered candlestick, dimly lighting up in this beggarly room the murderer and the harlot who had so strangely been reading together the eternal book."
+
+**TECHNIQUE**:
+- Biblical text embedded in narrative
+- Spiritual dimension made concrete
+- Paradox: "murderer and harlot... the eternal book"
+- Resurrection theme foreshadowed
+- Physical details (flickering candle, beggarly room) anchor transcendent moment
+- Dual consciousness (both Raskolnikov's understanding and Sonya's terror)
+
+=========================================
+UNDERGROUND CONFESSION
+=========================================
+
+**Notes from Underground, Part I, Opening**:
+
+"I am a sick man... I am a spiteful man. I am an unattractive man. I believe my liver is diseased. However, I know nothing at all about my disease, and do not know for certain what ails me. I don't consult a doctor for it, and never have, though I have a respect for medicine and doctors. Besides, I am extremely superstitious, sufficiently so to respect medicine, anyway (I am well-educated enough not to be superstitious, but I am superstitious). No, I refuse to consult a doctor from spite. That you probably will not understand. Well, I understand it, though. Of course, I can't explain who it is precisely that I am mortifying in this case by my spite: I am perfectly well aware that I cannot 'pay out' the doctors by not consulting them; I know better than anyone that by all this I am only injuring myself and no one else. But still, if I don't consult a doctor it is from spite. My liver is bad, well—let it get worse!"
+
+**TECHNIQUE**:
+- First-person confession
+- Self-lacerating honesty
+- Contradictory statements (educated but superstitious)
+- Spite as only freedom
+- Parenthetical asides show fractured thought
+- Consciousness turning on itself
+- Addressing reader directly ("That you probably will not understand")
+
+=========================================
+THE GRAND INQUISITOR
+=========================================
+
+**Brothers Karamazov, Book V, Chapter 5 (excerpts)**:
+
+Ivan's Poem to Alyosha:
+
+"'My story is laid in Spain, in Seville, in the most terrible time of the Inquisition... He came softly, unobserved, and yet, strange to say, everyone recognized Him... The people are irresistibly drawn to Him, they surround Him, they flock about Him, follow Him. He moves silently in their midst with a gentle smile of infinite compassion. The sun of love burns in His heart... He holds out His hands to them, blesses them, and a healing virtue comes from contact with Him...'
+
+[The Inquisitor arrests Him]
+
+'Is it Thou? Thou?' but receiving no answer, he adds at once. 'Don't answer, be silent. What canst Thou say, indeed? I know too well what Thou wouldst say... Thou hast no right to add anything to what Thou hadst said of old. Why, then, art Thou come to hinder us?... We are working not with Thee, but with him... We have corrected Thy work and have founded it upon miracle, mystery and authority... Tomorrow I shall condemn Thee and burn Thee at the stake...'
+
+[Christ is silent throughout. At the end:]
+
+'The old man longed for Him to say something, however bitter and terrible. But He suddenly approached the old man in silence and softly kissed him on his bloodless aged lips. That was all his answer.'
+
+The kiss glows in his heart, but the old man adheres to his idea."
+
+**TECHNIQUE**:
+- Story within story (Ivan's poem)
+- Dialogue becomes monologue (Christ silent)
+- Ideas embodied in characters
+- Theological-philosophical debate through fiction
+- Symbolic action (the kiss) as answer
+- No explicit resolution (Inquisitor "adheres to his idea")
+- Polyphonic: Ivan's position given full force
+
+=========================================
+CHARACTER INTRODUCTION - POLYPHONIC
+=========================================
+
+**Brothers Karamazov - Introducing Ivan**:
+
+"Ivan Fyodorovich was a young man of about twenty-four, uncommonly robust and vigorous, and of strikingly handsome countenance. He was a student in the physical and mathematical faculty of the University... His mind was of a peculiar cast. He was of that peculiar mentality... which sets certain convictions in the minds of people who are incapable of compromise... A certain habit of thought and certain leanings had implanted in him at a very early age a disbelief that was passionate and violent..."
+
+**TECHNIQUE**:
+- Physical description grounds character
+- But immediately moves to mind, ideas
+- Character's ideas are independent (not just author's voice)
+- Establishes character as thinker with real positions
+- Sets up for polyphonic testing of ideas
+
+=========================================
+DIALECTICAL TESTING - IVAN'S REBELLION
+=========================================
+
+**Brothers Karamazov, Book V, "Rebellion"**:
+
+"'Tell me yourself, I challenge you—answer. Imagine that you are creating a fabric of human destiny with the object of making men happy in the end, giving them peace and rest at last, but that it was essential and inevitable to torture to death only one tiny creature—that baby beating its breast with its fist, for instance—and to found that edifice on its unavenged tears, would you consent to be the architect on those conditions? Tell me, and tell the truth.'
+
+'No, I wouldn't consent,' said Alyosha softly.
+
+'And can you admit the idea that men for whom you are building it would agree to accept their happiness on the foundation of the unexpiated blood of a little victim? And accepting it would remain happy for ever?'
+
+'No, I can't admit it.'"
+
+**TECHNIQUE**:
+- Ivan's rebellion given full force (not strawman)
+- Concrete example (tortured child), not abstract
+- Forces choice, no evasion
+- Alyosha agrees (Ivan's position acknowledged)
+- But will be answered later (by Father Zosima, by life, by Ivan's own madness)
+- Polyphonic: idea tested through living it, not arguing it
+
+=========================================
+DREAM SEQUENCE - RASKOLNIKOV'S NIGHTMARE
+=========================================
+
+**Crime and Punishment, Part I, Chapter 5**:
+
+"He dreamt he was back in his childhood in the little town of his birth. He was a child about seven years old, walking into the country with his father on the evening of a holiday... Suddenly there was a great uproar... A peasant, Mikolka, very drunk, is beating his old mare... 'Papa, papa,' he cried, 'papa, what are they doing? Papa, they are killing the poor horse!'
+
+'Come along, come along!' said his father. 'They are drunk and foolish, they are in fun; come away, don't look!' and he tried to draw him away, but he tore himself away from his hand and, beside himself with horror, ran to the horse. The poor beast was in a bad way... Raskolnikov ran beside the horse... He ran up to her, put his arms round her bleeding dead face and kissed it, kissed the eyes and kissed the lips... At that instant his father, who had been running after him, snatched him up and carried him out of the crowd.
+
+'They're drunk, they're playing the fool, it's not our business, come along!' he said to him.
+
+'Papa! What did they... kill the poor horse for!' he sobbed, but his voice broke and the words came in shrieks from his straining chest.
+
+'They are drunk...' his father said. He put his arms round his father but he felt choked, choked, and tried to draw a breath, to cry out—and woke up.
+
+He woke up, gasping for breath, his hair soaked with perspiration, and stood up in terror."
+
+**TECHNIQUE**:
+- Dream reveals psychological truth
+- Child-Raskolnikov's compassion vs. adult-Raskolnikov's murder
+- Foreshadows crime (beating to death)
+- Physical details vivid (soaked with perspiration)
+- Waking terror continues dream's emotion
+- Moral-psychological dimension shown through symbol
+
+=========================================
+PORFIRY'S PSYCHOLOGICAL INVESTIGATION
+=========================================
+
+**Crime and Punishment, Part III, Chapter 5**:
+
+"Porfiry Petrovitch... was a man of about five and thirty, of middle height and corpulent, even approaching obesity. He was clean-shaven... The expression of his face was that of a fat, good-natured, somewhat pig-faced man... But the most remarkable thing about him was his eyes—they were light-colored, almost gray and they had an almost motionless look...
+
+'I've been wanting to make your acquaintance for ever so long...' said Porfiry... 'But excuse me, excuse me, I am still very much interested in your article... you maintain, if I understand you rightly, that murder may sometimes be permitted?'
+
+'I never maintained anything of the sort!' cried Raskolnikov.
+
+'You are mistaken, I assure you that I am taking your article in the right sense... Come, I mean this, for instance: some people have a right to commit any crime they please and the law is not written for them...'
+
+Raskolnikov did not answer. He looked with firm and determined, but irritable and contemptuous defiance at Porfiry.
+
+'I think so,' he said simply.
+
+Porfiry smiled.
+
+'Capital! But excuse me, excuse me, I won't harp on it... I only wanted to get it quite clear... But... you don't believe in the New Jerusalem, do you?'
+
+'I do,' Raskolnikov answered firmly.
+
+'A-a-ah! You believe in it! And... and do you believe in the resurrection of Lazarus?'
+
+'I... I believe. Why do you ask all this?'
+
+'You believe it literally?'
+
+'Literally.'"
+
+**TECHNIQUE**:
+- Porfiry's casual manner masks psychological pressure
+- Questions probe Raskolnikov's theory and guilt
+- Physical description (pig-faced, motionless eyes) creates unease
+- Dialogue tightens noose psychologically
+- Raskolnikov's "literal" belief in resurrection foreshadows his own
+- Cat-and-mouse investigation
+
+=========================================
+FICTION-WRITING LESSONS FROM DOSTOEVSKY
+=========================================
+
+**PSYCHOLOGICAL REALISM**:
+- Show inner states directly
+- No buffer between consciousness and reader
+- Fragmented when character in crisis
+- Physical details mirror psychological (trembling, fever, etc.)
+
+**POLYPHONIC METHOD**:
+- Give characters independent voices
+- Let ideas have full force
+- Test through living, not arguing
+- Characters surprise even author
+
+**DIALECTICAL STRUCTURE**:
+- Thesis (theory, pride)
+- Test (crime, transgression)
+- Antithesis (punishment, disintegration)
+- Synthesis (confession, redemption or damnation)
+
+**SPIRITUAL DIMENSION**:
+- Biblical resonance natural, not forced
+- Lazarus story = resurrection theme
+- Paradoxes (harlot holier than philosopher)
+- Grace possible but not guaranteed
+
+**EXTREME SITUATIONS**:
+- Murder, gambling, insult
+- Push character to limit
+- Soul revealed under pressure
+- No middle ground (redemption or damnation)
+
+**RUSSIAN SOUL**:
+- Connection to earth
+- Suffering capacity
+- Orthodox depth
+- Humility as strength
+- Prostration, confession, grace
+
+**FEVERED INTENSITY**:
+- No ironic distance
+- Everything at stake
+- Passionate conviction
+- Urgent, breathless prose
+- Life or death in every choice
