@@ -154,9 +154,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       if (!settings) {
         settings = await storage.upsertPersonaSettings(sessionId, {
-          responseLength: 0,
+          responseLength: 500,
           writePaper: false,
-          quoteFrequency: 2,
+          quoteFrequency: 5,
           selectedModel: "zhi5",
           enhancedMode: false,
         });
