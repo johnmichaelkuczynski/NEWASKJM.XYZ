@@ -157,6 +157,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           responseLength: 0,
           writePaper: false,
           quoteFrequency: 2,
+          selectedModel: "zhi5",
+          enhancedMode: false,
         });
       }
       
