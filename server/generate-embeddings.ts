@@ -1,4 +1,4 @@
-import { readFileSync } from "fs";
+import { readFileSync, readdirSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import { db } from "./db";
@@ -35,6 +35,7 @@ const batchToFigure: Record<string, string> = {
   "jmk_russell_math": "common",
   "jmk_conception": "common",
   "jmk_ama_epistem": "common",
+  "jmk_data_folder": "common",
   "luther_batch1": "common",
   "whewell_batch1": "common",
   "voltaire_batch1": "common",
@@ -77,6 +78,7 @@ const batchToAuthor: Record<string, string> = {
   "jmk_russell_math": "J.-M. Kuczynski",
   "jmk_conception": "J.-M. Kuczynski",
   "jmk_ama_epistem": "J.-M. Kuczynski",
+  "jmk_data_folder": "J.-M. Kuczynski",
   "jmk": "J.-M. Kuczynski",
   "luther_batch1": "Martin Luther",
   "whewell_batch1": "William Whewell",
@@ -280,6 +282,18 @@ const figuresPapers = {
     // BATCH 15C: J.-M. Kuczynski - AMA Epistemology - November 2025
     { file: "kuczynski_ama_epistemology.txt", title: "Ask Me Anything about Epistemology!" },
   ],
+  "jmk_data_folder": (() => {
+    // AUTO-SCAN: Automatically load ALL .txt files from server/data/kuczynski/
+    const kuczynskiPath = join(__dirname, "data", "kuczynski");
+    const files = readdirSync(kuczynskiPath)
+      .filter(f => f.endsWith('.txt'))
+      .map(f => ({
+        file: `data/kuczynski/${f}`,
+        title: f.replace(/\.txt$/i, '')
+      }));
+    console.log(`📂 Auto-discovered ${files.length} Kuczynski files from data/kuczynski/`);
+    return files;
+  })(),
   "jmk": [
     // LEGACY: For backward compatibility - use batch approach above
     { file: "kuczynski_analytic_philosophy_v2.txt", title: "Analytic Philosophy (Latest)" },
