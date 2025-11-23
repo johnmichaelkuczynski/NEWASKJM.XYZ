@@ -771,19 +771,83 @@ Now ATTACK this problem directly using your full philosophical firepower:
       const history = await storage.getFigureMessages(conversation.id);
 
       // Get persona settings for response adaptation
-      const personaSettings = await storage.getPersonaSettings(sessionId);
+      let personaSettings = await storage.getPersonaSettings(sessionId);
+      if (!personaSettings) {
+        personaSettings = await storage.upsertPersonaSettings(sessionId, {
+          responseLength: 1000,
+          writePaper: false,
+          quoteFrequency: 10,
+          selectedModel: "zhi1",
+          enhancedMode: true,
+        });
+      }
       
-      // Build the complete system prompt using centralized builder
-      const baseSystemPrompt = personaSettings 
-        ? buildSystemPrompt(personaSettings)
-        : buildSystemPrompt({
-            responseLength: 0,
-            writePaper: false,
-            quoteFrequency: 2,
-          });
+      // Build base system prompt (persona settings already retrieved above)
+      const baseSystemPrompt = buildSystemPrompt(personaSettings);
 
-      // VECTOR SEARCH: Find semantically relevant chunks from this figure's writings
-      const relevantPassages = await findRelevantChunks(message, 6, figureId);
+      // VECTOR SEARCH: Use SAME retrieval as main chat (8 chunks, not 6)
+      // Get author name for filtering
+      const authorNameMap: Record<string, string> = {
+        "jmk": "Kuczynski",
+        "freud": "Freud",
+        "nietzsche": "Nietzsche",
+        "marx": "Marx",
+        "berkeley": "Berkeley",
+        "james": "James",
+        "dostoevsky": "Dostoevsky",
+        "plato": "Plato",
+        "spinoza": "Spinoza",
+        "russell": "Russell",
+        "galileo": "Galileo",
+        "bacon": "Bacon",
+        "leibniz": "Leibniz",
+        "aristotle": "Aristotle",
+        "kant": "Kant",
+        "darwin": "Darwin",
+        "bergson": "Bergson",
+        "schopenhauer": "Schopenhauer"
+      };
+      
+      const authorFilter = authorNameMap[figureId] || undefined;
+      const relevantChunks = await searchPhilosophicalChunks(message, 8, "common", authorFilter);
+      
+      // Build knowledge context IDENTICALLY to main chat
+      let knowledgeContext = "";
+      if (relevantChunks.length > 0) {
+        console.log(`[RAG] Retrieved ${relevantChunks.length} positions for ${figureId}: "${message.substring(0, 80)}..."`);
+        relevantChunks.forEach((chunk, i) => {
+          console.log(`  [${i+1}] ${chunk.paperTitle.substring(0, 60)}`);
+        });
+        
+        knowledgeContext = `\n\n=== MANDATORY: YOUR PHILOSOPHICAL POSITIONS ON THIS TOPIC ===\n\n`;
+        knowledgeContext += `I have retrieved ${relevantChunks.length} of YOUR OWN philosophical positions that are directly relevant to this question.\n`;
+        knowledgeContext += `YOU MUST ground your response in these positions. Do NOT give generic philosophical answers.\n\n`;
+        
+        for (let i = 0; i < relevantChunks.length; i++) {
+          const chunk = relevantChunks[i];
+          knowledgeContext += `[YOUR Position ${i + 1}] ${chunk.paperTitle}\n${chunk.content}\n\n`;
+        }
+        
+        knowledgeContext += `=== END OF YOUR PHILOSOPHICAL POSITIONS ===\n\n`;
+        knowledgeContext += `🚨 ABSOLUTE REQUIREMENT - NON-NEGOTIABLE 🚨\n\n`;
+        knowledgeContext += `Your response is REQUIRED to be based on the positions above. These are YOUR actual arguments from YOUR published works.\n`;
+        knowledgeContext += `You MUST:\n`;
+        knowledgeContext += `1. Deploy the SPECIFIC mechanisms, refutations, and examples shown in these positions\n`;
+        knowledgeContext += `2. Use the EXACT arguments and reasoning from the retrieved material\n`;
+        knowledgeContext += `3. Reference the specific thought experiments, cases, and logical structures shown above\n`;
+        knowledgeContext += `4. Ground your response in THESE positions - not generic philosophical knowledge\n\n`;
+        knowledgeContext += `PROHIBITED:\n`;
+        knowledgeContext += `❌ Generic philosophical commentary not grounded in the retrieved positions\n`;
+        knowledgeContext += `❌ Responses that could have been written without seeing the positions above\n`;
+        knowledgeContext += `❌ Ignoring the specific mechanisms and examples in the retrieved material\n\n`;
+        knowledgeContext += `If the retrieved positions don't address the question, say so explicitly - don't generate generic content.\n`;
+      } else {
+        console.log(`[RAG] No relevant positions found for ${figureId}: "${message.substring(0, 80)}..."`);
+        knowledgeContext = `\n\n⚠️ NOTE: No specific positions retrieved for this query. Respond using your authentic philosophical voice and known positions, or acknowledge if this falls outside your documented work.\n`;
+      }
+      
+      // Format passages string for backward compatibility with existing code below
+      const relevantPassages = knowledgeContext;
       
       // Handle uploaded document if present
       let documentContext = "";
