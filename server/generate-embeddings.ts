@@ -61,6 +61,7 @@ const authorFolderToName: Record<string, string> = {
   "maimonides": "Moses Maimonides",
   "jack-london": "Jack London",
   "schopenhauer": "Arthur Schopenhauer",
+  "hegel": "Georg Wilhelm Friedrich Hegel",
 };
 
 // UNIFIED KNOWLEDGE BASE: ALL texts go into Common Fund
@@ -157,8 +158,12 @@ async function generateEmbedding(text: string, retryHalved: boolean = false): Pr
 
 async function main() {
   const targetFigure = process.argv[2] || "all";
+  const includePattern = process.argv[3]; // Optional filter pattern for targeted embedding
   
   console.log(`🚀 Starting embedding generation for: ${targetFigure}\n`);
+  if (includePattern) {
+    console.log(`🎯 TARGETED MODE: Only embedding files matching "${includePattern}"\n`);
+  }
   
   let figuresToProcess: [string, typeof figuresPapers[keyof typeof figuresPapers]][] = [];
   
@@ -174,7 +179,22 @@ async function main() {
       console.log(`Available figures: ${Object.keys(figuresPapers).join(", ")}`);
       process.exit(1);
     }
-    figuresToProcess = [[targetFigure, papers]];
+    
+    // Apply filter if pattern provided
+    let filteredPapers = papers;
+    if (includePattern) {
+      filteredPapers = papers.filter(p => 
+        p.file.toLowerCase().includes(includePattern.toLowerCase()) ||
+        p.title.toLowerCase().includes(includePattern.toLowerCase())
+      );
+      console.log(`🎯 Filtered to ${filteredPapers.length} files matching "${includePattern}"`);
+      if (filteredPapers.length === 0) {
+        console.error(`❌ No files match pattern "${includePattern}"`);
+        process.exit(1);
+      }
+    }
+    
+    figuresToProcess = [[targetFigure, filteredPapers]];
     console.log(`📦 Batch mode: Will skip papers that already exist\n`);
   }
   
