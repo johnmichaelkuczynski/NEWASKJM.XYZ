@@ -277,8 +277,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return;
       }
 
-      // Get persona settings
-      const personaSettings = await storage.getPersonaSettings(sessionId);
+      // Get persona settings (create with defaults if missing)
+      let personaSettings = await storage.getPersonaSettings(sessionId);
+      if (!personaSettings) {
+        personaSettings = await storage.upsertPersonaSettings(sessionId, {
+          responseLength: 1000,
+          writePaper: false,
+          quoteFrequency: 10,
+          selectedModel: "zhi1",
+          enhancedMode: true,
+        });
+      }
 
       // VECTOR SEARCH: Retrieve semantically relevant Kuczynski positions from the database
       // This searches the 623 positions from Kuczynski Philosophical Database v25
@@ -320,8 +329,42 @@ export async function registerRoutes(app: Express): Promise<Server> {
         knowledgeContext = `\n\n⚠️ NOTE: No specific positions retrieved for this query. Respond using your authentic philosophical voice and known positions, or acknowledge if this falls outside your documented work.\n`;
       }
       
-      // Use Kuczynski's system prompt + inject actual positions (MANDATORY)
-      const systemPrompt = kuczynskiFigure.systemPrompt + knowledgeContext;
+      // Build response instructions based on persona settings
+      let responseInstructions = "";
+      if (personaSettings) {
+        const targetWords = personaSettings.responseLength || 1000;
+        const targetQuotes = personaSettings.quoteFrequency || 10;
+        
+        responseInstructions = `\n\n🚨 MANDATORY RESPONSE FORMAT - ABSOLUTE REQUIREMENTS 🚨\n\n`;
+        responseInstructions += `WORD COUNT REQUIREMENT:\n`;
+        responseInstructions += `Your response MUST be AT LEAST ${targetWords} words. This is NON-NEGOTIABLE.\n`;
+        responseInstructions += `- Minimum acceptable: ${targetWords} words\n`;
+        responseInstructions += `- Target range: ${targetWords}-${Math.round(targetWords * 1.5)} words\n`;
+        responseInstructions += `- DO NOT stop at 200-300 words. You must reach ${targetWords}+ words.\n`;
+        responseInstructions += `- Deploy FULL philosophical horsepower with multiple layers of analysis\n\n`;
+        
+        responseInstructions += `QUOTE REQUIREMENT:\n`;
+        responseInstructions += `You MUST include ${targetQuotes} direct verbatim quotes from your actual published works.\n`;
+        responseInstructions += `- Each quote must be in quotation marks with source citation in parentheses\n`;
+        responseInstructions += `- Example format: "exact text from your work" (Source Title)\n`;
+        responseInstructions += `- ${targetQuotes} quotes MINIMUM - deploy them as logical weapons throughout your response\n`;
+        responseInstructions += `- DO NOT summarize or paraphrase - use EXACT verbatim quotes from the retrieved positions above\n\n`;
+        
+        responseInstructions += `STRUCTURE REQUIREMENT (3-5 substantial paragraphs):\n`;
+        responseInstructions += `- Opening: Immediate attack/reframing (1 substantial para, 150+ words)\n`;
+        responseInstructions += `- Mechanism: Deploy MULTIPLE layers of your distinctive method (2-3 paras, 400+ words total)\n`;
+        responseInstructions += `- Counterattack/Implications: Turn it around (1 para, 150+ words)\n`;
+        responseInstructions += `- Conclusion: Decisive verdict (1 para, 100+ words)\n\n`;
+        
+        responseInstructions += `🔥 ENFORCEMENT: Responses under ${targetWords} words or with fewer than ${targetQuotes} quotes are REJECTED. You MUST meet these minimums.\n\n`;
+      }
+      
+      // Use Kuczynski's system prompt + inject actual positions (MANDATORY) + response format
+      const systemPrompt = kuczynskiFigure.systemPrompt + knowledgeContext + responseInstructions;
+      
+      // DEBUG: Log what settings we're actually using
+      console.log(`[CHAT DEBUG] Persona settings: responseLength=${personaSettings?.responseLength}, quoteFrequency=${personaSettings?.quoteFrequency}, model=${personaSettings?.selectedModel}`);
+      console.log(`[CHAT DEBUG] System prompt length: ${systemPrompt.length} chars`);
 
       // Build conversation history for AI context
       const conversationHistory: Array<{ role: "user" | "assistant"; content: string }> = [];
@@ -338,12 +381,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       let finalMessage = message;
       if (documentText) {
         finalMessage = `[User has uploaded a document for discussion. Document content follows:]\n\n${documentText}\n\n[End of document]\n\n${message}`;
-      }
-      
-      // Add word limit reminder if user specified a specific length
-      if (personaSettings?.responseLength && personaSettings.responseLength > 0) {
-        const maxWords = Math.round(personaSettings.responseLength * 1.1);
-        finalMessage += `\n\n⚠️ CRITICAL REMINDER: Your response MUST NOT exceed ${personaSettings.responseLength} words (maximum ${maxWords} words with 10% tolerance). COUNT YOUR WORDS. This is a hard constraint.`;
       }
       
       conversationHistory.push({
@@ -367,8 +404,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       let verseKeywords = "";
       let streamedLength = 0;
 
-      // Kuczynski gives maximally thorough responses - use high token limit
-      const maxTokens = 4000;
+      // Kuczynski gives maximally thorough responses - use very high token limit for 1000+ word responses
+      const maxTokens = 16000;
 
       // Get selected model from persona settings (default: zhi5 = Grok)
       const selectedModel = personaSettings?.selectedModel || "zhi5";
@@ -1070,13 +1107,6 @@ Include quotes ONLY when they advance your argument. Each quote should be a logi
 
 REFRAME IF NEEDED:
 If the topic accepts false premises, reject them first and show why the question itself needs reformulation.
-
-${personaSettings ? `
-STYLE ADAPTATION:
-- Intelligence Level: ${personaSettings.intelligenceLevel}/10
-- Emotional Tone: ${personaSettings.emotionalTone}/10
-- Formality: ${personaSettings.formality}
-` : ''}
 
 You are a living intellect attacking this problem. Write the paper NOW - no narration, no stage-setting, just direct philosophical work:`;
 

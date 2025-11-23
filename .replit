@@ -1,4 +1,4 @@
-modules = ["nodejs-20"]
+modules = ["nodejs-20", "postgresql-16"]
 
 [workflows]
 runButton = "Project"
@@ -28,9 +28,8 @@ outputType = "webview"
 localPort = 5000
 externalPort = 80
 
-[[ports]]
-localPort = 36871
-externalPort = 3000
-
 [agent]
 expertMode = true
+
+[nix]
+channel = "stable-25_05"
