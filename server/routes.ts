@@ -277,37 +277,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return;
       }
 
-      // Get persona settings to adapt response style
+      // Get persona settings
       const personaSettings = await storage.getPersonaSettings(sessionId);
-      
-      // Build adaptive instructions based on user preferences
-      let adaptiveInstructions = "";
-      if (personaSettings) {
-        const lengthInstruction = personaSettings.responseLength === 0 
-          ? 'Auto (respond at whatever length best serves the question - brief for simple questions, extensive for complex ones)'
-          : `Approximately ${personaSettings.responseLength} sentences (adjust as needed for clarity)`;
-        
-        adaptiveInstructions = `
-
-ADAPTIVE RESPONSE INSTRUCTIONS:
-Adjust your response to match the user's preferences:
-- Intelligence Level: ${personaSettings.intelligenceLevel}/10 → ${
-  personaSettings.intelligenceLevel >= 8 ? 'Highly sophisticated, technical philosophical discourse' :
-  personaSettings.intelligenceLevel >= 5 ? 'Balanced - clear but philosophically rigorous' :
-  'Accessible, explain complex ideas simply without dumbing down'
-}
-- Emotional Tone: ${personaSettings.emotionalTone}/10 → ${
-  personaSettings.emotionalTone >= 7 ? 'Warm, engaging, personable' :
-  personaSettings.emotionalTone >= 4 ? 'Balanced - professional yet approachable' :
-  'Formal, analytical, measured'
-}
-- Formality: ${personaSettings.formality} style
-- Voice: ${personaSettings.voiceGender}
-- Response Length: ${lengthInstruction}
-
-Adapt your complexity, vocabulary, tone, and length to match these settings while maintaining philosophical rigor.
-`;
-      }
 
       // VECTOR SEARCH: Retrieve semantically relevant Kuczynski positions from the database
       // This searches the 623 positions from Kuczynski Philosophical Database v25
@@ -349,8 +320,8 @@ Adapt your complexity, vocabulary, tone, and length to match these settings whil
         knowledgeContext = `\n\n⚠️ NOTE: No specific positions retrieved for this query. Respond using your authentic philosophical voice and known positions, or acknowledge if this falls outside your documented work.\n`;
       }
       
-      // Use Kuczynski's system prompt + inject actual positions (MANDATORY) + adaptive instructions
-      const systemPrompt = kuczynskiFigure.systemPrompt + knowledgeContext + adaptiveInstructions;
+      // Use Kuczynski's system prompt + inject actual positions (MANDATORY)
+      const systemPrompt = kuczynskiFigure.systemPrompt + knowledgeContext;
 
       // Build conversation history for AI context
       const conversationHistory: Array<{ role: "user" | "assistant"; content: string }> = [];
