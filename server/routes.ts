@@ -280,36 +280,33 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Get persona settings to adapt response style
       const personaSettings = await storage.getPersonaSettings(sessionId);
       
-      // Build response instructions based on ACTUAL schema fields only
-      let responseInstructions = "";
+      // Build adaptive instructions based on user preferences
+      let adaptiveInstructions = "";
       if (personaSettings) {
-        // Response length enforcement (WORDS not sentences)
-        const targetWords = personaSettings.responseLength || 500;
-        const minWords = Math.max(Math.round(targetWords * 0.8), 100);
-        const maxWords = Math.round(targetWords * 1.2);
+        const lengthInstruction = personaSettings.responseLength === 0 
+          ? 'Auto (respond at whatever length best serves the question - brief for simple questions, extensive for complex ones)'
+          : `Approximately ${personaSettings.responseLength} sentences (adjust as needed for clarity)`;
         
-        if (targetWords === 0) {
-          responseInstructions += `\n\nRESPONSE LENGTH: Auto-adapt (brief for simple, extensive for complex)\n`;
-        } else {
-          responseInstructions += `\n\n🎯 RESPONSE LENGTH REQUIREMENT:\n`;
-          responseInstructions += `Target: ${targetWords} words (Range: ${minWords}-${maxWords} words)\n`;
-          responseInstructions += `You MUST count your words and stay within this range. This is NON-NEGOTIABLE.\n`;
-        }
-        
-        // Quote frequency enforcement (actual verbatim quotes from RAG chunks)
-        const numQuotes = personaSettings.quoteFrequency || 5;
-        if (numQuotes > 0) {
-          responseInstructions += `\n📚 VERBATIM QUOTE REQUIREMENT:\n`;
-          responseInstructions += `You MUST include exactly ${numQuotes} verbatim quotes extracted from the retrieved positions above.\n`;
-          responseInstructions += `Each quote must be:\n`;
-          responseInstructions += `1. Exact text from a retrieved chunk (no paraphrasing)\n`;
-          responseInstructions += `2. Surrounded by quotation marks\n`;
-          responseInstructions += `3. Followed by citation: [Position ${numQuotes}]\n`;
-          responseInstructions += `4. Integrated into your argument naturally\n`;
-          responseInstructions += `FAILURE TO INCLUDE ${numQuotes} VERBATIM QUOTES = UNACCEPTABLE RESPONSE\n`;
-        } else {
-          responseInstructions += `\n📚 NO QUOTES: Do not include verbatim quotes in this response.\n`;
-        }
+        adaptiveInstructions = `
+
+ADAPTIVE RESPONSE INSTRUCTIONS:
+Adjust your response to match the user's preferences:
+- Intelligence Level: ${personaSettings.intelligenceLevel}/10 → ${
+  personaSettings.intelligenceLevel >= 8 ? 'Highly sophisticated, technical philosophical discourse' :
+  personaSettings.intelligenceLevel >= 5 ? 'Balanced - clear but philosophically rigorous' :
+  'Accessible, explain complex ideas simply without dumbing down'
+}
+- Emotional Tone: ${personaSettings.emotionalTone}/10 → ${
+  personaSettings.emotionalTone >= 7 ? 'Warm, engaging, personable' :
+  personaSettings.emotionalTone >= 4 ? 'Balanced - professional yet approachable' :
+  'Formal, analytical, measured'
+}
+- Formality: ${personaSettings.formality} style
+- Voice: ${personaSettings.voiceGender}
+- Response Length: ${lengthInstruction}
+
+Adapt your complexity, vocabulary, tone, and length to match these settings while maintaining philosophical rigor.
+`;
       }
 
       // VECTOR SEARCH: Retrieve semantically relevant Kuczynski positions from the database
