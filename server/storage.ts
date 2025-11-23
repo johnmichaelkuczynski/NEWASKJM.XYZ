@@ -54,7 +54,7 @@ export interface IStorage {
   // Message operations
   getMessages(conversationId: string): Promise<Message[]>;
   createMessage(message: InsertMessage): Promise<Message>;
-  deleteMessage(id: number): Promise<void>;
+  deleteMessage(id: string): Promise<void>;
 
   // Figure operations
   getAllFigures(): Promise<Figure[]>;
@@ -182,7 +182,7 @@ export class DatabaseStorage implements IStorage {
     return result;
   }
 
-  async deleteMessage(id: number): Promise<void> {
+  async deleteMessage(id: string): Promise<void> {
     await db.delete(messages).where(eq(messages.id, id));
   }
 
