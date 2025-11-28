@@ -40,3 +40,16 @@ The application acts as a centralized knowledge server providing unified access 
 - **Embeddings**: OpenAI `text-embedding-ada-002`.
 - **File Parsing (Quote Generator)**: Multer, pdf-parse, mammoth.
 - **ZHI Knowledge Provider**: `https://analyticphilosophy.net/zhi/query` (for `/zhi/query` endpoint).
+
+### Kuczynski Corpus (Intelligence Reports Embedded)
+
+1. ✅ Libet Experiment - Free will, consciousness, epiphenomenalism (4 chunks, distance 0.128)
+2. ✅ Chapter 1: Analytic Philosophy - Philosophy as category analysis, Frege, LP critique (16 chunks, distance 0.119)
+3. ✅ Chapter 2 Part 1: Properties - Platonism, non-spatiotemporal entities, properties vs sets (21 chunks, distance 0.128)
+4. ✅ Chapter 2 Part 2: Properties Continued - Nominalism/conceptualism refutation, third-man argument (18 chunks, distance 0.132)
+5. ✅ Dialogue Concerning God - OCD, pseudo-beliefs/pseudo-actions, ambivalence, Freud (20 chunks, distance 0.122)
+6. ✅ Knowledge of Past, Present, Future - Causal epistemology, temporal knowledge, Hume (17 chunks, distance 0.134)
+7. ✅ Pragmatism - Critique of William James, truth as objective property (97 chunks, distance 0.129)
+8. ✅ Functional vs Structural Delusiveness - Ego-syntonic/dystonic, neurosis/psychosis, OCD/schizophrenia (22 chunks, distance 0.117)
+
+**Total Kuczynski corpus: 8 files, 215 chunks**
