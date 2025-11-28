@@ -52,5 +52,6 @@ The application acts as a centralized knowledge server providing unified access 
 7. ✅ Pragmatism - Critique of William James, truth as objective property (97 chunks, distance 0.129)
 8. ✅ Functional vs Structural Delusiveness - Ego-syntonic/dystonic, neurosis/psychosis, OCD/schizophrenia (22 chunks, distance 0.117)
 9. ✅ Religion and Limits of Rationalism - William James, phenomenology of religion, Freud critique, unseen order (125 chunks, distance 0.124)
+10. ✅ Searle vs Turing - Chinese Room argument, Turing test, machine intelligence, thought vs behavior (17 chunks, distance 0.129)
 
-**Total Kuczynski corpus: 9 files, 340 chunks**
+**Total Kuczynski corpus: 10 files, 357 chunks**
