@@ -53,5 +53,6 @@ The application acts as a centralized knowledge server providing unified access 
 8. ✅ Functional vs Structural Delusiveness - Ego-syntonic/dystonic, neurosis/psychosis, OCD/schizophrenia (22 chunks, distance 0.117)
 9. ✅ Religion and Limits of Rationalism - William James, phenomenology of religion, Freud critique, unseen order (125 chunks, distance 0.124)
 10. ✅ Searle vs Turing - Chinese Room argument, Turing test, machine intelligence, thought vs behavior (17 chunks, distance 0.129)
+11. ✅ Chapter 11: Analytic Philosophy - Descartes, epistemology, foundationalism, cogito, skepticism, mind-body dualism (234 chunks, distance 0.105)
 
-**Total Kuczynski corpus: 10 files, 357 chunks**
+**Total Kuczynski corpus: 11 files, 591 chunks**
