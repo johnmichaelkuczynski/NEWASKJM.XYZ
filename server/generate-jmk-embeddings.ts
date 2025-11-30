@@ -1,10 +1,10 @@
-import { readFileSync } from "fs";
+import { readFileSync, readdirSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import { db } from "./db";
 import { paperChunks } from "@shared/schema";
 import OpenAI from "openai";
-import { eq } from "drizzle-orm";
+import { eq, and } from "drizzle-orm";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -77,20 +77,49 @@ async function generateEmbedding(text: string): Promise<number[] | null> {
   }
 }
 
+function formatTitle(filename: string): string {
+  return filename
+    .replace(/\.txt$/, '')
+    .replace(/^CHAPTER_/, 'Chapter ')
+    .replace(/^CORPUS_ANALYSIS_/, '')
+    .replace(/_/g, ' ');
+}
+
 async function main() {
   console.log("🎓 Generating J.-M. Kuczynski embeddings...\n");
   
-  // Delete existing JMK embeddings only
-  console.log("🗑️  Clearing existing J.-M. Kuczynski embeddings...");
-  await db.delete(paperChunks).where(eq(paperChunks.figureId, 'jmk'));
-  console.log("✓ Cleared\n");
+  const dataDir = join(__dirname, "data/kuczynski");
+  
+  const targetFiles = readdirSync(dataDir).filter(f => 
+    f.endsWith('.txt') && (
+      f.startsWith('CHAPTER_') || 
+      f.startsWith('CORPUS_ANALYSIS_')
+    )
+  );
+  
+  console.log(`📚 Found ${targetFiles.length} Kuczynski file(s) to process\n`);
   
   const startTime = Date.now();
+  let totalChunks = 0;
+  let newFiles = 0;
   
-  try {
-    console.log(`📄 Processing: J.-M. Kuczynski Complete Works (30 papers on epistemology, mind, language, AI)`);
+  for (const file of targetFiles) {
+    const filePath = join(dataDir, file);
+    const paperTitle = formatTitle(file);
     
-    const content = readFileSync(join(__dirname, "kuczynski_complete_works.txt"), "utf-8");
+    console.log(`📄 Processing: ${paperTitle}`);
+    
+    const existing = await db.select().from(paperChunks)
+      .where(and(eq(paperChunks.figureId, "jmk"), eq(paperChunks.paperTitle, paperTitle)))
+      .limit(1);
+    
+    if (existing.length > 0) {
+      console.log(`   ⏭️  Already embedded, skipping\n`);
+      continue;
+    }
+    
+    newFiles++;
+    const content = readFileSync(filePath, "utf-8");
     const chunks = chunkText(content, 400);
     
     console.log(`   Found ${chunks.length} chunks`);
@@ -109,29 +138,24 @@ async function main() {
       
       await db.insert(paperChunks).values({
         figureId: "jmk",
-        paperTitle: "Complete Works: 30 Papers on Epistemology, Philosophy of Mind, Language & AI",
+        author: "J.-M. Kuczynski",
+        paperTitle: paperTitle,
         content: chunk,
         embedding: embedding as any,
         chunkIndex: i,
       });
       
       process.stdout.write(` ✓\n`);
+      totalChunks++;
       
-      // Rate limiting
       await new Promise(resolve => setTimeout(resolve, 100));
     }
     
-    const duration = ((Date.now() - startTime) / 1000 / 60).toFixed(1);
-    console.log(`\n🎉 Done! Generated ${chunks.length} J.-M. Kuczynski embeddings in ${duration} minutes.`);
-  } catch (error) {
-    console.error(`❌ Error:`, error);
-    process.exit(1);
+    console.log(`   ✓ Completed ${file}\n`);
   }
   
-  process.exit(0);
+  const duration = ((Date.now() - startTime) / 1000 / 60).toFixed(1);
+  console.log(`\n🎉 Done! Processed ${newFiles} new file(s), generated ${totalChunks} embeddings in ${duration} minutes.`);
 }
 
-main().catch((error) => {
-  console.error("Fatal error:", error);
-  process.exit(1);
-});
+main().catch(console.error);
