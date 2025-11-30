@@ -55,5 +55,6 @@ The application acts as a centralized knowledge server providing unified access 
 10. ✅ Searle vs Turing - Chinese Room argument, Turing test, machine intelligence, thought vs behavior (17 chunks, distance 0.129)
 11. ✅ Chapter 11: Analytic Philosophy - Descartes, epistemology, foundationalism, cogito, skepticism, mind-body dualism (234 chunks, distance 0.105)
 12. ✅ Analog Digital Distinction - Kant, Hume, causation, induction, synthetic a priori, transcendental arguments (437 chunks, distance 0.114)
+13. ✅ Outline Theory of Knowledge - Cults vs religions, worship, supernatural, projection, virtualization, institutionalization (71 chunks, distance 0.146)
 
-**Total Kuczynski corpus: 12 files, 1,028 chunks**
+**Total Kuczynski corpus: 13 files, 1,099 chunks**
