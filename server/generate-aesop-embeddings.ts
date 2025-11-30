@@ -4,7 +4,7 @@ import { fileURLToPath } from "url";
 import { db } from "./db";
 import { paperChunks } from "@shared/schema";
 import OpenAI from "openai";
-import { eq } from "drizzle-orm";
+import { eq, and } from "drizzle-orm";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -100,6 +100,15 @@ async function main() {
     const paperTitle = formatTitle(file);
     
     console.log(`📄 Processing: ${paperTitle}`);
+    
+    const existing = await db.select().from(paperChunks)
+      .where(and(eq(paperChunks.figureId, "aesop"), eq(paperChunks.paperTitle, paperTitle)))
+      .limit(1);
+    
+    if (existing.length > 0) {
+      console.log(`   ⏭️  Already embedded, skipping\n`);
+      continue;
+    }
     
     const content = readFileSync(filePath, "utf-8");
     const chunks = chunkText(content, 400);
