@@ -100,13 +100,13 @@ export async function searchPhilosophicalChunks(
     if (authorFilter) {
       console.log(`[Vector Search] STRICT author filter: "${authorFilter}" - will return ONLY this author's content`);
       
-      // Search ONLY the specified author's chunks
+      // Search ONLY the specified author's chunks - check BOTH common AND author-specific figure_id
       const authorResults = await db.execute(
         sql`
-          SELECT author, paper_title, content, chunk_index, 
+          SELECT author, paper_title, content, chunk_index, figure_id,
                  embedding <=> ${JSON.stringify(queryEmbedding)}::vector as distance
           FROM ${paperChunks}
-          WHERE figure_id = 'common'
+          WHERE (figure_id = 'common' OR figure_id = ${figureId})
             AND author ILIKE ${'%' + authorFilter + '%'}
           ORDER BY distance
           LIMIT ${topK}
@@ -134,13 +134,13 @@ export async function searchPhilosophicalChunks(
       return authorChunks;
     }
     
-    // NO AUTHOR FILTER: Search all content (normal semantic search)
+    // NO AUTHOR FILTER: Search all content (normal semantic search) - check BOTH common AND specific figureId
     const results = await db.execute(
       sql`
-        SELECT author, paper_title, content, chunk_index, 
+        SELECT author, paper_title, content, chunk_index, figure_id,
                embedding <=> ${JSON.stringify(queryEmbedding)}::vector as distance
         FROM ${paperChunks}
-        WHERE figure_id = 'common'
+        WHERE (figure_id = 'common' OR figure_id = ${figureId})
         ORDER BY distance
         LIMIT ${topK}
       `

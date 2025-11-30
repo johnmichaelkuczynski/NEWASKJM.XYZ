@@ -16,15 +16,13 @@ STYLE REQUIREMENTS:
 
 `;
 
-  // Only add length guidance if user specified
-  if (settings.responseLength && settings.responseLength > 0) {
-    prompt += `Target length: approximately ${settings.responseLength} words.\n\n`;
-  }
+  // Default to 1000 words if not specified
+  const targetLength = settings.responseLength && settings.responseLength > 0 ? settings.responseLength : 1000;
+  prompt += `Target length: approximately ${targetLength} words.\n\n`;
 
-  // Only mention quotes if user requested them
-  if (settings.quoteFrequency && settings.quoteFrequency > 0) {
-    prompt += `Include roughly ${settings.quoteFrequency} quotes from your works if they strengthen the argument.\n\n`;
-  }
+  // Default to 10 quotes if not specified
+  const quoteCount = settings.quoteFrequency && settings.quoteFrequency > 0 ? settings.quoteFrequency : 10;
+  prompt += `Include roughly ${quoteCount} quotes from your works if they strengthen the argument.\n\n`;
 
   // Paper mode
   if (settings.writePaper) {
