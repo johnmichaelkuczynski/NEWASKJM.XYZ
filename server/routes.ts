@@ -154,9 +154,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       if (!settings) {
         settings = await storage.upsertPersonaSettings(sessionId, {
-          responseLength: 1000,
+          responseLength: 0,
           writePaper: false,
-          quoteFrequency: 10,
+          quoteFrequency: 0,
           selectedModel: "zhi5",
           enhancedMode: true,
         });
@@ -281,13 +281,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
       let personaSettings = await storage.getPersonaSettings(sessionId);
       if (!personaSettings) {
         personaSettings = await storage.upsertPersonaSettings(sessionId, {
-          responseLength: 1000,
+          responseLength: 0,
           writePaper: false,
-          quoteFrequency: 10,
+          quoteFrequency: 0,
           selectedModel: "zhi1",
           enhancedMode: true,
         });
       }
+      
+      // Helper to convert ugly database filenames to readable titles
+      const formatTitle = (dbName: string): string => {
+        return dbName
+          .replace(/^CORPUS_ANALYSIS_/, '')
+          .replace(/_/g, ' ')
+          .replace(/([a-z])([A-Z])/g, '$1 $2')
+          .trim();
+      };
 
       // VECTOR SEARCH: Retrieve semantically relevant Kuczynski positions from the database
       // This searches the 623 positions from Kuczynski Philosophical Database v25
@@ -301,63 +310,35 @@ export async function registerRoutes(app: Express): Promise<Server> {
           console.log(`  [${i+1}] ${chunk.paperTitle.substring(0, 60)}`);
         });
         
-        knowledgeContext = `\n\n=== MANDATORY: YOUR PHILOSOPHICAL POSITIONS ON THIS TOPIC ===\n\n`;
-        knowledgeContext += `I have retrieved ${relevantChunks.length} of YOUR OWN philosophical positions that are directly relevant to this question.\n`;
-        knowledgeContext += `YOU MUST ground your response in these positions. Do NOT give generic philosophical answers.\n\n`;
+        knowledgeContext = `\n\n--- YOUR WRITINGS (for reference) ---\n\n`;
         
         for (let i = 0; i < relevantChunks.length; i++) {
           const chunk = relevantChunks[i];
-          knowledgeContext += `[YOUR Position ${i + 1}] ${chunk.paperTitle}\n${chunk.content}\n\n`;
+          const readableTitle = formatTitle(chunk.paperTitle);
+          knowledgeContext += `From "${readableTitle}":\n${chunk.content}\n\n`;
         }
         
-        knowledgeContext += `=== END OF YOUR PHILOSOPHICAL POSITIONS ===\n\n`;
-        knowledgeContext += `🚨 ABSOLUTE REQUIREMENT - NON-NEGOTIABLE 🚨\n\n`;
-        knowledgeContext += `Your response is REQUIRED to be based on the positions above. These are YOUR actual arguments from YOUR published works.\n`;
-        knowledgeContext += `You MUST:\n`;
-        knowledgeContext += `1. Deploy the SPECIFIC mechanisms, refutations, and examples shown in these positions\n`;
-        knowledgeContext += `2. Use the EXACT arguments and reasoning from the retrieved material\n`;
-        knowledgeContext += `3. Reference the specific thought experiments, cases, and logical structures shown above\n`;
-        knowledgeContext += `4. Ground your response in THESE positions - not generic philosophical knowledge\n\n`;
-        knowledgeContext += `PROHIBITED:\n`;
-        knowledgeContext += `❌ Generic philosophical commentary not grounded in the retrieved positions\n`;
-        knowledgeContext += `❌ Responses that could have been written without seeing the positions above\n`;
-        knowledgeContext += `❌ Ignoring the specific mechanisms and examples in the retrieved material\n\n`;
-        knowledgeContext += `If the retrieved positions don't address the question, say so explicitly - don't generate generic content.\n`;
+        knowledgeContext += `--- END ---\n\n`;
+        knowledgeContext += `INSTRUCTION: You have read your own writings above. Now answer the question IN YOUR OWN VOICE - crisp, direct, no fluff. Reason FROM this material, do not quote or cite it. If the material doesn't address the question, say so.\n`;
       } else {
         console.log(`[RAG] No relevant positions found for query: "${message.substring(0, 80)}..."`);
         // Even with no RAG results, remind system to use authentic voice
         knowledgeContext = `\n\n⚠️ NOTE: No specific positions retrieved for this query. Respond using your authentic philosophical voice and known positions, or acknowledge if this falls outside your documented work.\n`;
       }
       
-      // Build response instructions based on persona settings
+      // Build response instructions - minimal, focused on style
       let responseInstructions = "";
-      if (personaSettings) {
-        const targetWords = personaSettings.responseLength || 1000;
-        const targetQuotes = personaSettings.quoteFrequency || 10;
-        
-        responseInstructions = `\n\n🚨 MANDATORY RESPONSE FORMAT - ABSOLUTE REQUIREMENTS 🚨\n\n`;
-        responseInstructions += `WORD COUNT REQUIREMENT:\n`;
-        responseInstructions += `Your response MUST be AT LEAST ${targetWords} words. This is NON-NEGOTIABLE.\n`;
-        responseInstructions += `- Minimum acceptable: ${targetWords} words\n`;
-        responseInstructions += `- Target range: ${targetWords}-${Math.round(targetWords * 1.5)} words\n`;
-        responseInstructions += `- DO NOT stop at 200-300 words. You must reach ${targetWords}+ words.\n`;
-        responseInstructions += `- Deploy FULL philosophical horsepower with multiple layers of analysis\n\n`;
-        
-        responseInstructions += `QUOTE REQUIREMENT:\n`;
-        responseInstructions += `You MUST include ${targetQuotes} direct verbatim quotes from your actual published works.\n`;
-        responseInstructions += `- Each quote must be in quotation marks with source citation in parentheses\n`;
-        responseInstructions += `- Example format: "exact text from your work" (Source Title)\n`;
-        responseInstructions += `- ${targetQuotes} quotes MINIMUM - deploy them as logical weapons throughout your response\n`;
-        responseInstructions += `- DO NOT summarize or paraphrase - use EXACT verbatim quotes from the retrieved positions above\n\n`;
-        
-        responseInstructions += `STRUCTURE REQUIREMENT (3-5 substantial paragraphs):\n`;
-        responseInstructions += `- Opening: Immediate attack/reframing (1 substantial para, 150+ words)\n`;
-        responseInstructions += `- Mechanism: Deploy MULTIPLE layers of your distinctive method (2-3 paras, 400+ words total)\n`;
-        responseInstructions += `- Counterattack/Implications: Turn it around (1 para, 150+ words)\n`;
-        responseInstructions += `- Conclusion: Decisive verdict (1 para, 100+ words)\n\n`;
-        
-        responseInstructions += `🔥 ENFORCEMENT: Responses under ${targetWords} words or with fewer than ${targetQuotes} quotes are REJECTED. You MUST meet these minimums.\n\n`;
+      const targetWords = personaSettings?.responseLength || 0;
+      const targetQuotes = personaSettings?.quoteFrequency || 0;
+      
+      if (targetWords > 0) {
+        responseInstructions += `\nTarget length: approximately ${targetWords} words.\n`;
       }
+      if (targetQuotes > 0) {
+        responseInstructions += `Include roughly ${targetQuotes} quotes if they strengthen your argument.\n`;
+      }
+      
+      responseInstructions += `\nSTYLE: Write like Kuczynski - crisp, direct, no academic bloat. Short sentences. Clear logic. No throat-clearing. Get to the point immediately.\n`;
       
       // Use Kuczynski's system prompt + inject actual positions (MANDATORY) + response format
       const systemPrompt = kuczynskiFigure.systemPrompt + knowledgeContext + responseInstructions;
@@ -774,13 +755,22 @@ Now ATTACK this problem directly using your full philosophical firepower:
       let personaSettings = await storage.getPersonaSettings(sessionId);
       if (!personaSettings) {
         personaSettings = await storage.upsertPersonaSettings(sessionId, {
-          responseLength: 1000,
+          responseLength: 0,
           writePaper: false,
-          quoteFrequency: 10,
+          quoteFrequency: 0,
           selectedModel: "zhi1",
           enhancedMode: true,
         });
       }
+      
+      // Helper to convert ugly database filenames to readable titles
+      const formatTitle = (dbName: string): string => {
+        return dbName
+          .replace(/^CORPUS_ANALYSIS_/, '')
+          .replace(/_/g, ' ')
+          .replace(/([a-z])([A-Z])/g, '$1 $2')
+          .trim();
+      };
       
       // Build base system prompt (persona settings already retrieved above)
       const baseSystemPrompt = buildSystemPrompt(personaSettings);
@@ -819,28 +809,16 @@ Now ATTACK this problem directly using your full philosophical firepower:
           console.log(`  [${i+1}] ${chunk.paperTitle.substring(0, 60)}`);
         });
         
-        knowledgeContext = `\n\n=== MANDATORY: YOUR PHILOSOPHICAL POSITIONS ON THIS TOPIC ===\n\n`;
-        knowledgeContext += `I have retrieved ${relevantChunks.length} of YOUR OWN philosophical positions that are directly relevant to this question.\n`;
-        knowledgeContext += `YOU MUST ground your response in these positions. Do NOT give generic philosophical answers.\n\n`;
+        knowledgeContext = `\n\n--- YOUR WRITINGS (for reference) ---\n\n`;
         
         for (let i = 0; i < relevantChunks.length; i++) {
           const chunk = relevantChunks[i];
-          knowledgeContext += `[YOUR Position ${i + 1}] ${chunk.paperTitle}\n${chunk.content}\n\n`;
+          const readableTitle = formatTitle(chunk.paperTitle);
+          knowledgeContext += `From "${readableTitle}":\n${chunk.content}\n\n`;
         }
         
-        knowledgeContext += `=== END OF YOUR PHILOSOPHICAL POSITIONS ===\n\n`;
-        knowledgeContext += `🚨 ABSOLUTE REQUIREMENT - NON-NEGOTIABLE 🚨\n\n`;
-        knowledgeContext += `Your response is REQUIRED to be based on the positions above. These are YOUR actual arguments from YOUR published works.\n`;
-        knowledgeContext += `You MUST:\n`;
-        knowledgeContext += `1. Deploy the SPECIFIC mechanisms, refutations, and examples shown in these positions\n`;
-        knowledgeContext += `2. Use the EXACT arguments and reasoning from the retrieved material\n`;
-        knowledgeContext += `3. Reference the specific thought experiments, cases, and logical structures shown above\n`;
-        knowledgeContext += `4. Ground your response in THESE positions - not generic philosophical knowledge\n\n`;
-        knowledgeContext += `PROHIBITED:\n`;
-        knowledgeContext += `❌ Generic philosophical commentary not grounded in the retrieved positions\n`;
-        knowledgeContext += `❌ Responses that could have been written without seeing the positions above\n`;
-        knowledgeContext += `❌ Ignoring the specific mechanisms and examples in the retrieved material\n\n`;
-        knowledgeContext += `If the retrieved positions don't address the question, say so explicitly - don't generate generic content.\n`;
+        knowledgeContext += `--- END ---\n\n`;
+        knowledgeContext += `INSTRUCTION: You have read your own writings above. Now answer the question IN YOUR OWN VOICE - crisp, direct, no fluff. Reason FROM this material, do not quote or cite it. If the material doesn't address the question, say so.\n`;
       } else {
         console.log(`[RAG] No relevant positions found for ${figureId}: "${message.substring(0, 80)}..."`);
         knowledgeContext = `\n\n⚠️ NOTE: No specific positions retrieved for this query. Respond using your authentic philosophical voice and known positions, or acknowledge if this falls outside your documented work.\n`;
