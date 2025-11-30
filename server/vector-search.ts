@@ -196,8 +196,8 @@ export async function findRelevantChunks(
   
   const authorFilter = authorNameMap[figureId] || undefined;
   
-  // Use the structured search helper WITH AUTHOR FILTER
-  const chunks = await searchPhilosophicalChunks(question, topK, "common", authorFilter);
+  // Use the structured search helper WITH AUTHOR FILTER - pass figureId to search its specific embeddings
+  const chunks = await searchPhilosophicalChunks(question, topK, figureId, authorFilter);
   
   // Get figure name for messages
   const figureName = authorFilter || "this author";
