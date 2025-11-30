@@ -29,9 +29,9 @@ import { DialogueCreatorSection } from "@/components/dialogue-creator-section";
 import { DebateCreatorSection } from "@/components/sections/debate-creator-section";
 
 const DEFAULT_PERSONA_SETTINGS: Partial<PersonaSettings> = {
-  responseLength: 0,
+  responseLength: 1000,
   writePaper: false,
-  quoteFrequency: 2,
+  quoteFrequency: 10,
   enhancedMode: false,
 };
 
@@ -367,10 +367,10 @@ export default function Chat() {
                 <Input
                   id="response-length"
                   type="number"
-                  placeholder="Auto"
-                  value={personaSettings.responseLength === 0 ? '' : personaSettings.responseLength}
+                  placeholder="1000"
+                  value={personaSettings.responseLength || 1000}
                   onChange={(e) => {
-                    const value = e.target.value === '' ? 0 : parseInt(e.target.value, 10);
+                    const value = e.target.value === '' ? 1000 : parseInt(e.target.value, 10);
                     if (!isNaN(value) && value >= 0) {
                       updatePersonaMutation.mutate({ responseLength: value });
                     }
@@ -380,7 +380,7 @@ export default function Chat() {
                   className="text-sm"
                 />
                 <p className="text-xs text-muted-foreground">
-                  Leave blank for auto mode (AI chooses optimal length)
+                  Default: 1000 words
                 </p>
               </div>
 
@@ -392,12 +392,12 @@ export default function Chat() {
                   id="quote-frequency"
                   type="text"
                   inputMode="numeric"
-                  placeholder="0"
-                  value={personaSettings.quoteFrequency === 0 ? '' : personaSettings.quoteFrequency || ''}
+                  placeholder="10"
+                  value={personaSettings.quoteFrequency || 10}
                   onChange={(e) => {
                     const inputValue = e.target.value;
                     if (inputValue === '') {
-                      updatePersonaMutation.mutate({ quoteFrequency: 0 });
+                      updatePersonaMutation.mutate({ quoteFrequency: 10 });
                       return;
                     }
                     if (!/^\d+$/.test(inputValue)) return;
@@ -411,7 +411,7 @@ export default function Chat() {
                   className="text-sm"
                 />
                 <p className="text-xs text-muted-foreground">
-                  Type any number from 0 to 50 (0 for none)
+                  Default: 10 quotes (0-50 range)
                 </p>
               </div>
 
