@@ -299,8 +299,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       };
 
       // VECTOR SEARCH: Retrieve semantically relevant Kuczynski positions from the database
-      // This searches the 623 positions from Kuczynski Philosophical Database v25
-      const relevantChunks = await searchPhilosophicalChunks(message, 8, "common", "Kuczynski");
+      // CRITICAL: Use 'jmk' figureId to access 2,342 Kuczynski chunks (not just 'common')
+      const relevantChunks = await searchPhilosophicalChunks(message, 8, "jmk", "Kuczynski");
       
       // Build knowledge context with ACTUAL Kuczynski content
       let knowledgeContext = "";
@@ -326,17 +326,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
         knowledgeContext = `\n\n⚠️ NOTE: No specific positions retrieved for this query. Respond using your authentic philosophical voice and known positions, or acknowledge if this falls outside your documented work.\n`;
       }
       
-      // Build response instructions - minimal, focused on style
+      // Build response instructions - ENFORCE word count and quote minimums
       let responseInstructions = "";
-      const targetWords = personaSettings?.responseLength || 0;
-      const targetQuotes = personaSettings?.quoteFrequency || 0;
+      // DEFAULTS: 1000 words minimum, 10 quotes minimum (user explicitly requested)
+      const targetWords = (personaSettings?.responseLength && personaSettings.responseLength > 0) ? personaSettings.responseLength : 1000;
+      const targetQuotes = (personaSettings?.quoteFrequency && personaSettings.quoteFrequency > 0) ? personaSettings.quoteFrequency : 10;
       
-      if (targetWords > 0) {
-        responseInstructions += `\nTarget length: approximately ${targetWords} words.\n`;
-      }
-      if (targetQuotes > 0) {
-        responseInstructions += `Include roughly ${targetQuotes} quotes if they strengthen your argument.\n`;
-      }
+      // MANDATORY word count instruction
+      responseInstructions += `\n⚠️ MANDATORY TARGET LENGTH: Approximately ${targetWords} words. Do NOT write short responses. This is a minimum requirement.\n`;
+      
+      // MANDATORY quote instruction
+      responseInstructions += `⚠️ MANDATORY QUOTE REQUIREMENT: Include at least ${targetQuotes} quotes from your writings above to support your argument. Each quote must be relevant.\n`;
       
       responseInstructions += `\nSTYLE: Write like Kuczynski - crisp, direct, no academic bloat. Short sentences. Clear logic. No throat-clearing. Get to the point immediately.\n`;
       
