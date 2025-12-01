@@ -86,18 +86,24 @@ function formatTitle(filename: string): string {
 }
 
 async function main() {
-  console.log("🎓 Generating J.-M. Kuczynski embeddings...\n");
+  console.log("🎓 Generating J.-M. Kuczynski embeddings from ACTUAL SOURCE TEXTS...\n");
   
   const dataDir = join(__dirname, "data/kuczynski");
   
-  const targetFiles = readdirSync(dataDir).filter(f => 
-    f.endsWith('.txt') && (
-      f.startsWith('CHAPTER_') || 
-      f.startsWith('CORPUS_ANALYSIS_')
-    )
-  );
+  const allFiles = readdirSync(dataDir).filter(f => f.endsWith('.txt'));
   
-  console.log(`📚 Found ${targetFiles.length} Kuczynski file(s) to process\n`);
+  const targetFiles = allFiles.filter(f => {
+    if (f.startsWith('CORPUS_ANALYSIS_')) return false;
+    if (f.includes('WORD')) return false;
+    if (f.includes('revised')) return false;
+    if (f.includes('_1762') || f.includes('_176')) return false;
+    return true;
+  });
+  
+  console.log(`📚 Found ${targetFiles.length} ACTUAL Kuczynski source file(s) to process\n`);
+  console.log("Files to embed:");
+  targetFiles.forEach(f => console.log(`  - ${f}`));
+  console.log("");
   
   const startTime = Date.now();
   let totalChunks = 0;
