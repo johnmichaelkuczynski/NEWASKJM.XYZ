@@ -31,8 +31,10 @@ import { eq, desc, and } from "drizzle-orm";
 export interface IStorage {
   // User operations (Replit Auth integration)
   getUser(id: string): Promise<User | undefined>;
+  getUserByUsername(username: string): Promise<User | undefined>;
   upsertUser(user: UpsertUser): Promise<User>;
   createUser(user: InsertUser): Promise<User>;
+  createOrGetUserByUsername(username: string): Promise<User>;
   getCurrentUser(): Promise<User | undefined>;
 
   // Persona settings operations
@@ -49,7 +51,10 @@ export interface IStorage {
 
   // Conversation operations
   getCurrentConversation(userId: string): Promise<Conversation | undefined>;
+  getAllConversations(userId: string): Promise<Conversation[]>;
+  getConversation(id: string): Promise<Conversation | undefined>;
   createConversation(userId: string, conversation: InsertConversation): Promise<Conversation>;
+  migrateUserData(fromUserId: string, toUserId: string): Promise<void>;
 
   // Message operations
   getMessages(conversationId: string): Promise<Message[]>;
@@ -93,9 +98,32 @@ export class DatabaseStorage implements IStorage {
     return user || undefined;
   }
 
+  async getUserByUsername(username: string): Promise<User | undefined> {
+    const [user] = await db.select().from(users).where(eq(users.username, username));
+    return user || undefined;
+  }
+
   async createUser(insertUser: InsertUser): Promise<User> {
     const [user] = await db.insert(users).values(insertUser).returning();
     return user;
+  }
+
+  async createOrGetUserByUsername(username: string): Promise<User> {
+    const existingUser = await this.getUserByUsername(username);
+    if (existingUser) {
+      return existingUser;
+    }
+    const [newUser] = await db
+      .insert(users)
+      .values({
+        username,
+        email: `${username}@askaphilosopher.local`,
+        firstName: username,
+        lastName: null,
+        profileImageUrl: null,
+      })
+      .returning();
+    return newUser;
   }
 
   async getCurrentUser(): Promise<User | undefined> {
@@ -158,6 +186,22 @@ export class DatabaseStorage implements IStorage {
     return conversation || undefined;
   }
 
+  async getAllConversations(userId: string): Promise<Conversation[]> {
+    return db
+      .select()
+      .from(conversations)
+      .where(eq(conversations.userId, userId))
+      .orderBy(desc(conversations.createdAt));
+  }
+
+  async getConversation(id: string): Promise<Conversation | undefined> {
+    const [conversation] = await db
+      .select()
+      .from(conversations)
+      .where(eq(conversations.id, id));
+    return conversation || undefined;
+  }
+
   async createConversation(
     userId: string,
     conversation: InsertConversation
@@ -167,6 +211,41 @@ export class DatabaseStorage implements IStorage {
       .values({ userId, ...conversation })
       .returning();
     return result;
+  }
+
+  async migrateUserData(fromUserId: string, toUserId: string): Promise<void> {
+    // Migrate conversations from guest to authenticated user
+    await db
+      .update(conversations)
+      .set({ userId: toUserId })
+      .where(eq(conversations.userId, fromUserId));
+    
+    // Migrate figure conversations
+    await db
+      .update(figureConversations)
+      .set({ userId: toUserId })
+      .where(eq(figureConversations.userId, fromUserId));
+    
+    // Migrate goals
+    await db
+      .update(goals)
+      .set({ userId: toUserId })
+      .where(eq(goals.userId, fromUserId));
+    
+    // Migrate or merge persona settings (prefer existing authenticated user settings)
+    const existingSettings = await this.getPersonaSettings(toUserId);
+    if (!existingSettings) {
+      const guestSettings = await this.getPersonaSettings(fromUserId);
+      if (guestSettings) {
+        await db
+          .update(personaSettings)
+          .set({ userId: toUserId })
+          .where(eq(personaSettings.userId, fromUserId));
+      }
+    }
+    
+    // Clean up the guest user (optional - keep for now)
+    // await db.delete(users).where(eq(users.id, fromUserId));
   }
 
   async getMessages(conversationId: string): Promise<Message[]> {

@@ -15,7 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch";
 import { useToast } from "@/hooks/use-toast";
-import { Sparkles, Search, Users, Star } from "lucide-react";
+import { Sparkles, Search, Users, Star, User, LogOut, History, Download, MessageSquare, Plus } from "lucide-react";
 import type { Message, PersonaSettings, Figure } from "@shared/schema";
 import kuczynskiIcon from "/jmk-photo.png";
 import { ComparisonModal } from "@/components/comparison-modal";
@@ -48,6 +48,8 @@ export default function Chat() {
   const [figureDialogOpen, setFigureDialogOpen] = useState(false);
   const [figureSearchQuery, setFigureSearchQuery] = useState("");
   const [comparisonModalOpen, setComparisonModalOpen] = useState(false);
+  const [loginUsername, setLoginUsername] = useState("");
+  const [showChatHistory, setShowChatHistory] = useState(false);
 
   // Content transfer system: refs to input setters
   const [chatInputContent, setChatInputContent] = useState<{ text: string; version: number }>({ text: "", version: 0 });
@@ -125,6 +127,19 @@ export default function Chat() {
   const { data: figures = [], isLoading: figuresLoading } = useQuery<Figure[]>({
     queryKey: ["/api/figures"],
   });
+
+  // User login state
+  const { data: userData } = useQuery<{ user: { id: string; username: string; firstName: string } | null }>({
+    queryKey: ["/api/user"],
+  });
+
+  // Chat history
+  const { data: chatHistoryData, refetch: refetchChatHistory } = useQuery<{ 
+    conversations: { id: string; title: string; messageCount: number; preview: string; createdAt: string }[] 
+  }>({
+    queryKey: ["/api/chat-history"],
+    enabled: !!userData?.user,
+  });
   
   const personaSettings = fetchedSettings || DEFAULT_PERSONA_SETTINGS as PersonaSettings;
 
@@ -140,6 +155,53 @@ export default function Chat() {
       queryClient.invalidateQueries({ queryKey: ["/api/persona-settings"] });
     },
   });
+
+  // Login mutation
+  const loginMutation = useMutation({
+    mutationFn: async (username: string) => {
+      return apiRequest("POST", "/api/login", { username });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["/api/user"] });
+      queryClient.invalidateQueries({ queryKey: ["/api/chat-history"] });
+      setLoginUsername("");
+      toast({ title: "Logged in", description: "You can now access your past chats" });
+    },
+    onError: () => {
+      toast({ title: "Login failed", description: "Please try again", variant: "destructive" });
+    },
+  });
+
+  // Logout mutation
+  const logoutMutation = useMutation({
+    mutationFn: async () => {
+      return apiRequest("POST", "/api/logout", {});
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["/api/user"] });
+      queryClient.invalidateQueries({ queryKey: ["/api/chat-history"] });
+      toast({ title: "Logged out" });
+    },
+  });
+
+  // New chat mutation
+  const newChatMutation = useMutation({
+    mutationFn: async () => {
+      return apiRequest("POST", "/api/chat/new", {});
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["/api/messages"] });
+      queryClient.invalidateQueries({ queryKey: ["/api/chat-history"] });
+      toast({ title: "New chat started" });
+    },
+  });
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (loginUsername.trim().length >= 2) {
+      loginMutation.mutate(loginUsername.trim());
+    }
+  };
 
   const handleSendMessage = async (content: string, documentText?: string) => {
     setIsStreaming(true);
@@ -517,18 +579,136 @@ export default function Chat() {
                 Ask A Philosopher
               </h1>
             </div>
-            <Button
-              onClick={() => setComparisonModalOpen(true)}
-              variant="outline"
-              size="sm"
-              className="gap-2"
-              data-testid="button-compare-thinkers"
-            >
-              <Users className="w-4 h-4" />
-              Compare Thinkers
-            </Button>
+            <div className="flex items-center gap-2">
+              {userData?.user ? (
+                <>
+                  <Button
+                    onClick={() => setShowChatHistory(!showChatHistory)}
+                    variant="outline"
+                    size="sm"
+                    className="gap-2"
+                    data-testid="button-chat-history"
+                  >
+                    <History className="w-4 h-4" />
+                    My Chats
+                  </Button>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <User className="w-4 h-4" />
+                    <span data-testid="text-username">{userData.user.username}</span>
+                  </div>
+                  <Button
+                    onClick={() => logoutMutation.mutate()}
+                    variant="ghost"
+                    size="sm"
+                    data-testid="button-logout"
+                  >
+                    <LogOut className="w-4 h-4" />
+                  </Button>
+                </>
+              ) : (
+                <form onSubmit={handleLogin} className="flex items-center gap-2">
+                  <Input
+                    type="text"
+                    placeholder="Username"
+                    value={loginUsername}
+                    onChange={(e) => setLoginUsername(e.target.value)}
+                    className="h-8 w-32 text-sm"
+                    data-testid="input-login-username"
+                  />
+                  <Button
+                    type="submit"
+                    size="sm"
+                    disabled={loginUsername.trim().length < 2 || loginMutation.isPending}
+                    data-testid="button-login"
+                  >
+                    {loginMutation.isPending ? "..." : "Login"}
+                  </Button>
+                </form>
+              )}
+              <Button
+                onClick={() => setComparisonModalOpen(true)}
+                variant="outline"
+                size="sm"
+                className="gap-2"
+                data-testid="button-compare-thinkers"
+              >
+                <Users className="w-4 h-4" />
+                Compare Thinkers
+              </Button>
+            </div>
           </div>
         </header>
+
+        {/* Chat History Dropdown */}
+        {showChatHistory && userData?.user && (
+          <div className="absolute right-4 top-20 z-30 w-80 bg-background border rounded-lg shadow-lg p-4 max-h-96 overflow-y-auto">
+            <div className="flex items-center justify-between mb-3">
+              <h3 className="font-semibold flex items-center gap-2">
+                <History className="w-4 h-4" />
+                Your Past Chats
+              </h3>
+              <Button
+                onClick={() => {
+                  newChatMutation.mutate();
+                  setShowChatHistory(false);
+                }}
+                size="sm"
+                variant="outline"
+                className="gap-1"
+                data-testid="button-new-chat"
+              >
+                <Plus className="w-3 h-3" />
+                New
+              </Button>
+            </div>
+            {chatHistoryData?.conversations && chatHistoryData.conversations.length > 0 ? (
+              <div className="space-y-2">
+                {chatHistoryData.conversations.map((chat) => (
+                  <div
+                    key={chat.id}
+                    className="p-3 border rounded-lg hover:bg-muted/50 transition-colors"
+                    data-testid={`chat-history-item-${chat.id}`}
+                  >
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <MessageSquare className="w-3 h-3 text-muted-foreground flex-shrink-0" />
+                          <span className="text-sm font-medium truncate">{chat.title}</span>
+                        </div>
+                        <p className="text-xs text-muted-foreground mt-1 line-clamp-2">
+                          {chat.preview}
+                        </p>
+                        <div className="flex items-center gap-2 mt-1">
+                          <span className="text-xs text-muted-foreground">
+                            {chat.messageCount} messages
+                          </span>
+                          <span className="text-xs text-muted-foreground">
+                            {new Date(chat.createdAt).toLocaleDateString()}
+                          </span>
+                        </div>
+                      </div>
+                      <a
+                        href={`/api/chat/${chat.id}/download`}
+                        download
+                        className="flex-shrink-0"
+                        onClick={(e) => e.stopPropagation()}
+                        data-testid={`button-download-chat-${chat.id}`}
+                      >
+                        <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+                          <Download className="w-4 h-4" />
+                        </Button>
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-sm text-muted-foreground text-center py-4">
+                No chats yet. Start a conversation!
+              </p>
+            )}
+          </div>
+        )}
 
         {/* Scrollable Content Area with All Three Sections */}
         <div className="relative z-10 flex-1 overflow-y-auto">

@@ -146,6 +146,211 @@ export async function registerRoutes(app: Express): Promise<Server> {
     },
   }));
 
+  // ============ USERNAME-BASED LOGIN (NO PASSWORD) ============
+  
+  // Login with username - creates user if not exists
+  // NOTE: This is a simple username-only login (no password) as requested by the user.
+  // It's suitable for casual use but not for sensitive data.
+  app.post("/api/login", async (req: any, res) => {
+    try {
+      const { username } = req.body;
+      
+      if (!username || typeof username !== "string" || username.trim().length < 2) {
+        return res.status(400).json({ error: "Username must be at least 2 characters" });
+      }
+      
+      const cleanUsername = username.trim().toLowerCase().replace(/[^a-z0-9_-]/g, '');
+      if (cleanUsername.length < 2) {
+        return res.status(400).json({ error: "Username can only contain letters, numbers, underscores, and dashes" });
+      }
+      
+      // Get the current guest user ID before login
+      const guestUserId = req.session.userId;
+      
+      // Get or create the authenticated user
+      const user = await storage.createOrGetUserByUsername(cleanUsername);
+      
+      // Migrate guest data to authenticated user (preserves current conversation)
+      if (guestUserId && guestUserId !== user.id && guestUserId.startsWith('guest_')) {
+        await storage.migrateUserData(guestUserId, user.id);
+      }
+      
+      // Update session with authenticated user
+      req.session.userId = user.id;
+      req.session.username = cleanUsername;
+      
+      res.json({ 
+        success: true, 
+        user: { 
+          id: user.id, 
+          username: cleanUsername,
+          firstName: user.firstName 
+        } 
+      });
+    } catch (error) {
+      console.error("Login error:", error);
+      res.status(500).json({ error: "Failed to login" });
+    }
+  });
+
+  // Get current user
+  app.get("/api/user", async (req: any, res) => {
+    try {
+      if (!req.session.userId || !req.session.username) {
+        return res.json({ user: null });
+      }
+      
+      const user = await storage.getUser(req.session.userId);
+      if (!user) {
+        return res.json({ user: null });
+      }
+      
+      res.json({ 
+        user: { 
+          id: user.id, 
+          username: req.session.username,
+          firstName: user.firstName 
+        } 
+      });
+    } catch (error) {
+      console.error("Get user error:", error);
+      res.status(500).json({ error: "Failed to get user" });
+    }
+  });
+
+  // Logout
+  app.post("/api/logout", async (req: any, res) => {
+    try {
+      req.session.destroy((err: any) => {
+        if (err) {
+          return res.status(500).json({ error: "Failed to logout" });
+        }
+        res.json({ success: true });
+      });
+    } catch (error) {
+      console.error("Logout error:", error);
+      res.status(500).json({ error: "Failed to logout" });
+    }
+  });
+
+  // Get chat history for logged-in user
+  app.get("/api/chat-history", async (req: any, res) => {
+    try {
+      if (!req.session.userId || !req.session.username) {
+        return res.json({ conversations: [] });
+      }
+      
+      const allConversations = await storage.getAllConversations(req.session.userId);
+      
+      // Get message counts and first message preview for each conversation
+      const conversationsWithDetails = await Promise.all(
+        allConversations.map(async (conv) => {
+          const messages = await storage.getMessages(conv.id);
+          const userMessages = messages.filter(m => m.role === 'user');
+          const firstUserMessage = userMessages[0];
+          
+          return {
+            id: conv.id,
+            title: conv.title || (firstUserMessage?.content?.substring(0, 50) + '...') || 'Untitled',
+            messageCount: messages.length,
+            preview: firstUserMessage?.content?.substring(0, 100) || '',
+            createdAt: conv.createdAt,
+          };
+        })
+      );
+      
+      res.json({ conversations: conversationsWithDetails.filter(c => c.messageCount > 0) });
+    } catch (error) {
+      console.error("Get chat history error:", error);
+      res.status(500).json({ error: "Failed to get chat history" });
+    }
+  });
+
+  // Load a specific chat
+  app.get("/api/chat/:id", async (req: any, res) => {
+    try {
+      const conversationId = req.params.id;
+      const conversation = await storage.getConversation(conversationId);
+      
+      if (!conversation) {
+        return res.status(404).json({ error: "Chat not found" });
+      }
+      
+      // Verify ownership if logged in
+      if (req.session.userId && conversation.userId !== req.session.userId) {
+        return res.status(403).json({ error: "Access denied" });
+      }
+      
+      const messages = await storage.getMessages(conversationId);
+      
+      res.json({ 
+        conversation: {
+          id: conversation.id,
+          title: conversation.title,
+          createdAt: conversation.createdAt,
+        },
+        messages 
+      });
+    } catch (error) {
+      console.error("Get chat error:", error);
+      res.status(500).json({ error: "Failed to get chat" });
+    }
+  });
+
+  // Download chat as text file
+  app.get("/api/chat/:id/download", async (req: any, res) => {
+    try {
+      const conversationId = req.params.id;
+      const conversation = await storage.getConversation(conversationId);
+      
+      if (!conversation) {
+        return res.status(404).json({ error: "Chat not found" });
+      }
+      
+      // Verify ownership if logged in
+      if (req.session.userId && conversation.userId !== req.session.userId) {
+        return res.status(403).json({ error: "Access denied" });
+      }
+      
+      const messages = await storage.getMessages(conversationId);
+      
+      // Format as readable text
+      let content = `# ${conversation.title || 'Philosophical Conversation'}\n`;
+      content += `# Date: ${new Date(conversation.createdAt).toLocaleString()}\n`;
+      content += `${'='.repeat(60)}\n\n`;
+      
+      for (const msg of messages) {
+        const role = msg.role === 'user' ? 'YOU' : 'PHILOSOPHER';
+        content += `[${role}]\n${msg.content}\n\n${'─'.repeat(40)}\n\n`;
+      }
+      
+      const filename = `chat-${conversationId.substring(0, 8)}-${new Date().toISOString().split('T')[0]}.txt`;
+      
+      res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+      res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+      res.send(content);
+    } catch (error) {
+      console.error("Download chat error:", error);
+      res.status(500).json({ error: "Failed to download chat" });
+    }
+  });
+
+  // Start new chat session
+  app.post("/api/chat/new", async (req: any, res) => {
+    try {
+      const sessionId = await getSessionId(req);
+      const conversation = await storage.createConversation(sessionId, {
+        title: "New Conversation",
+      });
+      res.json({ conversation });
+    } catch (error) {
+      console.error("Create new chat error:", error);
+      res.status(500).json({ error: "Failed to create new chat" });
+    }
+  });
+
+  // ============ END LOGIN/CHAT HISTORY ROUTES ============
+
   // Get persona settings
   app.get("/api/persona-settings", async (req: any, res) => {
     try {
