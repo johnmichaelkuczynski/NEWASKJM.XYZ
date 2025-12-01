@@ -13,7 +13,13 @@
 - **Contradiction Handling Protocol**: When retrieved database positions contradict each other, philosophers must: (1) acknowledge the tension explicitly ("I recognize this creates a tension with what I said earlier..."), (2) attempt reconciliation through chronological development, scope limitations, or theoretical tensions, (3) admit unresolved contradictions honestly rather than pretending coherence, (4) maintain philosophical authenticity by representing real intellectual evolution. Goal is self-awareness of contradictions, not elimination.
 
 ### System Architecture
-The application acts as a centralized knowledge server providing unified access to philosophical and psychoanalytic texts via a secure internal API. It features a 3-column layout without authentication, offering direct access to the chat interface. All philosophical texts are consolidated into a unified "Common Fund" knowledge base.
+The application acts as a centralized knowledge server providing unified access to philosophical and psychoanalytic texts via a secure internal API. It features a 3-column layout with optional username-based login for chat history access. All philosophical texts are consolidated into a unified "Common Fund" knowledge base.
+
+#### User Authentication
+- **Username Login**: Simple username-only login (no password) for convenience, suitable for demo/casual use
+- **Chat History**: Logged-in users can access their past conversations via "My Chats" dropdown
+- **Download**: Each conversation can be downloaded as a text file
+- **Guest Migration**: In-progress conversations are automatically migrated when users log in (no data loss)
 
 #### UI/UX Decisions
 - **Layout**: A unified single-page layout with 3 columns (philosophers sidebar, settings, main content) containing eight vertically stacked sections, accessible by scrolling.
