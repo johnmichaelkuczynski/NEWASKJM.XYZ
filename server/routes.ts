@@ -1179,18 +1179,33 @@ You are a living intellect attacking problems, NOT a textbook summarizing views.
           const lastMessage = history[history.length - 1];
           let enhancedUserMessage = lastMessage.content;
           
-          // Add word limit reminder if user specified a specific length
+          // 🚨 MANDATORY WORD COUNT - User specified target length
           if (personaSettings?.responseLength && personaSettings.responseLength > 0) {
-            const maxWords = Math.round(personaSettings.responseLength * 1.1);
-            enhancedUserMessage += `\n\n⚠️ CRITICAL REMINDER: Your response MUST NOT exceed ${personaSettings.responseLength} words (maximum ${maxWords} words with 10% tolerance). COUNT YOUR WORDS. This is a hard constraint.`;
+            const minWords = Math.round(personaSettings.responseLength * 0.9);
+            const targetWords = personaSettings.responseLength;
+            enhancedUserMessage += `\n\n🚨🚨🚨 MANDATORY WORD COUNT REQUIREMENT 🚨🚨🚨
+YOUR RESPONSE MUST BE APPROXIMATELY ${targetWords} WORDS.
+- MINIMUM: ${minWords} words (90% of target)
+- TARGET: ${targetWords} words
+- This is NOT optional. Short responses are UNACCEPTABLE.
+- Write substantively. Develop your argument fully.
+- COUNT YOUR WORDS before finishing. If under ${minWords}, KEEP WRITING.`;
           }
           
-          // Add quote reminder if user specified a number
+          // 🚨 MANDATORY QUOTE COUNT - User specified number of quotes
           const numQuotes = personaSettings?.quoteFrequency || 0;
           if (numQuotes > 0) {
-            enhancedUserMessage += `\n\n📚 QUOTE REMINDER: Include approximately ${numQuotes} verbatim quotes from your works in this response. Extract exact text from the retrieved passages above.`;
+            enhancedUserMessage += `\n\n🚨🚨🚨 MANDATORY QUOTE REQUIREMENT 🚨🚨🚨
+YOU MUST INCLUDE EXACTLY ${numQuotes} VERBATIM QUOTES from your writings.
+- Extract WORD-FOR-WORD text from the retrieved passages above
+- Format each quote with quotation marks and source citation
+- ${numQuotes} quotes is MANDATORY, not optional
+- If you provide fewer than ${numQuotes} quotes, your response is INCOMPLETE
+- Each quote must be a direct extraction, not paraphrased
+
+COUNT YOUR QUOTES before finishing. If you have fewer than ${numQuotes}, ADD MORE.`;
           } else if (numQuotes === 0) {
-            enhancedUserMessage += `\n\n📚 NO QUOTES: Do not include any verbatim quotes in this response.`;
+            enhancedUserMessage += `\n\n📚 NO QUOTES: The user has not requested quotes. Focus on analysis and reasoning.`;
           }
           
           messages.push({
@@ -1223,18 +1238,33 @@ You are a living intellect attacking problems, NOT a textbook summarizing views.
           const lastMessage = history[history.length - 1];
           let enhancedUserMessage = lastMessage.content;
           
-          // Add word limit reminder if user specified a specific length
+          // 🚨 MANDATORY WORD COUNT - User specified target length
           if (personaSettings?.responseLength && personaSettings.responseLength > 0) {
-            const maxWords = Math.round(personaSettings.responseLength * 1.1);
-            enhancedUserMessage += `\n\n⚠️ CRITICAL REMINDER: Your response MUST NOT exceed ${personaSettings.responseLength} words (maximum ${maxWords} words with 10% tolerance). COUNT YOUR WORDS. This is a hard constraint.`;
+            const minWords = Math.round(personaSettings.responseLength * 0.9);
+            const targetWords = personaSettings.responseLength;
+            enhancedUserMessage += `\n\n🚨🚨🚨 MANDATORY WORD COUNT REQUIREMENT 🚨🚨🚨
+YOUR RESPONSE MUST BE APPROXIMATELY ${targetWords} WORDS.
+- MINIMUM: ${minWords} words (90% of target)
+- TARGET: ${targetWords} words
+- This is NOT optional. Short responses are UNACCEPTABLE.
+- Write substantively. Develop your argument fully.
+- COUNT YOUR WORDS before finishing. If under ${minWords}, KEEP WRITING.`;
           }
           
-          // Add quote reminder if user specified a number
+          // 🚨 MANDATORY QUOTE COUNT - User specified number of quotes
           const numQuotes = personaSettings?.quoteFrequency || 0;
           if (numQuotes > 0) {
-            enhancedUserMessage += `\n\n📚 QUOTE REMINDER: Include approximately ${numQuotes} verbatim quotes from your works in this response. Extract exact text from the retrieved passages above.`;
+            enhancedUserMessage += `\n\n🚨🚨🚨 MANDATORY QUOTE REQUIREMENT 🚨🚨🚨
+YOU MUST INCLUDE EXACTLY ${numQuotes} VERBATIM QUOTES from your writings.
+- Extract WORD-FOR-WORD text from the retrieved passages above
+- Format each quote with quotation marks and source citation
+- ${numQuotes} quotes is MANDATORY, not optional
+- If you provide fewer than ${numQuotes} quotes, your response is INCOMPLETE
+- Each quote must be a direct extraction, not paraphrased
+
+COUNT YOUR QUOTES before finishing. If you have fewer than ${numQuotes}, ADD MORE.`;
           } else if (numQuotes === 0) {
-            enhancedUserMessage += `\n\n📚 NO QUOTES: Do not include any verbatim quotes in this response.`;
+            enhancedUserMessage += `\n\n📚 NO QUOTES: The user has not requested quotes. Focus on analysis and reasoning.`;
           }
           
           formattedMessages.push({
@@ -1244,7 +1274,7 @@ You are a living intellect attacking problems, NOT a textbook summarizing views.
 
           const stream = await anthropic.messages.stream({
             model: "claude-sonnet-4-5-20250929",
-            max_tokens: 8000,
+            max_tokens: 16000,
             system: enhancedSystemPrompt,
             messages: formattedMessages,
           });
