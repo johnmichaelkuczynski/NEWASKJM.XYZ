@@ -1180,10 +1180,10 @@ You are a living intellect attacking problems, NOT a textbook summarizing views.
           let enhancedUserMessage = lastMessage.content;
           
           // 🚨🚨🚨 ALWAYS ENFORCE WORD COUNT - No exceptions 🚨🚨🚨
-          // Default to 500 words if user hasn't specified, otherwise use their exact specification
+          // CRITICAL: 0 means "use defaults" (1000 words) - frontend displays 1000 when server has 0
           const targetWords = (personaSettings?.responseLength && personaSettings.responseLength > 0) 
             ? personaSettings.responseLength 
-            : 500;
+            : 1000; // DEFAULT: 1000 words when not set
           const minWords = Math.round(targetWords * 0.9);
           
           console.log(`[ENFORCEMENT] Word count target: ${targetWords}, min: ${minWords}, from settings: ${personaSettings?.responseLength}`);
@@ -1211,7 +1211,10 @@ THIS IS ENFORCEABLE. SHORT RESPONSES WILL BE REJECTED.
 ═══════════════════════════════════════════════════════════════════`;
           
           // 🚨🚨🚨 ALWAYS ENFORCE QUOTE COUNT - No exceptions 🚨🚨🚨
-          const numQuotes = personaSettings?.quoteFrequency ?? 0;
+          // CRITICAL: 0 means "use defaults" (10 quotes) - frontend displays 10 when server has 0
+          const numQuotes = (personaSettings?.quoteFrequency && personaSettings.quoteFrequency > 0) 
+            ? personaSettings.quoteFrequency 
+            : 10; // DEFAULT: 10 quotes when not set
           
           console.log(`[ENFORCEMENT] Quote count target: ${numQuotes}, from settings: ${personaSettings?.quoteFrequency}`);
           
@@ -1288,10 +1291,10 @@ THIS IS ENFORCEABLE. RESPONSES WITH FEWER THAN ${numQuotes} QUOTES WILL BE REJEC
           let enhancedUserMessage = lastMessage.content;
           
           // 🚨🚨🚨 ALWAYS ENFORCE WORD COUNT - No exceptions 🚨🚨🚨
-          // Default to 500 words if user hasn't specified, otherwise use their exact specification
+          // CRITICAL: 0 means "use defaults" (1000 words) - frontend displays 1000 when server has 0
           const targetWordsAnthropic = (personaSettings?.responseLength && personaSettings.responseLength > 0) 
             ? personaSettings.responseLength 
-            : 500;
+            : 1000; // DEFAULT: 1000 words when not set
           const minWordsAnthropic = Math.round(targetWordsAnthropic * 0.9);
           
           console.log(`[ENFORCEMENT-ANTHROPIC] Word count target: ${targetWordsAnthropic}, min: ${minWordsAnthropic}, from settings: ${personaSettings?.responseLength}`);
@@ -1319,7 +1322,10 @@ THIS IS ENFORCEABLE. SHORT RESPONSES WILL BE REJECTED.
 ═══════════════════════════════════════════════════════════════════`;
           
           // 🚨🚨🚨 ALWAYS ENFORCE QUOTE COUNT - No exceptions 🚨🚨🚨
-          const numQuotesAnthropic = personaSettings?.quoteFrequency ?? 0;
+          // CRITICAL: 0 means "use defaults" (10 quotes) - frontend displays 10 when server has 0
+          const numQuotesAnthropic = (personaSettings?.quoteFrequency && personaSettings.quoteFrequency > 0) 
+            ? personaSettings.quoteFrequency 
+            : 10; // DEFAULT: 10 quotes when not set
           
           console.log(`[ENFORCEMENT-ANTHROPIC] Quote count target: ${numQuotesAnthropic}, from settings: ${personaSettings?.quoteFrequency}`);
           
