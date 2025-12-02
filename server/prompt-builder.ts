@@ -16,13 +16,32 @@ STYLE REQUIREMENTS:
 
 `;
 
-  // Default to 1000 words if not specified
+  // 🚨 MANDATORY WORD COUNT ENFORCEMENT
   const targetLength = settings.responseLength && settings.responseLength > 0 ? settings.responseLength : 1000;
-  prompt += `Target length: approximately ${targetLength} words.\n\n`;
+  const minWords = Math.round(targetLength * 0.9);
+  prompt += `🚨 MANDATORY WORD COUNT: Your response MUST be ${targetLength} words.
+- MINIMUM: ${minWords} words (90% of target) - responses shorter than this are UNACCEPTABLE
+- TARGET: ${targetLength} words
+- This is NOT optional. Do NOT stop early.
+- Develop your argument fully. Add depth, examples, and reasoning.
+- COUNT YOUR WORDS. If under ${minWords}, KEEP WRITING until you reach the target.
 
-  // Default to 10 quotes if not specified
-  const quoteCount = settings.quoteFrequency && settings.quoteFrequency > 0 ? settings.quoteFrequency : 10;
-  prompt += `Include roughly ${quoteCount} quotes from your works if they strengthen the argument.\n\n`;
+`;
+
+  // 🚨 MANDATORY QUOTE COUNT ENFORCEMENT
+  const quoteCount = settings.quoteFrequency !== undefined ? settings.quoteFrequency : 10;
+  if (quoteCount > 0) {
+    prompt += `🚨 MANDATORY QUOTE REQUIREMENT: You MUST include EXACTLY ${quoteCount} verbatim quotes.
+- Each quote must be WORD-FOR-WORD extracted text from retrieved passages
+- Format: "exact quote text" (Source Title)
+- ${quoteCount} quotes is MANDATORY, not optional
+- If you provide fewer than ${quoteCount} quotes, your response is INCOMPLETE
+- COUNT YOUR QUOTES before finishing. If fewer than ${quoteCount}, ADD MORE.
+
+`;
+  } else {
+    prompt += `NO QUOTES: Focus on analysis and reasoning without direct quotations.\n\n`;
+  }
 
   // Paper mode
   if (settings.writePaper) {
