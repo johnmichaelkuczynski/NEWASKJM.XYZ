@@ -1179,33 +1179,82 @@ You are a living intellect attacking problems, NOT a textbook summarizing views.
           const lastMessage = history[history.length - 1];
           let enhancedUserMessage = lastMessage.content;
           
-          // 🚨 MANDATORY WORD COUNT - User specified target length
-          if (personaSettings?.responseLength && personaSettings.responseLength > 0) {
-            const minWords = Math.round(personaSettings.responseLength * 0.9);
-            const targetWords = personaSettings.responseLength;
-            enhancedUserMessage += `\n\n🚨🚨🚨 MANDATORY WORD COUNT REQUIREMENT 🚨🚨🚨
-YOUR RESPONSE MUST BE APPROXIMATELY ${targetWords} WORDS.
-- MINIMUM: ${minWords} words (90% of target)
-- TARGET: ${targetWords} words
-- This is NOT optional. Short responses are UNACCEPTABLE.
-- Write substantively. Develop your argument fully.
-- COUNT YOUR WORDS before finishing. If under ${minWords}, KEEP WRITING.`;
-          }
+          // 🚨🚨🚨 ALWAYS ENFORCE WORD COUNT - No exceptions 🚨🚨🚨
+          // Default to 500 words if user hasn't specified, otherwise use their exact specification
+          const targetWords = (personaSettings?.responseLength && personaSettings.responseLength > 0) 
+            ? personaSettings.responseLength 
+            : 500;
+          const minWords = Math.round(targetWords * 0.9);
           
-          // 🚨 MANDATORY QUOTE COUNT - User specified number of quotes
-          const numQuotes = personaSettings?.quoteFrequency || 0;
-          if (numQuotes > 0) {
-            enhancedUserMessage += `\n\n🚨🚨🚨 MANDATORY QUOTE REQUIREMENT 🚨🚨🚨
-YOU MUST INCLUDE EXACTLY ${numQuotes} VERBATIM QUOTES from your writings.
-- Extract WORD-FOR-WORD text from the retrieved passages above
-- Format each quote with quotation marks and source citation
-- ${numQuotes} quotes is MANDATORY, not optional
-- If you provide fewer than ${numQuotes} quotes, your response is INCOMPLETE
-- Each quote must be a direct extraction, not paraphrased
+          console.log(`[ENFORCEMENT] Word count target: ${targetWords}, min: ${minWords}, from settings: ${personaSettings?.responseLength}`);
+          
+          enhancedUserMessage += `
 
-COUNT YOUR QUOTES before finishing. If you have fewer than ${numQuotes}, ADD MORE.`;
-          } else if (numQuotes === 0) {
-            enhancedUserMessage += `\n\n📚 NO QUOTES: The user has not requested quotes. Focus on analysis and reasoning.`;
+═══════════════════════════════════════════════════════════════════
+🚨🚨🚨 ABSOLUTE MANDATORY WORD COUNT - THIS IS NOT OPTIONAL 🚨🚨🚨
+═══════════════════════════════════════════════════════════════════
+
+YOUR RESPONSE MUST BE EXACTLY ${targetWords} WORDS.
+
+HARD REQUIREMENTS:
+- MINIMUM: ${minWords} words (you will be rejected if under this)
+- TARGET: ${targetWords} words exactly
+- MAXIMUM: ${Math.round(targetWords * 1.1)} words
+
+BEFORE SUBMITTING YOUR RESPONSE:
+1. COUNT every word you have written
+2. If your count is BELOW ${minWords}, you MUST add more content
+3. Expand arguments, add examples, develop ideas further
+4. Do NOT submit until you hit the minimum
+
+THIS IS ENFORCEABLE. SHORT RESPONSES WILL BE REJECTED.
+═══════════════════════════════════════════════════════════════════`;
+          
+          // 🚨🚨🚨 ALWAYS ENFORCE QUOTE COUNT - No exceptions 🚨🚨🚨
+          const numQuotes = personaSettings?.quoteFrequency ?? 0;
+          
+          console.log(`[ENFORCEMENT] Quote count target: ${numQuotes}, from settings: ${personaSettings?.quoteFrequency}`);
+          
+          if (numQuotes > 0) {
+            enhancedUserMessage += `
+
+═══════════════════════════════════════════════════════════════════
+🚨🚨🚨 ABSOLUTE MANDATORY QUOTE COUNT - THIS IS NOT OPTIONAL 🚨🚨🚨
+═══════════════════════════════════════════════════════════════════
+
+YOU MUST INCLUDE EXACTLY ${numQuotes} VERBATIM QUOTES.
+
+HARD REQUIREMENTS:
+- EXACTLY ${numQuotes} quotes - no more, no less
+- Each quote MUST be WORD-FOR-WORD text from the passages above
+- Format: "exact verbatim text" (Source Title)
+- Paraphrases DO NOT count as quotes
+- Synthetic/made-up quotes are FORBIDDEN
+
+BEFORE SUBMITTING YOUR RESPONSE:
+1. COUNT every quote you have included
+2. If your count is BELOW ${numQuotes}, you MUST add more quotes
+3. Extract additional verbatim text from the passages above
+4. Do NOT submit until you have EXACTLY ${numQuotes} quotes
+
+Quote #1 must be present.
+Quote #2 must be present.
+${numQuotes >= 3 ? `Quote #3 must be present.` : ''}
+${numQuotes >= 4 ? `Quote #4 must be present.` : ''}
+${numQuotes >= 5 ? `Quote #5 must be present.` : ''}
+${numQuotes >= 6 ? `Quote #6 must be present.` : ''}
+${numQuotes >= 7 ? `Quote #7 must be present.` : ''}
+${numQuotes >= 8 ? `Quote #8 must be present.` : ''}
+${numQuotes >= 9 ? `Quote #9 must be present.` : ''}
+${numQuotes >= 10 ? `Quote #10 must be present.` : ''}
+${numQuotes > 10 ? `Quotes #11-${numQuotes} must be present.` : ''}
+
+THIS IS ENFORCEABLE. RESPONSES WITH FEWER THAN ${numQuotes} QUOTES WILL BE REJECTED.
+═══════════════════════════════════════════════════════════════════`;
+          } else {
+            enhancedUserMessage += `
+
+📚 QUOTE MODE: Auto (no mandatory quotes). Focus on analysis and reasoning without citations.`;
           }
           
           messages.push({
@@ -1238,33 +1287,82 @@ COUNT YOUR QUOTES before finishing. If you have fewer than ${numQuotes}, ADD MOR
           const lastMessage = history[history.length - 1];
           let enhancedUserMessage = lastMessage.content;
           
-          // 🚨 MANDATORY WORD COUNT - User specified target length
-          if (personaSettings?.responseLength && personaSettings.responseLength > 0) {
-            const minWords = Math.round(personaSettings.responseLength * 0.9);
-            const targetWords = personaSettings.responseLength;
-            enhancedUserMessage += `\n\n🚨🚨🚨 MANDATORY WORD COUNT REQUIREMENT 🚨🚨🚨
-YOUR RESPONSE MUST BE APPROXIMATELY ${targetWords} WORDS.
-- MINIMUM: ${minWords} words (90% of target)
-- TARGET: ${targetWords} words
-- This is NOT optional. Short responses are UNACCEPTABLE.
-- Write substantively. Develop your argument fully.
-- COUNT YOUR WORDS before finishing. If under ${minWords}, KEEP WRITING.`;
-          }
+          // 🚨🚨🚨 ALWAYS ENFORCE WORD COUNT - No exceptions 🚨🚨🚨
+          // Default to 500 words if user hasn't specified, otherwise use their exact specification
+          const targetWordsAnthropic = (personaSettings?.responseLength && personaSettings.responseLength > 0) 
+            ? personaSettings.responseLength 
+            : 500;
+          const minWordsAnthropic = Math.round(targetWordsAnthropic * 0.9);
           
-          // 🚨 MANDATORY QUOTE COUNT - User specified number of quotes
-          const numQuotes = personaSettings?.quoteFrequency || 0;
-          if (numQuotes > 0) {
-            enhancedUserMessage += `\n\n🚨🚨🚨 MANDATORY QUOTE REQUIREMENT 🚨🚨🚨
-YOU MUST INCLUDE EXACTLY ${numQuotes} VERBATIM QUOTES from your writings.
-- Extract WORD-FOR-WORD text from the retrieved passages above
-- Format each quote with quotation marks and source citation
-- ${numQuotes} quotes is MANDATORY, not optional
-- If you provide fewer than ${numQuotes} quotes, your response is INCOMPLETE
-- Each quote must be a direct extraction, not paraphrased
+          console.log(`[ENFORCEMENT-ANTHROPIC] Word count target: ${targetWordsAnthropic}, min: ${minWordsAnthropic}, from settings: ${personaSettings?.responseLength}`);
+          
+          enhancedUserMessage += `
 
-COUNT YOUR QUOTES before finishing. If you have fewer than ${numQuotes}, ADD MORE.`;
-          } else if (numQuotes === 0) {
-            enhancedUserMessage += `\n\n📚 NO QUOTES: The user has not requested quotes. Focus on analysis and reasoning.`;
+═══════════════════════════════════════════════════════════════════
+🚨🚨🚨 ABSOLUTE MANDATORY WORD COUNT - THIS IS NOT OPTIONAL 🚨🚨🚨
+═══════════════════════════════════════════════════════════════════
+
+YOUR RESPONSE MUST BE EXACTLY ${targetWordsAnthropic} WORDS.
+
+HARD REQUIREMENTS:
+- MINIMUM: ${minWordsAnthropic} words (you will be rejected if under this)
+- TARGET: ${targetWordsAnthropic} words exactly
+- MAXIMUM: ${Math.round(targetWordsAnthropic * 1.1)} words
+
+BEFORE SUBMITTING YOUR RESPONSE:
+1. COUNT every word you have written
+2. If your count is BELOW ${minWordsAnthropic}, you MUST add more content
+3. Expand arguments, add examples, develop ideas further
+4. Do NOT submit until you hit the minimum
+
+THIS IS ENFORCEABLE. SHORT RESPONSES WILL BE REJECTED.
+═══════════════════════════════════════════════════════════════════`;
+          
+          // 🚨🚨🚨 ALWAYS ENFORCE QUOTE COUNT - No exceptions 🚨🚨🚨
+          const numQuotesAnthropic = personaSettings?.quoteFrequency ?? 0;
+          
+          console.log(`[ENFORCEMENT-ANTHROPIC] Quote count target: ${numQuotesAnthropic}, from settings: ${personaSettings?.quoteFrequency}`);
+          
+          if (numQuotesAnthropic > 0) {
+            enhancedUserMessage += `
+
+═══════════════════════════════════════════════════════════════════
+🚨🚨🚨 ABSOLUTE MANDATORY QUOTE COUNT - THIS IS NOT OPTIONAL 🚨🚨🚨
+═══════════════════════════════════════════════════════════════════
+
+YOU MUST INCLUDE EXACTLY ${numQuotesAnthropic} VERBATIM QUOTES.
+
+HARD REQUIREMENTS:
+- EXACTLY ${numQuotesAnthropic} quotes - no more, no less
+- Each quote MUST be WORD-FOR-WORD text from the passages above
+- Format: "exact verbatim text" (Source Title)
+- Paraphrases DO NOT count as quotes
+- Synthetic/made-up quotes are FORBIDDEN
+
+BEFORE SUBMITTING YOUR RESPONSE:
+1. COUNT every quote you have included
+2. If your count is BELOW ${numQuotesAnthropic}, you MUST add more quotes
+3. Extract additional verbatim text from the passages above
+4. Do NOT submit until you have EXACTLY ${numQuotesAnthropic} quotes
+
+Quote #1 must be present.
+Quote #2 must be present.
+${numQuotesAnthropic >= 3 ? `Quote #3 must be present.` : ''}
+${numQuotesAnthropic >= 4 ? `Quote #4 must be present.` : ''}
+${numQuotesAnthropic >= 5 ? `Quote #5 must be present.` : ''}
+${numQuotesAnthropic >= 6 ? `Quote #6 must be present.` : ''}
+${numQuotesAnthropic >= 7 ? `Quote #7 must be present.` : ''}
+${numQuotesAnthropic >= 8 ? `Quote #8 must be present.` : ''}
+${numQuotesAnthropic >= 9 ? `Quote #9 must be present.` : ''}
+${numQuotesAnthropic >= 10 ? `Quote #10 must be present.` : ''}
+${numQuotesAnthropic > 10 ? `Quotes #11-${numQuotesAnthropic} must be present.` : ''}
+
+THIS IS ENFORCEABLE. RESPONSES WITH FEWER THAN ${numQuotesAnthropic} QUOTES WILL BE REJECTED.
+═══════════════════════════════════════════════════════════════════`;
+          } else {
+            enhancedUserMessage += `
+
+📚 QUOTE MODE: Auto (no mandatory quotes). Focus on analysis and reasoning without citations.`;
           }
           
           formattedMessages.push({
