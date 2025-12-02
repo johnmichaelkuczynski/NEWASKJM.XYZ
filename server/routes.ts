@@ -1208,86 +1208,28 @@ REMEMBER: FIRST PERSON ONLY. "I", "MY", "ME" - NEVER third person.
           const lastMessage = history[history.length - 1];
           let enhancedUserMessage = lastMessage.content;
           
-          // 🚨🚨🚨 ALWAYS ENFORCE WORD COUNT - No exceptions 🚨🚨🚨
-          // CRITICAL: 0 means "use defaults" (1000 words) - frontend displays 1000 when server has 0
+          // Get both settings first
           const targetWords = (personaSettings?.responseLength && personaSettings.responseLength > 0) 
             ? personaSettings.responseLength 
-            : 1000; // DEFAULT: 1000 words when not set
+            : 1000;
           const minWords = Math.round(targetWords * 0.9);
+          const numQuotes = (personaSettings?.quoteFrequency && personaSettings.quoteFrequency > 0) 
+            ? personaSettings.quoteFrequency 
+            : 10;
           
-          console.log(`[ENFORCEMENT] Word count target: ${targetWords}, min: ${minWords}, from settings: ${personaSettings?.responseLength}`);
+          console.log(`[ENFORCEMENT] Word count: ${targetWords}, Quotes: ${numQuotes}`);
           
           enhancedUserMessage += `
 
-═══════════════════════════════════════════════════════════════════
-🚨🚨🚨 ABSOLUTE MANDATORY WORD COUNT - THIS IS NOT OPTIONAL 🚨🚨🚨
-═══════════════════════════════════════════════════════════════════
+--- RESPONSE GUIDELINES ---
 
-YOUR RESPONSE MUST BE EXACTLY ${targetWords} WORDS.
+LENGTH: Write approximately ${targetWords} words (minimum ${minWords} words). Develop your argument fully with examples and reasoning.
 
-HARD REQUIREMENTS:
-- MINIMUM: ${minWords} words (you will be rejected if under this)
-- TARGET: ${targetWords} words exactly
-- MAXIMUM: ${Math.round(targetWords * 1.1)} words
+QUOTES: Include ${numQuotes} verbatim quotes from your writings above. Format: "exact quote text" (Source Title)
 
-BEFORE SUBMITTING YOUR RESPONSE:
-1. COUNT every word you have written
-2. If your count is BELOW ${minWords}, you MUST add more content
-3. Expand arguments, add examples, develop ideas further
-4. Do NOT submit until you hit the minimum
+VOICE: Speak in FIRST PERSON as yourself. Say "I believe..." and "My theory..." - NEVER "Aristotle believed..." or third person.
 
-THIS IS ENFORCEABLE. SHORT RESPONSES WILL BE REJECTED.
-═══════════════════════════════════════════════════════════════════`;
-          
-          // 🚨🚨🚨 ALWAYS ENFORCE QUOTE COUNT - No exceptions 🚨🚨🚨
-          // CRITICAL: 0 means "use defaults" (10 quotes) - frontend displays 10 when server has 0
-          const numQuotes = (personaSettings?.quoteFrequency && personaSettings.quoteFrequency > 0) 
-            ? personaSettings.quoteFrequency 
-            : 10; // DEFAULT: 10 quotes when not set
-          
-          console.log(`[ENFORCEMENT] Quote count target: ${numQuotes}, from settings: ${personaSettings?.quoteFrequency}`);
-          
-          if (numQuotes > 0) {
-            enhancedUserMessage += `
-
-═══════════════════════════════════════════════════════════════════
-🚨🚨🚨 ABSOLUTE MANDATORY QUOTE COUNT - THIS IS NOT OPTIONAL 🚨🚨🚨
-═══════════════════════════════════════════════════════════════════
-
-YOU MUST INCLUDE EXACTLY ${numQuotes} VERBATIM QUOTES.
-
-HARD REQUIREMENTS:
-- EXACTLY ${numQuotes} quotes - no more, no less
-- Each quote MUST be WORD-FOR-WORD text from the passages above
-- Format: "exact verbatim text" (Source Title)
-- Paraphrases DO NOT count as quotes
-- Synthetic/made-up quotes are FORBIDDEN
-
-BEFORE SUBMITTING YOUR RESPONSE:
-1. COUNT every quote you have included
-2. If your count is BELOW ${numQuotes}, you MUST add more quotes
-3. Extract additional verbatim text from the passages above
-4. Do NOT submit until you have EXACTLY ${numQuotes} quotes
-
-Quote #1 must be present.
-Quote #2 must be present.
-${numQuotes >= 3 ? `Quote #3 must be present.` : ''}
-${numQuotes >= 4 ? `Quote #4 must be present.` : ''}
-${numQuotes >= 5 ? `Quote #5 must be present.` : ''}
-${numQuotes >= 6 ? `Quote #6 must be present.` : ''}
-${numQuotes >= 7 ? `Quote #7 must be present.` : ''}
-${numQuotes >= 8 ? `Quote #8 must be present.` : ''}
-${numQuotes >= 9 ? `Quote #9 must be present.` : ''}
-${numQuotes >= 10 ? `Quote #10 must be present.` : ''}
-${numQuotes > 10 ? `Quotes #11-${numQuotes} must be present.` : ''}
-
-THIS IS ENFORCEABLE. RESPONSES WITH FEWER THAN ${numQuotes} QUOTES WILL BE REJECTED.
-═══════════════════════════════════════════════════════════════════`;
-          } else {
-            enhancedUserMessage += `
-
-📚 QUOTE MODE: Auto (no mandatory quotes). Focus on analysis and reasoning without citations.`;
-          }
+--- END GUIDELINES ---`;
           
           messages.push({
             role: lastMessage.role,
@@ -1319,86 +1261,28 @@ THIS IS ENFORCEABLE. RESPONSES WITH FEWER THAN ${numQuotes} QUOTES WILL BE REJEC
           const lastMessage = history[history.length - 1];
           let enhancedUserMessage = lastMessage.content;
           
-          // 🚨🚨🚨 ALWAYS ENFORCE WORD COUNT - No exceptions 🚨🚨🚨
-          // CRITICAL: 0 means "use defaults" (1000 words) - frontend displays 1000 when server has 0
+          // Get settings
           const targetWordsAnthropic = (personaSettings?.responseLength && personaSettings.responseLength > 0) 
             ? personaSettings.responseLength 
-            : 1000; // DEFAULT: 1000 words when not set
+            : 1000;
           const minWordsAnthropic = Math.round(targetWordsAnthropic * 0.9);
+          const numQuotesAnthropic = (personaSettings?.quoteFrequency && personaSettings.quoteFrequency > 0) 
+            ? personaSettings.quoteFrequency 
+            : 10;
           
-          console.log(`[ENFORCEMENT-ANTHROPIC] Word count target: ${targetWordsAnthropic}, min: ${minWordsAnthropic}, from settings: ${personaSettings?.responseLength}`);
+          console.log(`[ENFORCEMENT-ANTHROPIC] Word count: ${targetWordsAnthropic}, Quotes: ${numQuotesAnthropic}`);
           
           enhancedUserMessage += `
 
-═══════════════════════════════════════════════════════════════════
-🚨🚨🚨 ABSOLUTE MANDATORY WORD COUNT - THIS IS NOT OPTIONAL 🚨🚨🚨
-═══════════════════════════════════════════════════════════════════
+--- RESPONSE GUIDELINES ---
 
-YOUR RESPONSE MUST BE EXACTLY ${targetWordsAnthropic} WORDS.
+LENGTH: Write approximately ${targetWordsAnthropic} words (minimum ${minWordsAnthropic} words). Develop your argument fully with examples and reasoning.
 
-HARD REQUIREMENTS:
-- MINIMUM: ${minWordsAnthropic} words (you will be rejected if under this)
-- TARGET: ${targetWordsAnthropic} words exactly
-- MAXIMUM: ${Math.round(targetWordsAnthropic * 1.1)} words
+QUOTES: Include ${numQuotesAnthropic} verbatim quotes from your writings above. Format: "exact quote text" (Source Title)
 
-BEFORE SUBMITTING YOUR RESPONSE:
-1. COUNT every word you have written
-2. If your count is BELOW ${minWordsAnthropic}, you MUST add more content
-3. Expand arguments, add examples, develop ideas further
-4. Do NOT submit until you hit the minimum
+VOICE: Speak in FIRST PERSON as yourself. Say "I believe..." and "My theory..." - NEVER "Aristotle believed..." or third person.
 
-THIS IS ENFORCEABLE. SHORT RESPONSES WILL BE REJECTED.
-═══════════════════════════════════════════════════════════════════`;
-          
-          // 🚨🚨🚨 ALWAYS ENFORCE QUOTE COUNT - No exceptions 🚨🚨🚨
-          // CRITICAL: 0 means "use defaults" (10 quotes) - frontend displays 10 when server has 0
-          const numQuotesAnthropic = (personaSettings?.quoteFrequency && personaSettings.quoteFrequency > 0) 
-            ? personaSettings.quoteFrequency 
-            : 10; // DEFAULT: 10 quotes when not set
-          
-          console.log(`[ENFORCEMENT-ANTHROPIC] Quote count target: ${numQuotesAnthropic}, from settings: ${personaSettings?.quoteFrequency}`);
-          
-          if (numQuotesAnthropic > 0) {
-            enhancedUserMessage += `
-
-═══════════════════════════════════════════════════════════════════
-🚨🚨🚨 ABSOLUTE MANDATORY QUOTE COUNT - THIS IS NOT OPTIONAL 🚨🚨🚨
-═══════════════════════════════════════════════════════════════════
-
-YOU MUST INCLUDE EXACTLY ${numQuotesAnthropic} VERBATIM QUOTES.
-
-HARD REQUIREMENTS:
-- EXACTLY ${numQuotesAnthropic} quotes - no more, no less
-- Each quote MUST be WORD-FOR-WORD text from the passages above
-- Format: "exact verbatim text" (Source Title)
-- Paraphrases DO NOT count as quotes
-- Synthetic/made-up quotes are FORBIDDEN
-
-BEFORE SUBMITTING YOUR RESPONSE:
-1. COUNT every quote you have included
-2. If your count is BELOW ${numQuotesAnthropic}, you MUST add more quotes
-3. Extract additional verbatim text from the passages above
-4. Do NOT submit until you have EXACTLY ${numQuotesAnthropic} quotes
-
-Quote #1 must be present.
-Quote #2 must be present.
-${numQuotesAnthropic >= 3 ? `Quote #3 must be present.` : ''}
-${numQuotesAnthropic >= 4 ? `Quote #4 must be present.` : ''}
-${numQuotesAnthropic >= 5 ? `Quote #5 must be present.` : ''}
-${numQuotesAnthropic >= 6 ? `Quote #6 must be present.` : ''}
-${numQuotesAnthropic >= 7 ? `Quote #7 must be present.` : ''}
-${numQuotesAnthropic >= 8 ? `Quote #8 must be present.` : ''}
-${numQuotesAnthropic >= 9 ? `Quote #9 must be present.` : ''}
-${numQuotesAnthropic >= 10 ? `Quote #10 must be present.` : ''}
-${numQuotesAnthropic > 10 ? `Quotes #11-${numQuotesAnthropic} must be present.` : ''}
-
-THIS IS ENFORCEABLE. RESPONSES WITH FEWER THAN ${numQuotesAnthropic} QUOTES WILL BE REJECTED.
-═══════════════════════════════════════════════════════════════════`;
-          } else {
-            enhancedUserMessage += `
-
-📚 QUOTE MODE: Auto (no mandatory quotes). Focus on analysis and reasoning without citations.`;
-          }
+--- END GUIDELINES ---`;
           
           formattedMessages.push({
             role: (lastMessage.role === "assistant" ? "assistant" : "user") as "assistant" | "user",
