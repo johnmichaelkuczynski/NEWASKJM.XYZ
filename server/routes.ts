@@ -1221,15 +1221,32 @@ REMEMBER: FIRST PERSON ONLY. "I", "MY", "ME" - NEVER third person.
           
           enhancedUserMessage += `
 
---- RESPONSE GUIDELINES ---
+══════════════════════════════════════════════════════════════
+                    REQUIRED RESPONSE FORMAT
+══════════════════════════════════════════════════════════════
 
-LENGTH: Write approximately ${targetWords} words (minimum ${minWords} words). Develop your argument fully with examples and reasoning.
+WORD COUNT REQUIREMENT: ${targetWords} words
+Your response must be approximately ${targetWords} words long.
+- Minimum acceptable: ${minWords} words
+- Write substantial paragraphs with full explanations
+- If your response feels short, add more analysis and examples
+- Count your words before finishing
 
-QUOTES: Include ${numQuotes} verbatim quotes from your writings above. Format: "exact quote text" (Source Title)
+QUOTE REQUIREMENT: ${numQuotes} verbatim quotes
+You must include exactly ${numQuotes} direct quotes from the passages provided above.
+Each quote must:
+- Be word-for-word text from the passages (not paraphrased)
+- Be enclosed in quotation marks
+- Include the source in parentheses: "quote text" (Source Title)
+- Be integrated naturally into your argument
 
-VOICE: Speak in FIRST PERSON as yourself. Say "I believe..." and "My theory..." - NEVER "Aristotle believed..." or third person.
+CHECKLIST before responding:
+□ Response is ${targetWords}+ words (not a brief reply)
+□ Contains ${numQuotes} verbatim quotes with citations
+□ Written in FIRST PERSON ("I argue...", "My view is...")
+□ Never refers to yourself in third person
 
---- END GUIDELINES ---`;
+══════════════════════════════════════════════════════════════`;
           
           messages.push({
             role: lastMessage.role,
@@ -1274,15 +1291,32 @@ VOICE: Speak in FIRST PERSON as yourself. Say "I believe..." and "My theory..." 
           
           enhancedUserMessage += `
 
---- RESPONSE GUIDELINES ---
+══════════════════════════════════════════════════════════════
+                    REQUIRED RESPONSE FORMAT
+══════════════════════════════════════════════════════════════
 
-LENGTH: Write approximately ${targetWordsAnthropic} words (minimum ${minWordsAnthropic} words). Develop your argument fully with examples and reasoning.
+WORD COUNT REQUIREMENT: ${targetWordsAnthropic} words
+Your response must be approximately ${targetWordsAnthropic} words long.
+- Minimum acceptable: ${minWordsAnthropic} words
+- Write substantial paragraphs with full explanations
+- If your response feels short, add more analysis and examples
+- Count your words before finishing
 
-QUOTES: Include ${numQuotesAnthropic} verbatim quotes from your writings above. Format: "exact quote text" (Source Title)
+QUOTE REQUIREMENT: ${numQuotesAnthropic} verbatim quotes
+You must include exactly ${numQuotesAnthropic} direct quotes from the passages provided above.
+Each quote must:
+- Be word-for-word text from the passages (not paraphrased)
+- Be enclosed in quotation marks
+- Include the source in parentheses: "quote text" (Source Title)
+- Be integrated naturally into your argument
 
-VOICE: Speak in FIRST PERSON as yourself. Say "I believe..." and "My theory..." - NEVER "Aristotle believed..." or third person.
+CHECKLIST before responding:
+□ Response is ${targetWordsAnthropic}+ words (not a brief reply)
+□ Contains ${numQuotesAnthropic} verbatim quotes with citations
+□ Written in FIRST PERSON ("I argue...", "My view is...")
+□ Never refers to yourself in third person
 
---- END GUIDELINES ---`;
+══════════════════════════════════════════════════════════════`;
           
           formattedMessages.push({
             role: (lastMessage.role === "assistant" ? "assistant" : "user") as "assistant" | "user",
