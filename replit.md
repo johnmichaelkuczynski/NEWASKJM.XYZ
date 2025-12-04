@@ -64,5 +64,6 @@ The application acts as a centralized knowledge server providing unified access 
 14. ✅ Godel's Proof - Incompleteness theorem, formal systems, logicism refutation, diagonal argument, arithmetization (16 chunks, distance 0.133)
 15. ✅ What Is An Infinite Number - Cardinal/ordinal arithmetic, transfinite numbers, ℵ₀, reflexive classes, power-set theorem, continuum hypothesis (15 chunks)
 16. ✅ Kuczynski Quotes Volume 4: Math and Infinity - Transfinite numbers, reflexive classes, orders of magnitude, bijections, diagonal argument, power-set theorem, cardinal vs ordinal arithmetic, dimension and cardinality (4 chunks)
+17. ✅ Heed My Wisdom - Platonism in mathematics, academic critique, economics critique, Zeno's paradox, existentialism, psychology, business productivity, identity/metaphysics, standardized testing (11 sections)
 
-**Total Kuczynski corpus: 16 files, 1,134 chunks**
+**Total Kuczynski corpus: 17 files, 1,145 chunks**
