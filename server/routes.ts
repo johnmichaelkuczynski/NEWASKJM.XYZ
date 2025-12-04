@@ -2712,6 +2712,242 @@ The dialogue should feel like overhearing two real minds grappling with real ide
     }
   });
 
+  // ==================== INTERVIEW CREATOR ====================
+  app.post("/api/interview-creator", upload.single('file'), async (req, res) => {
+    try {
+      const { thinkerId, mode, interviewerTone, wordLength, topic } = req.body;
+      let sourceText = '';
+
+      // Validate thinker selection
+      if (!thinkerId) {
+        return res.status(400).json({
+          success: false,
+          error: "Please select a thinker to interview"
+        });
+      }
+
+      // Get text from file upload or use topic
+      if (req.file) {
+        const fileExtension = req.file.originalname.split('.').pop()?.toLowerCase();
+        
+        if (fileExtension === 'txt' || fileExtension === 'md') {
+          sourceText = req.file.buffer.toString('utf-8');
+        } else if (fileExtension === 'pdf') {
+          const pdfData = await pdfParse(req.file.buffer);
+          sourceText = pdfData.text;
+        } else if (fileExtension === 'docx' || fileExtension === 'doc') {
+          const result = await mammoth.extractRawText({ buffer: req.file.buffer });
+          sourceText = result.value;
+        } else {
+          return res.status(400).json({
+            success: false,
+            error: "Unsupported file type. Please upload .txt, .pdf, .doc, .docx, or .md"
+          });
+        }
+      }
+
+      // Get thinker details
+      const thinker = await storage.getFigure(thinkerId);
+      if (!thinker) {
+        return res.status(404).json({
+          success: false,
+          error: "Selected thinker not found"
+        });
+      }
+
+      const targetWordLength = parseInt(wordLength) || 1500;
+      const totalChapters = Math.ceil(targetWordLength / 2000);
+      
+      console.log(`[Interview Creator] Generating ${targetWordLength} word interview with ${thinker.name}, mode: ${mode}, tone: ${interviewerTone}`);
+
+      // Retrieve relevant content from the thinker's works
+      const normalizedThinkerName = normalizeAuthorName(thinker.name);
+      let thinkerContent = '';
+      
+      try {
+        const relevantChunks = await searchPhilosophicalChunks(
+          sourceText || topic || thinker.name,
+          8,
+          "common",
+          normalizedThinkerName
+        );
+        
+        if (relevantChunks.length > 0) {
+          thinkerContent = `\n\n=== REFERENCE MATERIAL FROM ${thinker.name.toUpperCase()}'S WORKS ===\n\n`;
+          relevantChunks.forEach((chunk, index) => {
+            thinkerContent += `[Passage ${index + 1}] ${chunk.paperTitle}\n${chunk.content}\n\n`;
+          });
+          thinkerContent += `=== END REFERENCE MATERIAL ===\n`;
+          console.log(`[Interview Creator] Retrieved ${relevantChunks.length} relevant passages`);
+        }
+      } catch (error) {
+        console.error(`[Interview Creator] Error retrieving content:`, error);
+      }
+
+      // Build interviewer tone description
+      const toneDescriptions: Record<string, string> = {
+        neutral: `NEUTRAL INTERVIEWER: You are a well-disposed, objective interviewer. You listen attentively, ask for clarification when needed, and help the interviewee relate their views to broader topics. You're supportive but never sycophantic. You don't share your own opinions but focus on drawing out the interviewee's positions.`,
+        dialectical: `DIALECTICALLY ENGAGED INTERVIEWER: You are an active intellectual participant, not just a questioner. You volunteer your own views, sometimes agree enthusiastically, sometimes disagree respectfully. You have a cooperative mentality but engage as an almost equal intellectual partner. You push back when you find arguments unconvincing but remain genuinely curious.`,
+        hostile: `HOSTILE INTERVIEWER: You are attempting to challenge and critique the interviewee's positions through rigorous logic and legitimate argumentation. You look for weaknesses, inconsistencies, and gaps. You're not rude or personal, but you're intellectually relentless. Every claim must withstand scrutiny.`
+      };
+
+      // Build mode description
+      const modeDescriptions: Record<string, string> = {
+        conservative: `CONSERVATIVE MODE: Stay strictly faithful to ${thinker.name}'s documented views and stated positions. Quote and reference their actual works. Don't speculate about views they never expressed. When uncertain, acknowledge the limits of their written record.`,
+        aggressive: `AGGRESSIVE MODE: You may reconstruct and extend ${thinker.name}'s views beyond their explicit statements. Apply their intellectual framework to contemporary issues they never addressed. Integrate insights from later scholarship and related thinkers. The goal is an intellectually alive reconstruction, not a museum exhibit.`
+      };
+
+      const INTERVIEW_SYSTEM_PROMPT = `# INTERVIEW CREATOR SYSTEM PROMPT
+
+You are generating an in-depth interview with ${thinker.name}. 
+
+## CRITICAL RULES
+
+1. NO PLEASANTRIES: Start immediately with a substantive question or statement. No "Hello," "Welcome," "Thank you for joining us," or any greeting whatsoever. The interviewer's first words must be a question or intellectual challenge.
+
+2. AUTHENTIC VOICE: ${thinker.name} must speak in first person, deploying their distinctive analytical machinery, terminology, and reasoning frameworks. Don't paraphrase - THINK like them.
+
+3. INTELLECTUAL SUBSTANCE: Every exchange must advance understanding. No filler, no repetition, no pleasantries between questions either.
+
+## INTERVIEW MODE
+${modeDescriptions[mode] || modeDescriptions.conservative}
+
+## INTERVIEWER TONE
+${toneDescriptions[interviewerTone] || toneDescriptions.neutral}
+
+## CHARACTER: ${thinker.name.toUpperCase()}
+${thinker.title ? `Title/Era: ${thinker.title}` : ''}
+${thinker.description ? `Background: ${thinker.description}` : ''}
+
+The interviewee speaks as ${thinker.name} in first person. They use their characteristic vocabulary, reference their own works naturally, and reason using their distinctive intellectual frameworks. They have strong opinions and defend them vigorously.
+
+## OUTPUT FORMAT
+
+INTERVIEWER: [Question or challenge - NO GREETINGS]
+
+${thinker.name.toUpperCase()}: [Response in first person, using their authentic voice and reasoning style]
+
+INTERVIEWER: [Follow-up or new direction]
+
+${thinker.name.toUpperCase()}: [Response]
+
+Continue this pattern. Use CAPS for speaker names. No markdown formatting. Plain text only.
+
+## LENGTH TARGET
+Generate approximately ${Math.min(targetWordLength, 2000)} words for this ${totalChapters > 1 ? 'chapter' : 'interview'}.
+${totalChapters > 1 ? `This is chapter content - make it self-contained with a natural ending point.` : ''}
+
+## QUALITY REQUIREMENTS
+- Intellectually substantive exchanges
+- Concrete examples where appropriate
+- Authentic representation of ${thinker.name}'s thinking
+- Natural flow despite no pleasantries
+- Both interviewer and interviewee are intelligent
+- Tension and genuine engagement, not softball questions`;
+
+      // Set up SSE streaming
+      res.setHeader('Content-Type', 'text/event-stream');
+      res.setHeader('Cache-Control', 'no-cache');
+      res.setHeader('Connection', 'keep-alive');
+
+      let fullResponse = '';
+      let currentChapter = 1;
+
+      // Generate chapters if needed
+      for (let chapter = 1; chapter <= totalChapters; chapter++) {
+        currentChapter = chapter;
+        
+        // Send chapter notification
+        res.write(`data: ${JSON.stringify({ chapter, totalChapters })}\n\n`);
+
+        // Build the user prompt for this chapter
+        let userPrompt = '';
+        
+        if (sourceText) {
+          userPrompt = `Generate an interview about this text:\n\n${sourceText.slice(0, 8000)}\n\n`;
+        } else if (topic) {
+          userPrompt = `Topic for the interview: ${topic}\n\n`;
+        }
+
+        if (thinkerContent) {
+          userPrompt += thinkerContent;
+        }
+
+        if (chapter > 1) {
+          userPrompt += `\n\nThis is Chapter ${chapter} of ${totalChapters}. Continue the interview from where the previous chapter ended. Here's how the previous chapter ended:\n\n${fullResponse.slice(-1500)}\n\nContinue naturally from this point with new questions and topics.`;
+        } else if (totalChapters > 1) {
+          userPrompt += `\n\nThis is Chapter 1 of ${totalChapters}. Start with foundational concepts and build toward more complex ideas in later chapters.`;
+        }
+
+        // Stream this chapter
+        const stream = await anthropic!.messages.create({
+          model: "claude-sonnet-4-20250514",
+          max_tokens: 4000,
+          temperature: 0.7,
+          stream: true,
+          system: INTERVIEW_SYSTEM_PROMPT,
+          messages: [{ role: "user", content: userPrompt }]
+        });
+
+        let chapterText = '';
+        
+        for await (const event of stream) {
+          if (event.type === 'content_block_delta' && event.delta.type === 'text_delta') {
+            const text = event.delta.text;
+            chapterText += text;
+            fullResponse += text;
+            
+            res.write(`data: ${JSON.stringify({ content: text })}\n\n`);
+          }
+        }
+
+        const currentWordCount = fullResponse.split(/\s+/).length;
+        console.log(`[Interview Creator] Chapter ${chapter}/${totalChapters} complete, ${currentWordCount} words total`);
+
+        // Send word count update
+        res.write(`data: ${JSON.stringify({ wordCount: currentWordCount })}\n\n`);
+
+        // If more chapters to go, add chapter break and wait
+        if (chapter < totalChapters) {
+          const chapterBreak = `\n\n--- END OF CHAPTER ${chapter} ---\n\n`;
+          fullResponse += chapterBreak;
+          res.write(`data: ${JSON.stringify({ content: chapterBreak })}\n\n`);
+          
+          // Notify client about wait
+          res.write(`data: ${JSON.stringify({ waiting: true, waitTime: 60, chapter })}\n\n`);
+          
+          // Wait 60 seconds between chapters
+          await new Promise(resolve => setTimeout(resolve, 60000));
+        }
+      }
+
+      const finalWordCount = fullResponse.split(/\s+/).length;
+      console.log(`[Interview Creator] Complete: ${finalWordCount} words, ${totalChapters} chapter(s)`);
+
+      res.write(`data: ${JSON.stringify({ 
+        done: true,
+        wordCount: finalWordCount,
+        chapters: totalChapters
+      })}\n\n`);
+      
+      res.write('data: [DONE]\n\n');
+      res.end();
+
+    } catch (error) {
+      console.error("[Interview Creator] Error:", error);
+      
+      if (!res.headersSent) {
+        res.status(500).json({
+          success: false,
+          error: error instanceof Error ? error.message : "Failed to generate interview"
+        });
+      } else {
+        res.write(`data: ${JSON.stringify({ error: "Generation failed" })}\n\n`);
+        res.end();
+      }
+    }
+  });
+
   // ==================== PLATO SQLite DATABASE API ====================
   
   // Import Plato database functions

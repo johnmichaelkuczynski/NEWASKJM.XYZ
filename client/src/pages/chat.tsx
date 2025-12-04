@@ -23,6 +23,7 @@ import { ModelBuilderSection } from "@/components/model-builder-section";
 import { PaperWriterSection } from "@/components/paper-writer-section";
 import { QuoteGeneratorSection } from "@/components/quote-generator-section";
 import { DialogueCreatorSection } from "@/components/dialogue-creator-section";
+import { InterviewCreatorSection } from "@/components/interview-creator-section";
 import { DebateCreatorSection } from "@/components/sections/debate-creator-section";
 
 const DEFAULT_PERSONA_SETTINGS: Partial<PersonaSettings> = {
@@ -803,6 +804,11 @@ export default function Chat() {
             <DialogueCreatorSection 
               onRegisterInput={(setter) => { dialogueCreatorInputRef.current = setter; }}
             />
+          </div>
+
+          {/* Interview Creator Section */}
+          <div id="interview-creator-section" className="px-4 py-8 border-t-4 border-primary/20">
+            <InterviewCreatorSection />
           </div>
 
           {/* Debate Creator Section */}

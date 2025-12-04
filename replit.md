@@ -1,7 +1,7 @@
 # Ask A Philosopher - Philosophical Q&A Application
 
 ### Overview
-"Ask A Philosopher" is a unified application for deep philosophical discourse with 59 philosophical and literary figures. It offers six operational sections: philosophical Q&A chat, Model Builder, Paper Writer, Quote Generator, Dialogue Creator, and Debate Creator. The platform uses actual writings and advanced AI to provide nuanced, contextually rich responses, enabling multi-author conversations through a Retrieval-Augmented Generation (RAG) system. Its purpose is to provide a robust platform for exploring complex philosophical and literary concepts, enhancing understanding through direct engagement with historical thinkers, with significant market potential in education and intellectual discourse. The application is powered by the Kuczynski Philosophical Database (v32_CONCEPTUAL_ATOMISM + WORK-043 + VERBATIM), containing 892 high-quality positions and 1,015 verbatim text chunks from original source works across 5 major philosophers, with an average RAG retrieval relevance of 0.850.
+"Ask A Philosopher" is a unified application for deep philosophical discourse with 59 philosophical and literary figures. It offers seven operational sections: philosophical Q&A chat, Model Builder, Paper Writer, Quote Generator, Dialogue Creator, Interview Creator, and Debate Creator. The platform uses actual writings and advanced AI to provide nuanced, contextually rich responses, enabling multi-author conversations through a Retrieval-Augmented Generation (RAG) system. Its purpose is to provide a robust platform for exploring complex philosophical and literary concepts, enhancing understanding through direct engagement with historical thinkers, with significant market potential in education and intellectual discourse. The application is powered by the Kuczynski Philosophical Database (v32_CONCEPTUAL_ATOMISM + WORK-043 + VERBATIM), containing 892 high-quality positions and 1,015 verbatim text chunks from original source works across 5 major philosophers, with an average RAG retrieval relevance of 0.850.
 
 ### User Preferences
 - **Response Style**: Crisp, direct, no academic bloat. Short sentences. Clear logic. No throat-clearing. Get to the point immediately. Default is Auto mode (no word limit); user can specify word count if desired.
@@ -22,7 +22,7 @@ The application acts as a centralized knowledge server providing unified access 
 - **Guest Migration**: In-progress conversations are automatically migrated when users log in (no data loss)
 
 #### UI/UX Decisions
-- **Layout**: A unified single-page layout with 3 columns (philosophers sidebar, settings, main content) containing six vertically stacked sections, accessible by scrolling.
+- **Layout**: A unified single-page layout with 3 columns (philosophers sidebar, settings, main content) containing seven vertically stacked sections, accessible by scrolling.
 - **Visuals**: Animated Kuczynski icon, AI-generated portrait avatars, minimalistic design with elegant typography, dark mode support, and visual section dividers.
 
 #### Technical Implementations
@@ -32,7 +32,7 @@ The application acts as a centralized knowledge server providing unified access 
 - **Streaming**: Server-Sent Events (SSE) for real-time word-by-word AI response streaming.
 - **Cross-Section Content Transfer**: Bidirectional content flow using "Send to" dropdown buttons.
 - **ZHI Knowledge Provider API**: Secure internal API endpoint at `/zhi/query` for authenticated database queries with Bearer token authentication, returning structured JSON with excerpts, citations, and relevance scores.
-- **Key Features**: Model Builder, Paper Writer (up to 1500 words), Quote Generator, Dialogue Creator (Kuczynski-style dialogues), and Debate Creator (1500-2500 word synthetic debates with Auto/Custom modes, paper upload, RAG grounding with 6 positions per thinker, word-by-word streaming, plain text output with no markdown formatting, download as .txt file, and full-height responsive layout).
+- **Key Features**: Model Builder, Paper Writer (up to 1500 words), Quote Generator, Dialogue Creator (Kuczynski-style dialogues), Interview Creator (in-depth interviews with thinkers featuring Conservative/Aggressive modes, Neutral/Dialectical/Hostile interviewer tones, topic or file-based discussions, 500-10000 word length with chapter breaks for long outputs), and Debate Creator (1500-2500 word synthetic debates with Auto/Custom modes, paper upload, RAG grounding with 6 positions per thinker, word-by-word streaming, plain text output with no markdown formatting, download as .txt file, and full-height responsive layout).
 - **RAG System**: Papers are chunked, embedded, and stored in a PostgreSQL database with `pgvector` for semantic search across 87 authors. Retrieves 8 most relevant positions per query, injected into AI's system prompt with mandatory instructions.
 - **Document Upload Feature**: Users can upload text documents (.txt, .md, .doc, .docx, .pdf up to 5MB) across multiple sections using a reusable `DragDropUpload` component.
 - **Standalone SQLite Databases**:
