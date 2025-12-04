@@ -261,7 +261,7 @@ export function DialogueCreatorSection({
           Dialogue Creator
         </h2>
         <p className="text-muted-foreground mt-2">
-          Transform non-fiction into authentic philosophical dialogue in Kuczynski's distinctive style
+          Transform non-fiction into authentic philosophical dialogue.
         </p>
       </div>
 
@@ -349,10 +349,10 @@ export function DialogueCreatorSection({
                 data-testid="select-author"
                 className="mt-2"
               >
-                <SelectValue placeholder="None - Standard Dr. K dialogue" />
+                <SelectValue placeholder="Standard Dialogue" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="none">None - Standard Dr. K dialogue</SelectItem>
+                <SelectItem value="none">Standard Dialogue</SelectItem>
                 {figures.map((figure) => (
                   <SelectItem key={figure.id} value={figure.id}>
                     {figure.name}
