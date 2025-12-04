@@ -62,5 +62,6 @@ The application acts as a centralized knowledge server providing unified access 
 12. ✅ Analog Digital Distinction - Kant, Hume, causation, induction, synthetic a priori, transcendental arguments (437 chunks, distance 0.114)
 13. ✅ Outline Theory of Knowledge - Cults vs religions, worship, supernatural, projection, virtualization, institutionalization (71 chunks, distance 0.146)
 14. ✅ Godel's Proof - Incompleteness theorem, formal systems, logicism refutation, diagonal argument, arithmetization (16 chunks, distance 0.133)
+15. ✅ What Is An Infinite Number - Cardinal/ordinal arithmetic, transfinite numbers, ℵ₀, reflexive classes, power-set theorem, continuum hypothesis (15 chunks)
 
-**Total Kuczynski corpus: 14 files, 1,115 chunks**
+**Total Kuczynski corpus: 15 files, 1,130 chunks**
