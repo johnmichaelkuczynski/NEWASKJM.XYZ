@@ -538,24 +538,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
       let targetQuotes = (personaSettings?.quoteFrequency && personaSettings.quoteFrequency > 0) ? personaSettings.quoteFrequency : 10;
       
       // PROMPT OVERRIDE: Detect when user's request explicitly requires more than settings allow
-      // Examples: "Give me 100 quotations", "Write 5000 words", "List 50 examples"
+      // Examples: "Give me 100 quotations", "Write 5000 words", "List 50 examples", "need at least 20 quotes"
       const messageLower = message.toLowerCase();
       
-      // Detect explicit quote/example requests
-      const quoteMatch = messageLower.match(/(?:give|list|provide|show|include|cite|quote)\s*(?:me\s*)?(\d+)\s*(?:quotes?|quotations?|examples?|passages?|excerpts?|citations?)/i);
+      // Detect explicit quote/example requests - handles: "give me 100 quotes", "need 50 quotations", "at least 20 quotes", "100 quotations"
+      const quoteMatch = messageLower.match(/(?:give|list|provide|show|include|cite|quote|need|want|at\s+least)\s*(?:me\s*)?(\d+)\s*(?:quotes?|quotations?|examples?|passages?|excerpts?|citations?)/i) 
+        || messageLower.match(/(\d+)\s*(?:quotes?|quotations?|examples?|passages?|excerpts?|citations?)/i);
       if (quoteMatch) {
-        const requestedQuotes = parseInt(quoteMatch[1], 10);
-        if (requestedQuotes > targetQuotes) {
+        const requestedQuotes = parseInt(quoteMatch[1].replace(/,/g, ''), 10);
+        if (requestedQuotes > targetQuotes && requestedQuotes <= 500) { // Cap at 500 quotes
           targetQuotes = requestedQuotes;
           console.log(`[PROMPT OVERRIDE] User requested ${requestedQuotes} quotes - overriding setting of ${personaSettings?.quoteFrequency || 10}`);
         }
       }
       
-      // Detect explicit word count requests
-      const wordMatch = messageLower.match(/(?:write|give|provide|compose|generate)\s*(?:me\s*)?(?:a\s*)?(\d+)\s*(?:words?|word)/i);
+      // Detect explicit word count requests - handles: "write 5000 words", "5,000 word essay", "in 2000 words"
+      const wordMatch = messageLower.match(/(?:write|give|provide|compose|generate|in|about|approximately)\s*(?:me\s*)?(?:a\s*)?(\d[\d,]*)\s*(?:words?|word)/i)
+        || messageLower.match(/(\d[\d,]*)\s*(?:words?|word)\s*(?:essay|response|answer|paper)/i);
       if (wordMatch) {
-        const requestedWords = parseInt(wordMatch[1], 10);
-        if (requestedWords > targetWords) {
+        const requestedWords = parseInt(wordMatch[1].replace(/,/g, ''), 10);
+        if (requestedWords > targetWords && requestedWords <= 20000) { // Cap at 20k words
           targetWords = requestedWords;
           console.log(`[PROMPT OVERRIDE] User requested ${requestedWords} words - overriding setting of ${personaSettings?.responseLength || 1000}`);
         }
@@ -564,9 +566,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Detect requests for many items that imply long responses
       const listMatch = messageLower.match(/(?:list|give|provide|show|enumerate|name)\s*(?:me\s*)?(\d+)\s*(?:things?|items?|points?|reasons?|arguments?|positions?|theses?|claims?|ideas?)/i);
       if (listMatch) {
-        const numItems = parseInt(listMatch[1], 10);
-        // Each item typically needs ~50-100 words for proper explanation
-        const impliedWords = numItems * 75;
+        const numItems = parseInt(listMatch[1].replace(/,/g, ''), 10);
+        // Each item typically needs ~50-100 words for proper explanation - cap at 200 items max
+        const cappedItems = Math.min(numItems, 200);
+        const impliedWords = Math.min(cappedItems * 75, 15000); // Cap at 15k words
         if (impliedWords > targetWords) {
           targetWords = impliedWords;
           console.log(`[PROMPT OVERRIDE] User requested ${numItems} items - adjusting word count to ${targetWords}`);
@@ -1254,26 +1257,29 @@ REMEMBER: FIRST PERSON ONLY. "I", "MY", "ME" - NEVER third person.
           
           // PROMPT OVERRIDE: Detect when user's request explicitly requires more than settings allow
           const messageLower = message.toLowerCase();
-          const quoteMatch = messageLower.match(/(?:give|list|provide|show|include|cite|quote)\s*(?:me\s*)?(\d+)\s*(?:quotes?|quotations?|examples?|passages?|excerpts?|citations?)/i);
+          const quoteMatch = messageLower.match(/(?:give|list|provide|show|include|cite|quote|need|want|at\s+least)\s*(?:me\s*)?(\d+)\s*(?:quotes?|quotations?|examples?|passages?|excerpts?|citations?)/i) 
+            || messageLower.match(/(\d+)\s*(?:quotes?|quotations?|examples?|passages?|excerpts?|citations?)/i);
           if (quoteMatch) {
-            const requestedQuotes = parseInt(quoteMatch[1], 10);
-            if (requestedQuotes > numQuotes) {
+            const requestedQuotes = parseInt(quoteMatch[1].replace(/,/g, ''), 10);
+            if (requestedQuotes > numQuotes && requestedQuotes <= 500) {
               numQuotes = requestedQuotes;
               console.log(`[PROMPT OVERRIDE] User requested ${requestedQuotes} quotes`);
             }
           }
-          const wordMatch = messageLower.match(/(?:write|give|provide|compose|generate)\s*(?:me\s*)?(?:a\s*)?(\d+)\s*(?:words?|word)/i);
+          const wordMatch = messageLower.match(/(?:write|give|provide|compose|generate|in|about|approximately)\s*(?:me\s*)?(?:a\s*)?(\d[\d,]*)\s*(?:words?|word)/i)
+            || messageLower.match(/(\d[\d,]*)\s*(?:words?|word)\s*(?:essay|response|answer|paper)/i);
           if (wordMatch) {
-            const requestedWords = parseInt(wordMatch[1], 10);
-            if (requestedWords > targetWords) {
+            const requestedWords = parseInt(wordMatch[1].replace(/,/g, ''), 10);
+            if (requestedWords > targetWords && requestedWords <= 20000) {
               targetWords = requestedWords;
               console.log(`[PROMPT OVERRIDE] User requested ${requestedWords} words`);
             }
           }
           const listMatch = messageLower.match(/(?:list|give|provide|show|enumerate|name)\s*(?:me\s*)?(\d+)\s*(?:things?|items?|points?|reasons?|arguments?|positions?|theses?|claims?|ideas?)/i);
           if (listMatch) {
-            const numItems = parseInt(listMatch[1], 10);
-            const impliedWords = numItems * 75;
+            const numItems = parseInt(listMatch[1].replace(/,/g, ''), 10);
+            const cappedItems = Math.min(numItems, 200);
+            const impliedWords = Math.min(cappedItems * 75, 15000);
             if (impliedWords > targetWords) {
               targetWords = impliedWords;
               console.log(`[PROMPT OVERRIDE] User requested ${numItems} items - adjusting words to ${targetWords}`);
@@ -1352,26 +1358,29 @@ CHECKLIST before responding:
           
           // PROMPT OVERRIDE: Detect when user's request explicitly requires more than settings allow
           const msgLower = message.toLowerCase();
-          const quoteMatchA = msgLower.match(/(?:give|list|provide|show|include|cite|quote)\s*(?:me\s*)?(\d+)\s*(?:quotes?|quotations?|examples?|passages?|excerpts?|citations?)/i);
+          const quoteMatchA = msgLower.match(/(?:give|list|provide|show|include|cite|quote|need|want|at\s+least)\s*(?:me\s*)?(\d+)\s*(?:quotes?|quotations?|examples?|passages?|excerpts?|citations?)/i)
+            || msgLower.match(/(\d+)\s*(?:quotes?|quotations?|examples?|passages?|excerpts?|citations?)/i);
           if (quoteMatchA) {
-            const reqQuotes = parseInt(quoteMatchA[1], 10);
-            if (reqQuotes > numQuotesAnthropic) {
+            const reqQuotes = parseInt(quoteMatchA[1].replace(/,/g, ''), 10);
+            if (reqQuotes > numQuotesAnthropic && reqQuotes <= 500) {
               numQuotesAnthropic = reqQuotes;
               console.log(`[PROMPT OVERRIDE-A] User requested ${reqQuotes} quotes`);
             }
           }
-          const wordMatchA = msgLower.match(/(?:write|give|provide|compose|generate)\s*(?:me\s*)?(?:a\s*)?(\d+)\s*(?:words?|word)/i);
+          const wordMatchA = msgLower.match(/(?:write|give|provide|compose|generate|in|about|approximately)\s*(?:me\s*)?(?:a\s*)?(\d[\d,]*)\s*(?:words?|word)/i)
+            || msgLower.match(/(\d[\d,]*)\s*(?:words?|word)\s*(?:essay|response|answer|paper)/i);
           if (wordMatchA) {
-            const reqWords = parseInt(wordMatchA[1], 10);
-            if (reqWords > targetWordsAnthropic) {
+            const reqWords = parseInt(wordMatchA[1].replace(/,/g, ''), 10);
+            if (reqWords > targetWordsAnthropic && reqWords <= 20000) {
               targetWordsAnthropic = reqWords;
               console.log(`[PROMPT OVERRIDE-A] User requested ${reqWords} words`);
             }
           }
           const listMatchA = msgLower.match(/(?:list|give|provide|show|enumerate|name)\s*(?:me\s*)?(\d+)\s*(?:things?|items?|points?|reasons?|arguments?|positions?|theses?|claims?|ideas?)/i);
           if (listMatchA) {
-            const numItemsA = parseInt(listMatchA[1], 10);
-            const impliedWordsA = numItemsA * 75;
+            const numItemsA = parseInt(listMatchA[1].replace(/,/g, ''), 10);
+            const cappedItemsA = Math.min(numItemsA, 200);
+            const impliedWordsA = Math.min(cappedItemsA * 75, 15000);
             if (impliedWordsA > targetWordsAnthropic) {
               targetWordsAnthropic = impliedWordsA;
               console.log(`[PROMPT OVERRIDE-A] User requested ${numItemsA} items - adjusting words to ${targetWordsAnthropic}`);
