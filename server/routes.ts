@@ -534,8 +534,44 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Build response instructions - ENFORCE word count and quote minimums
       let responseInstructions = "";
       // DEFAULTS: 1000 words minimum, 10 quotes minimum (user explicitly requested)
-      const targetWords = (personaSettings?.responseLength && personaSettings.responseLength > 0) ? personaSettings.responseLength : 1000;
-      const targetQuotes = (personaSettings?.quoteFrequency && personaSettings.quoteFrequency > 0) ? personaSettings.quoteFrequency : 10;
+      let targetWords = (personaSettings?.responseLength && personaSettings.responseLength > 0) ? personaSettings.responseLength : 1000;
+      let targetQuotes = (personaSettings?.quoteFrequency && personaSettings.quoteFrequency > 0) ? personaSettings.quoteFrequency : 10;
+      
+      // PROMPT OVERRIDE: Detect when user's request explicitly requires more than settings allow
+      // Examples: "Give me 100 quotations", "Write 5000 words", "List 50 examples"
+      const messageLower = message.toLowerCase();
+      
+      // Detect explicit quote/example requests
+      const quoteMatch = messageLower.match(/(?:give|list|provide|show|include|cite|quote)\s*(?:me\s*)?(\d+)\s*(?:quotes?|quotations?|examples?|passages?|excerpts?|citations?)/i);
+      if (quoteMatch) {
+        const requestedQuotes = parseInt(quoteMatch[1], 10);
+        if (requestedQuotes > targetQuotes) {
+          targetQuotes = requestedQuotes;
+          console.log(`[PROMPT OVERRIDE] User requested ${requestedQuotes} quotes - overriding setting of ${personaSettings?.quoteFrequency || 10}`);
+        }
+      }
+      
+      // Detect explicit word count requests
+      const wordMatch = messageLower.match(/(?:write|give|provide|compose|generate)\s*(?:me\s*)?(?:a\s*)?(\d+)\s*(?:words?|word)/i);
+      if (wordMatch) {
+        const requestedWords = parseInt(wordMatch[1], 10);
+        if (requestedWords > targetWords) {
+          targetWords = requestedWords;
+          console.log(`[PROMPT OVERRIDE] User requested ${requestedWords} words - overriding setting of ${personaSettings?.responseLength || 1000}`);
+        }
+      }
+      
+      // Detect requests for many items that imply long responses
+      const listMatch = messageLower.match(/(?:list|give|provide|show|enumerate|name)\s*(?:me\s*)?(\d+)\s*(?:things?|items?|points?|reasons?|arguments?|positions?|theses?|claims?|ideas?)/i);
+      if (listMatch) {
+        const numItems = parseInt(listMatch[1], 10);
+        // Each item typically needs ~50-100 words for proper explanation
+        const impliedWords = numItems * 75;
+        if (impliedWords > targetWords) {
+          targetWords = impliedWords;
+          console.log(`[PROMPT OVERRIDE] User requested ${numItems} items - adjusting word count to ${targetWords}`);
+        }
+      }
       
       // MANDATORY word count instruction
       responseInstructions += `\n⚠️ MANDATORY TARGET LENGTH: Approximately ${targetWords} words. Do NOT write short responses. This is a minimum requirement.\n`;
@@ -1209,14 +1245,42 @@ REMEMBER: FIRST PERSON ONLY. "I", "MY", "ME" - NEVER third person.
           let enhancedUserMessage = lastMessage.content;
           
           // Get both settings first
-          const targetWords = (personaSettings?.responseLength && personaSettings.responseLength > 0) 
+          let targetWords = (personaSettings?.responseLength && personaSettings.responseLength > 0) 
             ? personaSettings.responseLength 
             : 1000;
-          const minWords = Math.round(targetWords * 0.9);
-          const numQuotes = (personaSettings?.quoteFrequency && personaSettings.quoteFrequency > 0) 
+          let numQuotes = (personaSettings?.quoteFrequency && personaSettings.quoteFrequency > 0) 
             ? personaSettings.quoteFrequency 
             : 10;
           
+          // PROMPT OVERRIDE: Detect when user's request explicitly requires more than settings allow
+          const messageLower = message.toLowerCase();
+          const quoteMatch = messageLower.match(/(?:give|list|provide|show|include|cite|quote)\s*(?:me\s*)?(\d+)\s*(?:quotes?|quotations?|examples?|passages?|excerpts?|citations?)/i);
+          if (quoteMatch) {
+            const requestedQuotes = parseInt(quoteMatch[1], 10);
+            if (requestedQuotes > numQuotes) {
+              numQuotes = requestedQuotes;
+              console.log(`[PROMPT OVERRIDE] User requested ${requestedQuotes} quotes`);
+            }
+          }
+          const wordMatch = messageLower.match(/(?:write|give|provide|compose|generate)\s*(?:me\s*)?(?:a\s*)?(\d+)\s*(?:words?|word)/i);
+          if (wordMatch) {
+            const requestedWords = parseInt(wordMatch[1], 10);
+            if (requestedWords > targetWords) {
+              targetWords = requestedWords;
+              console.log(`[PROMPT OVERRIDE] User requested ${requestedWords} words`);
+            }
+          }
+          const listMatch = messageLower.match(/(?:list|give|provide|show|enumerate|name)\s*(?:me\s*)?(\d+)\s*(?:things?|items?|points?|reasons?|arguments?|positions?|theses?|claims?|ideas?)/i);
+          if (listMatch) {
+            const numItems = parseInt(listMatch[1], 10);
+            const impliedWords = numItems * 75;
+            if (impliedWords > targetWords) {
+              targetWords = impliedWords;
+              console.log(`[PROMPT OVERRIDE] User requested ${numItems} items - adjusting words to ${targetWords}`);
+            }
+          }
+          
+          const minWords = Math.round(targetWords * 0.9);
           console.log(`[ENFORCEMENT] Word count: ${targetWords}, Quotes: ${numQuotes}`);
           
           enhancedUserMessage += `
@@ -1279,14 +1343,42 @@ CHECKLIST before responding:
           let enhancedUserMessage = lastMessage.content;
           
           // Get settings
-          const targetWordsAnthropic = (personaSettings?.responseLength && personaSettings.responseLength > 0) 
+          let targetWordsAnthropic = (personaSettings?.responseLength && personaSettings.responseLength > 0) 
             ? personaSettings.responseLength 
             : 1000;
-          const minWordsAnthropic = Math.round(targetWordsAnthropic * 0.9);
-          const numQuotesAnthropic = (personaSettings?.quoteFrequency && personaSettings.quoteFrequency > 0) 
+          let numQuotesAnthropic = (personaSettings?.quoteFrequency && personaSettings.quoteFrequency > 0) 
             ? personaSettings.quoteFrequency 
             : 10;
           
+          // PROMPT OVERRIDE: Detect when user's request explicitly requires more than settings allow
+          const msgLower = message.toLowerCase();
+          const quoteMatchA = msgLower.match(/(?:give|list|provide|show|include|cite|quote)\s*(?:me\s*)?(\d+)\s*(?:quotes?|quotations?|examples?|passages?|excerpts?|citations?)/i);
+          if (quoteMatchA) {
+            const reqQuotes = parseInt(quoteMatchA[1], 10);
+            if (reqQuotes > numQuotesAnthropic) {
+              numQuotesAnthropic = reqQuotes;
+              console.log(`[PROMPT OVERRIDE-A] User requested ${reqQuotes} quotes`);
+            }
+          }
+          const wordMatchA = msgLower.match(/(?:write|give|provide|compose|generate)\s*(?:me\s*)?(?:a\s*)?(\d+)\s*(?:words?|word)/i);
+          if (wordMatchA) {
+            const reqWords = parseInt(wordMatchA[1], 10);
+            if (reqWords > targetWordsAnthropic) {
+              targetWordsAnthropic = reqWords;
+              console.log(`[PROMPT OVERRIDE-A] User requested ${reqWords} words`);
+            }
+          }
+          const listMatchA = msgLower.match(/(?:list|give|provide|show|enumerate|name)\s*(?:me\s*)?(\d+)\s*(?:things?|items?|points?|reasons?|arguments?|positions?|theses?|claims?|ideas?)/i);
+          if (listMatchA) {
+            const numItemsA = parseInt(listMatchA[1], 10);
+            const impliedWordsA = numItemsA * 75;
+            if (impliedWordsA > targetWordsAnthropic) {
+              targetWordsAnthropic = impliedWordsA;
+              console.log(`[PROMPT OVERRIDE-A] User requested ${numItemsA} items - adjusting words to ${targetWordsAnthropic}`);
+            }
+          }
+          
+          const minWordsAnthropic = Math.round(targetWordsAnthropic * 0.9);
           console.log(`[ENFORCEMENT-ANTHROPIC] Word count: ${targetWordsAnthropic}, Quotes: ${numQuotesAnthropic}`);
           
           enhancedUserMessage += `
