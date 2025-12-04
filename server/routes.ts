@@ -2776,11 +2776,17 @@ The dialogue should feel like overhearing two real minds grappling with real ide
         );
         
         if (relevantChunks.length > 0) {
-          thinkerContent = `\n\n=== REFERENCE MATERIAL FROM ${thinker.name.toUpperCase()}'S WORKS ===\n\n`;
+          thinkerContent = `\n\n╔══════════════════════════════════════════════════════════════════╗
+║  MANDATORY SOURCE MATERIAL - ${thinker.name.toUpperCase()}'S ACTUAL POSITIONS  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+These passages contain ${thinker.name}'s ACTUAL documented positions. You MUST ground all of ${thinker.name}'s interview responses in this material. Do NOT invent positions.\n\n`;
           relevantChunks.forEach((chunk, index) => {
-            thinkerContent += `[Passage ${index + 1}] ${chunk.paperTitle}\n${chunk.content}\n\n`;
+            thinkerContent += `━━━ SOURCE ${index + 1}: "${chunk.paperTitle}" ━━━\n${chunk.content}\n\n`;
           });
-          thinkerContent += `=== END REFERENCE MATERIAL ===\n`;
+          thinkerContent += `╔══════════════════════════════════════════════════════════════════╗
+║  END SOURCE MATERIAL - USE ONLY THESE POSITIONS IN RESPONSES    ║
+╚══════════════════════════════════════════════════════════════════╝\n`;
           console.log(`[Interview Creator] Retrieved ${relevantChunks.length} relevant passages`);
         }
       } catch (error) {
@@ -2800,17 +2806,44 @@ The dialogue should feel like overhearing two real minds grappling with real ide
         aggressive: `AGGRESSIVE MODE: You may reconstruct and extend ${thinker.name}'s views beyond their explicit statements. Apply their intellectual framework to contemporary issues they never addressed. Integrate insights from later scholarship and related thinkers. The goal is an intellectually alive reconstruction, not a museum exhibit.`
       };
 
+      // Guard clause: if no RAG content retrieved, we cannot generate an authentic interview
+      if (!thinkerContent || thinkerContent.trim() === '') {
+        res.setHeader('Content-Type', 'text/event-stream');
+        res.setHeader('Cache-Control', 'no-cache');
+        res.setHeader('Connection', 'keep-alive');
+        res.write(`data: ${JSON.stringify({ 
+          error: `No source material found for ${thinker.name} on this topic. Please try a different topic or upload a file containing their work.`,
+          noContent: true 
+        })}\n\n`);
+        res.write('data: [DONE]\n\n');
+        res.end();
+        return;
+      }
+
       const INTERVIEW_SYSTEM_PROMPT = `# INTERVIEW CREATOR SYSTEM PROMPT
 
 You are generating an in-depth interview with ${thinker.name}. 
 
-## CRITICAL RULES
+## MANDATORY GROUNDING REQUIREMENT - READ THIS FIRST
 
-1. NO PLEASANTRIES: Start immediately with a substantive question or statement. No "Hello," "Welcome," "Thank you for joining us," or any greeting whatsoever. The interviewer's first words must be a question or intellectual challenge.
+YOU MUST DERIVE EVERY CLAIM, POSITION, AND ARGUMENT FROM THE RETRIEVED PASSAGES PROVIDED BELOW.
 
-2. AUTHENTIC VOICE: ${thinker.name} must speak in first person, deploying their distinctive analytical machinery, terminology, and reasoning frameworks. Don't paraphrase - THINK like them.
+THIS IS NON-NEGOTIABLE:
+- Do NOT invent philosophical positions
+- Do NOT guess what ${thinker.name} might think
+- Do NOT attribute views to ${thinker.name} that are not explicitly supported by the retrieved passages
+- If the passages don't support a particular claim, ${thinker.name} should say "I haven't written on that specifically" or redirect to what they HAVE written
 
-3. INTELLECTUAL SUBSTANCE: Every exchange must advance understanding. No filler, no repetition, no pleasantries between questions either.
+CITATION REQUIREMENT:
+- ${thinker.name}'s responses MUST incorporate verbatim phrases and concepts from the retrieved passages
+- When making a claim, ${thinker.name} should naturally reference their own works: "As I wrote in [title]..." or "My analysis of [concept] shows..."
+- Every substantive philosophical claim must be traceable to the provided source material
+
+FORBIDDEN:
+- Inventing positions ${thinker.name} never held
+- Attributing common philosophical positions to ${thinker.name} without passage support
+- Making up arguments that sound plausible but aren't in the sources
+- Guessing ${thinker.name}'s views on topics not covered in the passages
 
 ## INTERVIEW MODE
 ${modeDescriptions[mode] || modeDescriptions.conservative}
@@ -2822,17 +2855,25 @@ ${toneDescriptions[interviewerTone] || toneDescriptions.neutral}
 ${thinker.title ? `Title/Era: ${thinker.title}` : ''}
 ${thinker.description ? `Background: ${thinker.description}` : ''}
 
-The interviewee speaks as ${thinker.name} in first person. They use their characteristic vocabulary, reference their own works naturally, and reason using their distinctive intellectual frameworks. They have strong opinions and defend them vigorously.
+The interviewee speaks as ${thinker.name} in first person. They deploy their distinctive analytical machinery from the retrieved passages. They reference their actual works and use their characteristic terminology AS FOUND IN THE PASSAGES.
+
+## CRITICAL RULES
+
+1. NO PLEASANTRIES: Start immediately with a substantive question. No greetings whatsoever.
+
+2. PASSAGE-GROUNDED VOICE: ${thinker.name} must speak using concepts, terminology, and arguments FROM THE PROVIDED PASSAGES. Do not paraphrase generic philosophy - use THEIR specific formulations.
+
+3. INTELLECTUAL HONESTY: If asked about something not covered in the passages, ${thinker.name} should redirect: "That's not a topic I've addressed directly. What I have analyzed is..." and pivot to actual passage content.
 
 ## OUTPUT FORMAT
 
 INTERVIEWER: [Question or challenge - NO GREETINGS]
 
-${thinker.name.toUpperCase()}: [Response in first person, using their authentic voice and reasoning style]
+${thinker.name.toUpperCase()}: [Response grounded in passage content, using their actual terminology and arguments]
 
 INTERVIEWER: [Follow-up or new direction]
 
-${thinker.name.toUpperCase()}: [Response]
+${thinker.name.toUpperCase()}: [Response with explicit reference to their works/concepts from passages]
 
 Continue this pattern. Use CAPS for speaker names. No markdown formatting. Plain text only.
 
@@ -2841,12 +2882,11 @@ Generate approximately ${wordsPerChapter} words for this ${totalChapters > 1 ? '
 ${totalChapters > 1 ? `This is chapter content - make it self-contained with a natural ending point. Each chapter MUST be approximately ${wordsPerChapter} words.` : ''}
 
 ## QUALITY REQUIREMENTS
-- Intellectually substantive exchanges
-- Concrete examples where appropriate
-- Authentic representation of ${thinker.name}'s thinking
-- Natural flow despite no pleasantries
-- Both interviewer and interviewee are intelligent
-- Tension and genuine engagement, not softball questions`;
+- Every ${thinker.name} response must be traceable to the retrieved passages
+- Use verbatim phrases from the sources naturally integrated into responses
+- Reference specific works/papers by title when possible
+- Maintain intellectual tension while staying grounded in actual positions
+- The interview explores what's IN the passages, not what you imagine ${thinker.name} might think`;
 
       // Set up SSE streaming
       res.setHeader('Content-Type', 'text/event-stream');
