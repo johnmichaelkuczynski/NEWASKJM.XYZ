@@ -71,9 +71,37 @@ const batchToFigure: Record<string, string> = {};
 // REQUIRED: Author attribution mapping - dynamically resolved from authorFolderToName
 const batchToAuthor: Record<string, string> = {};
 
-// Multi-author configuration: AUTO-SCAN ALL AUTHOR FOLDERS
+// Helper function to recursively scan directories for .txt files
+function scanDirectoryRecursively(dirPath: string, basePath: string): { file: string; title: string }[] {
+  const results: { file: string; title: string }[] = [];
+  
+  try {
+    const entries = readdirSync(dirPath, { withFileTypes: true });
+    
+    for (const entry of entries) {
+      const fullPath = join(dirPath, entry.name);
+      const relativePath = fullPath.replace(join(__dirname, ''), '').replace(/^\//, '');
+      
+      if (entry.isDirectory()) {
+        // Recursively scan subdirectories (e.g., quotes/)
+        results.push(...scanDirectoryRecursively(fullPath, basePath));
+      } else if (entry.isFile() && entry.name.endsWith('.txt')) {
+        results.push({
+          file: relativePath,
+          title: entry.name.replace(/\.txt$/i, '')
+        });
+      }
+    }
+  } catch (error) {
+    console.warn(`⚠️  Could not scan directory ${dirPath}:`, error);
+  }
+  
+  return results;
+}
+
+// Multi-author configuration: AUTO-SCAN ALL AUTHOR FOLDERS (including subdirectories)
 const figuresPapers = {
-  // AUTO-SCAN ALL AUTHORS: Dynamically load ALL .txt files from ALL author folders
+  // AUTO-SCAN ALL AUTHORS: Dynamically load ALL .txt files from ALL author folders and subdirectories
   ...(() => {
     const dataPath = join(__dirname, "data");
     const authorBatches: Record<string, any[]> = {};
@@ -85,16 +113,12 @@ const figuresPapers = {
       
       for (const authorFolder of authorFolders) {
         const authorPath = join(dataPath, authorFolder);
-        const files = readdirSync(authorPath)
-          .filter(f => f.endsWith('.txt'))
-          .map(f => ({
-            file: `data/${authorFolder}/${f}`,
-            title: f.replace(/\.txt$/i, '')
-          }));
+        // Recursively scan all subdirectories (including quotes/, etc.)
+        const files = scanDirectoryRecursively(authorPath, authorPath);
         
         if (files.length > 0) {
           authorBatches[`auto_${authorFolder}`] = files;
-          console.log(`📂 Auto-discovered ${files.length} files from data/${authorFolder}/`);
+          console.log(`📂 Auto-discovered ${files.length} files from data/${authorFolder}/ (including subdirs)`);
         }
       }
     } catch (error) {
