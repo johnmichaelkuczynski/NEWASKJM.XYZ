@@ -2757,8 +2757,11 @@ The dialogue should feel like overhearing two real minds grappling with real ide
 
       const targetWordLength = parseInt(wordLength) || 1500;
       const totalChapters = Math.ceil(targetWordLength / 2000);
+      const wordsPerChapter = Math.ceil(targetWordLength / totalChapters);
       
-      console.log(`[Interview Creator] Generating ${targetWordLength} word interview with ${thinker.name}, mode: ${mode}, tone: ${interviewerTone}`);
+      console.log(`[Interview Creator] Generating ${targetWordLength} word interview with ${thinker.name}`);
+      console.log(`[Interview Creator] Split into ${totalChapters} chapter(s), ~${wordsPerChapter} words each`);
+      console.log(`[Interview Creator] Mode: ${mode}, Tone: ${interviewerTone}`);
 
       // Retrieve relevant content from the thinker's works
       const normalizedThinkerName = normalizeAuthorName(thinker.name);
@@ -2834,8 +2837,8 @@ ${thinker.name.toUpperCase()}: [Response]
 Continue this pattern. Use CAPS for speaker names. No markdown formatting. Plain text only.
 
 ## LENGTH TARGET
-Generate approximately ${Math.min(targetWordLength, 2000)} words for this ${totalChapters > 1 ? 'chapter' : 'interview'}.
-${totalChapters > 1 ? `This is chapter content - make it self-contained with a natural ending point.` : ''}
+Generate approximately ${wordsPerChapter} words for this ${totalChapters > 1 ? 'chapter' : 'interview'}. This is CRITICAL - do not cut short.
+${totalChapters > 1 ? `This is chapter content - make it self-contained with a natural ending point. Each chapter MUST be approximately ${wordsPerChapter} words.` : ''}
 
 ## QUALITY REQUIREMENTS
 - Intellectually substantive exchanges
@@ -2907,17 +2910,24 @@ ${totalChapters > 1 ? `This is chapter content - make it self-contained with a n
         // Send word count update
         res.write(`data: ${JSON.stringify({ wordCount: currentWordCount })}\n\n`);
 
-        // If more chapters to go, add chapter break and wait
+        // If more chapters to go, add chapter break and ENFORCE 60-second pause
         if (chapter < totalChapters) {
           const chapterBreak = `\n\n--- END OF CHAPTER ${chapter} ---\n\n`;
           fullResponse += chapterBreak;
           res.write(`data: ${JSON.stringify({ content: chapterBreak })}\n\n`);
           
+          // Log the start of the mandatory pause
+          const pauseStart = Date.now();
+          console.log(`[Interview Creator] PAUSE START: 60-second break after Chapter ${chapter}. No LLM calls during this period.`);
+          
           // Notify client about wait
           res.write(`data: ${JSON.stringify({ waiting: true, waitTime: 60, chapter })}\n\n`);
           
-          // Wait 60 seconds between chapters
+          // MANDATORY 60-SECOND WAIT - NO LLM CALLS DURING THIS PERIOD
           await new Promise(resolve => setTimeout(resolve, 60000));
+          
+          const actualPause = Math.round((Date.now() - pauseStart) / 1000);
+          console.log(`[Interview Creator] PAUSE END: Waited ${actualPause} seconds. Resuming with Chapter ${chapter + 1}.`);
         }
       }
 
