@@ -63,5 +63,6 @@ The application acts as a centralized knowledge server providing unified access 
 13. ✅ Outline Theory of Knowledge - Cults vs religions, worship, supernatural, projection, virtualization, institutionalization (71 chunks, distance 0.146)
 14. ✅ Godel's Proof - Incompleteness theorem, formal systems, logicism refutation, diagonal argument, arithmetization (16 chunks, distance 0.133)
 15. ✅ What Is An Infinite Number - Cardinal/ordinal arithmetic, transfinite numbers, ℵ₀, reflexive classes, power-set theorem, continuum hypothesis (15 chunks)
+16. ✅ Kuczynski Quotes Volume 4: Math and Infinity - Transfinite numbers, reflexive classes, orders of magnitude, bijections, diagonal argument, power-set theorem, cardinal vs ordinal arithmetic, dimension and cardinality (4 chunks)
 
-**Total Kuczynski corpus: 15 files, 1,130 chunks**
+**Total Kuczynski corpus: 16 files, 1,134 chunks**
