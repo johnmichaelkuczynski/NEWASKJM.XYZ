@@ -1,7 +1,7 @@
 # Ask A Philosopher - Philosophical Q&A Application
 
 ### Overview
-"Ask A Philosopher" is a unified application for deep philosophical discourse with 59 philosophical and literary figures. It offers seven operational sections: philosophical Q&A chat, Model Builder, Paper Writer, Quote Generator, Dialogue Creator, Interview Creator, and Debate Creator. The platform uses actual writings and advanced AI to provide nuanced, contextually rich responses, enabling multi-author conversations through a Retrieval-Augmented Generation (RAG) system. Its purpose is to provide a robust platform for exploring complex philosophical and literary concepts, enhancing understanding through direct engagement with historical thinkers, with significant market potential in education and intellectual discourse. The application is powered by a comprehensive RAG database containing **23,267 embedded chunks** across 253 works from 4 major sources: Kuczynski (191 works, 22,336 chunks), Freud (16 works, 610 chunks), Aristotle (44 works, 213 chunks), and Aesop (2 works, 108 chunks). The system uses OpenAI text-embedding-ada-002 for semantic search with pgvector in PostgreSQL.
+"Ask A Philosopher" is a unified application for deep philosophical discourse with 59 philosophical and literary figures. It offers seven operational sections: philosophical Q&A chat, Model Builder, Paper Writer, Quote Generator, Dialogue Creator, Interview Creator, and Debate Creator. The platform uses actual writings and advanced AI to provide nuanced, contextually rich responses, enabling multi-author conversations through a Retrieval-Augmented Generation (RAG) system. Its purpose is to provide a robust platform for exploring complex philosophical and literary concepts, enhancing understanding through direct engagement with historical thinkers, with significant market potential in education and intellectual discourse. The application is powered by a comprehensive RAG database containing **23,273 embedded chunks** across 254 works from 4 major sources: Kuczynski (192 works, 22,342 chunks), Freud (16 works, 610 chunks), Aristotle (44 works, 213 chunks), and Aesop (2 works, 108 chunks). The system uses OpenAI text-embedding-ada-002 for semantic search with pgvector in PostgreSQL.
 
 ### User Preferences
 - **Response Style**: Crisp, direct, no academic bloat. Short sentences. Clear logic. No throat-clearing. Get to the point immediately. Default is Auto mode (no word limit); user can specify word count if desired.
@@ -65,8 +65,9 @@ The application acts as a centralized knowledge server providing unified access 
 15. ✅ What Is An Infinite Number - Cardinal/ordinal arithmetic, transfinite numbers, ℵ₀, reflexive classes, power-set theorem, continuum hypothesis (15 chunks)
 16. ✅ Kuczynski Quotes Volume 4: Math and Infinity - Transfinite numbers, reflexive classes, orders of magnitude, bijections, diagonal argument, power-set theorem, cardinal vs ordinal arithmetic, dimension and cardinality (4 chunks)
 17. ✅ Heed My Wisdom - Platonism in mathematics, academic critique, economics critique, Zeno's paradox, existentialism, psychology, business productivity, identity/metaphysics, standardized testing (11 sections)
+18. ✅ Papers on Business Positions - 50 positions: Altman Z-score, exchange/use-value divergence, drug legalization economics, university inefficiency, fraud triangle, Peter Pan Syndrome, Turing Test critique
 
-**Total Kuczynski corpus: 191 works, 22,336 chunks**
+**Total Kuczynski corpus: 192 works, 22,342 chunks**
 
 ### Freud Corpus (Position Statements Embedded)
 
