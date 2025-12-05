@@ -44,7 +44,7 @@ The application acts as a centralized knowledge server providing unified access 
 - **File Parsing (Quote Generator)**: Multer, pdf-parse, mammoth.
 - **ZHI Knowledge Provider**: `https://analyticphilosophy.net/zhi/query` (for `/zhi/query` endpoint).
 
-### RAG Database Corpus (25,891 chunks across 294 works)
+### RAG Database Corpus (29,086 chunks across 311 works)
 
 **Kuczynski Corpus** (194 works, 22,959 chunks):
 - Core philosophical papers on semantics, philosophy of mind, epistemology, ethics, mathematics
@@ -58,6 +58,10 @@ The application acts as a centralized knowledge server providing unified access 
 **Freud Corpus** (18 works, 767 chunks):
 - Beyond Pleasure Principle, Metapsychological Papers, Introductory Lectures, Collected Papers Vol 8
 - Key themes: pleasure principle, death drive, repetition compulsion, unconscious, repression, cathartic method, talking cure, hysteria, Anna O case, Frau Emmy case
+
+**Leibniz Corpus** (17 works, 3,195 chunks):
+- Major works: Discourse on Metaphysics, Monadology, New Essays on Human Understanding, Theodicy, Correspondence with Arnauld, Correspondence with Clarke, Ars Combinatoria, On Universal Synthesis and Analysis, Political Writings, Mathematical Writings
+- Key themes: monads, pre-established harmony, principle of sufficient reason, best of all possible worlds, innate ideas, substance, perception vs apperception, freedom and determinism, universal characteristic, calculus, combinatorics
 
 **Spinoza Corpus** (6 works, 370 chunks):
 - Major works: Ethics, Tractatus Theologico-Politicus, Tractatus Politicus, Principles of Cartesian Philosophy, Treatise on the Emendation of the Intellect, Correspondence
