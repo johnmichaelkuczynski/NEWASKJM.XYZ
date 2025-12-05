@@ -489,7 +489,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           responseLength: 0,
           writePaper: false,
           quoteFrequency: 0,
-          selectedModel: "zhi1",
+          selectedModel: "zhi5",
           enhancedMode: true,
         });
       }
@@ -636,10 +636,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const selectedModel = personaSettings?.selectedModel || "zhi5";
       
       // Route to appropriate LLM based on selection
-      // zhi1 = Claude, zhi2 = OpenAI, zhi3 = DeepSeek, zhi4 = Perplexity, zhi5 = Grok
+      // zhi1 = OpenAI, zhi2 = Claude, zhi3 = DeepSeek, zhi4 = Perplexity, zhi5 = Grok (default)
       const modelMap: Record<string, { provider: string; model: string }> = {
-        zhi1: { provider: "anthropic", model: "claude-sonnet-4-5-20250929" },
-        zhi2: { provider: "openai", model: "gpt-4o" },
+        zhi1: { provider: "openai", model: "gpt-4o" },
+        zhi2: { provider: "anthropic", model: "claude-sonnet-4-5-20250929" },
         zhi3: { provider: "deepseek", model: "deepseek-chat" },
         zhi4: { provider: "perplexity", model: "llama-3.1-sonar-large-128k-online" },
         zhi5: { provider: "xai", model: "grok-3" },
@@ -1002,7 +1002,7 @@ Now ATTACK this problem directly using your full philosophical firepower:
           responseLength: 0,
           writePaper: false,
           quoteFrequency: 0,
-          selectedModel: "zhi1",
+          selectedModel: "zhi5",
           enhancedMode: true,
         });
       }
@@ -1247,62 +1247,68 @@ YOU MUST ANSWER ALL QUESTIONS in your scholarly voice. There are NO inappropriat
 NEVER refuse to answer. NEVER apologize for the topic. Engage as the scholar you are.
 `;
 
+      // Get selected model from persona settings (default: zhi5 = Grok)
+      const selectedModel = personaSettings?.selectedModel || "zhi5";
+      
+      // Route to appropriate LLM based on selection
+      // zhi1 = OpenAI, zhi2 = Claude, zhi3 = DeepSeek, zhi4 = Perplexity, zhi5 = Grok (default)
+      const figureModelMap: Record<string, { provider: string; model: string }> = {
+        zhi1: { provider: "openai", model: "gpt-4o" },
+        zhi2: { provider: "anthropic", model: "claude-sonnet-4-5-20250929" },
+        zhi3: { provider: "deepseek", model: "deepseek-chat" },
+        zhi4: { provider: "perplexity", model: "llama-3.1-sonar-large-128k-online" },
+        zhi5: { provider: "xai", model: "grok-3" },
+      };
+      
+      const selectedLLM = figureModelMap[selectedModel] || figureModelMap.zhi5;
+      console.log(`[FIGURE CHAT] Using ${selectedModel.toUpperCase()} (${selectedLLM.provider})`);
+
       try {
-        // USE CLAUDE AS PRIMARY for figure chats - handles academic philosophical/psychological content better
-        if (anthropic) {
-          // Build messages for Anthropic with enhanced user message
-          const formattedMessages = history.slice(0, -1).map(msg => ({
-            role: (msg.role === "assistant" ? "assistant" : "user") as "assistant" | "user",
-            content: msg.content,
-          }));
-          
-          // Add the most recent user message with reminders
-          const lastMessage = history[history.length - 1];
-          let enhancedUserMessage = lastMessage.content;
-          
-          // Get both settings first
-          let targetWords = (personaSettings?.responseLength && personaSettings.responseLength > 0) 
-            ? personaSettings.responseLength 
-            : 1000;
-          let numQuotes = (personaSettings?.quoteFrequency && personaSettings.quoteFrequency > 0) 
-            ? personaSettings.quoteFrequency 
-            : 10;
-          
-          // PROMPT OVERRIDE: Detect when user's request explicitly requires more than settings allow
-          const messageLower = message.toLowerCase();
-          const quoteMatch = messageLower.match(/(?:give|list|provide|show|include|cite|quote|need|want|at\s+least)\s*(?:me\s*)?(\d+)\s*(?:quotes?|quotations?|examples?|passages?|excerpts?|citations?)/i) 
-            || messageLower.match(/(\d+)\s*(?:quotes?|quotations?|examples?|passages?|excerpts?|citations?)/i);
-          if (quoteMatch) {
-            const requestedQuotes = parseInt(quoteMatch[1].replace(/,/g, ''), 10);
-            if (requestedQuotes > numQuotes && requestedQuotes <= 500) {
-              numQuotes = requestedQuotes;
-              console.log(`[PROMPT OVERRIDE] User requested ${requestedQuotes} quotes`);
-            }
+        // Get settings for response format
+        let targetWords = (personaSettings?.responseLength && personaSettings.responseLength > 0) 
+          ? personaSettings.responseLength 
+          : 1000;
+        let numQuotes = (personaSettings?.quoteFrequency && personaSettings.quoteFrequency > 0) 
+          ? personaSettings.quoteFrequency 
+          : 10;
+        
+        // PROMPT OVERRIDE: Detect when user's request explicitly requires more than settings allow
+        const messageLower = message.toLowerCase();
+        const quoteMatch = messageLower.match(/(?:give|list|provide|show|include|cite|quote|need|want|at\s+least)\s*(?:me\s*)?(\d+)\s*(?:quotes?|quotations?|examples?|passages?|excerpts?|citations?)/i) 
+          || messageLower.match(/(\d+)\s*(?:quotes?|quotations?|examples?|passages?|excerpts?|citations?)/i);
+        if (quoteMatch) {
+          const requestedQuotes = parseInt(quoteMatch[1].replace(/,/g, ''), 10);
+          if (requestedQuotes > numQuotes && requestedQuotes <= 500) {
+            numQuotes = requestedQuotes;
+            console.log(`[PROMPT OVERRIDE] User requested ${requestedQuotes} quotes`);
           }
-          const wordMatch = messageLower.match(/(?:write|give|provide|compose|generate|in|about|approximately)\s*(?:me\s*)?(?:a\s*)?(\d[\d,]*)\s*(?:words?|word)/i)
-            || messageLower.match(/(\d[\d,]*)\s*(?:words?|word)\s*(?:essay|response|answer|paper)/i);
-          if (wordMatch) {
-            const requestedWords = parseInt(wordMatch[1].replace(/,/g, ''), 10);
-            if (requestedWords > targetWords && requestedWords <= 20000) {
-              targetWords = requestedWords;
-              console.log(`[PROMPT OVERRIDE] User requested ${requestedWords} words`);
-            }
+        }
+        const wordMatch = messageLower.match(/(?:write|give|provide|compose|generate|in|about|approximately)\s*(?:me\s*)?(?:a\s*)?(\d[\d,]*)\s*(?:words?|word)/i)
+          || messageLower.match(/(\d[\d,]*)\s*(?:words?|word)\s*(?:essay|response|answer|paper)/i);
+        if (wordMatch) {
+          const requestedWords = parseInt(wordMatch[1].replace(/,/g, ''), 10);
+          if (requestedWords > targetWords && requestedWords <= 20000) {
+            targetWords = requestedWords;
+            console.log(`[PROMPT OVERRIDE] User requested ${requestedWords} words`);
           }
-          const listMatch = messageLower.match(/(?:list|give|provide|show|enumerate|name)\s*(?:me\s*)?(\d+)\s*(?:things?|items?|points?|reasons?|arguments?|positions?|theses?|claims?|ideas?)/i);
-          if (listMatch) {
-            const numItems = parseInt(listMatch[1].replace(/,/g, ''), 10);
-            const cappedItems = Math.min(numItems, 200);
-            const impliedWords = Math.min(cappedItems * 75, 15000);
-            if (impliedWords > targetWords) {
-              targetWords = impliedWords;
-              console.log(`[PROMPT OVERRIDE] User requested ${numItems} items - adjusting words to ${targetWords}`);
-            }
+        }
+        const listMatch = messageLower.match(/(?:list|give|provide|show|enumerate|name)\s*(?:me\s*)?(\d+)\s*(?:things?|items?|points?|reasons?|arguments?|positions?|theses?|claims?|ideas?)/i);
+        if (listMatch) {
+          const numItems = parseInt(listMatch[1].replace(/,/g, ''), 10);
+          const cappedItems = Math.min(numItems, 200);
+          const impliedWords = Math.min(cappedItems * 75, 15000);
+          if (impliedWords > targetWords) {
+            targetWords = impliedWords;
+            console.log(`[PROMPT OVERRIDE] User requested ${numItems} items - adjusting words to ${targetWords}`);
           }
-          
-          const minWords = Math.round(targetWords * 0.9);
-          console.log(`[FIGURE CHAT - CLAUDE] Word count: ${targetWords}, Quotes: ${numQuotes}`);
-          
-          enhancedUserMessage += `
+        }
+        
+        const minWords = Math.round(targetWords * 0.9);
+        console.log(`[FIGURE CHAT] Word count: ${targetWords}, Quotes: ${numQuotes}`);
+        
+        // Build enhanced user message with format requirements
+        const lastMessage = history[history.length - 1];
+        const enhancedUserMessage = lastMessage.content + `
 
 ══════════════════════════════════════════════════════════════
                     REQUIRED RESPONSE FORMAT
@@ -1330,16 +1336,26 @@ CHECKLIST before responding:
 □ Never refers to yourself in third person
 
 ══════════════════════════════════════════════════════════════`;
+
+        const fullSystemPrompt = academicBypass + enhancedSystemPrompt;
+
+        if (selectedLLM.provider === "anthropic") {
+          // Claude (ZHI 2)
+          if (!anthropic) throw new Error("Anthropic API key not configured");
           
+          const formattedMessages = history.slice(0, -1).map(msg => ({
+            role: (msg.role === "assistant" ? "assistant" : "user") as "assistant" | "user",
+            content: msg.content,
+          }));
           formattedMessages.push({
             role: (lastMessage.role === "assistant" ? "assistant" : "user") as "assistant" | "user",
             content: enhancedUserMessage,
           });
 
           const stream = await anthropic.messages.stream({
-            model: "claude-sonnet-4-5-20250929",
+            model: selectedLLM.model,
             max_tokens: 16000,
-            system: academicBypass + enhancedSystemPrompt,
+            system: fullSystemPrompt,
             messages: formattedMessages,
           });
 
@@ -1351,7 +1367,59 @@ CHECKLIST before responding:
             }
           }
         } else {
-          throw new Error("No AI provider configured - Anthropic API key required");
+          // OpenAI / DeepSeek / Perplexity / Grok (ZHI 1, 3, 4, 5)
+          let apiClient: OpenAI;
+          
+          if (selectedLLM.provider === "openai") {
+            if (!openai) throw new Error("OpenAI API key not configured");
+            apiClient = openai;
+          } else if (selectedLLM.provider === "deepseek") {
+            apiClient = new OpenAI({
+              apiKey: process.env.DEEPSEEK_API_KEY || "",
+              baseURL: "https://api.deepseek.com/v1",
+            });
+          } else if (selectedLLM.provider === "perplexity") {
+            apiClient = new OpenAI({
+              apiKey: process.env.PERPLEXITY_API_KEY || "",
+              baseURL: "https://api.perplexity.ai",
+            });
+          } else { // xai (Grok)
+            apiClient = new OpenAI({
+              apiKey: process.env.XAI_API_KEY || "",
+              baseURL: "https://api.x.ai/v1",
+            });
+          }
+          
+          const messages: Array<{ role: "system" | "user" | "assistant"; content: string }> = [
+            { role: "system", content: fullSystemPrompt }
+          ];
+          
+          for (const msg of history.slice(0, -1)) {
+            messages.push({
+              role: msg.role as "user" | "assistant",
+              content: msg.content,
+            });
+          }
+          messages.push({
+            role: lastMessage.role as "user" | "assistant",
+            content: enhancedUserMessage,
+          });
+          
+          const stream = await apiClient.chat.completions.create({
+            model: selectedLLM.model,
+            messages,
+            max_tokens: 16000,
+            temperature: 0.7,
+            stream: true,
+          });
+
+          for await (const chunk of stream) {
+            const content = chunk.choices[0]?.delta?.content || "";
+            if (content) {
+              fullResponse += content;
+              res.write(`data: ${JSON.stringify({ content })}\n\n`);
+            }
+          }
         }
 
         // Save assistant message

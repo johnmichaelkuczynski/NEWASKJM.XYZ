@@ -28,7 +28,7 @@ The application acts as a centralized knowledge server providing unified access 
 #### Technical Implementations
 - **Frontend**: React, TypeScript, Wouter, TanStack Query, Shadcn UI, and Tailwind CSS.
 - **Backend**: Express.js with Node.js and Drizzle ORM.
-- **AI Interaction**: Anthropic Claude Sonnet 4.5 (0.7 temperature) configured for aggressive direct reasoning.
+- **AI Interaction**: User-selectable from 5 LLMs: ZHI 1 (OpenAI GPT-4o), ZHI 2 (Claude Sonnet 4.5), ZHI 3 (DeepSeek), ZHI 4 (Perplexity), ZHI 5 (Grok - default). Temperature 0.7, aggressive direct reasoning.
 - **Streaming**: Server-Sent Events (SSE) for real-time word-by-word AI response streaming.
 - **Cross-Section Content Transfer**: Bidirectional content flow using "Send to" dropdown buttons.
 - **ZHI Knowledge Provider API**: Secure internal API endpoint at `/zhi/query` for authenticated database queries with Bearer token authentication, returning structured JSON.

@@ -68,13 +68,13 @@ export function PersonaSettingsDialog({
         </DialogHeader>
 
         <div className="space-y-8 py-4">
-          {/* Philosophical Engine Selection */}
+          {/* AI Model Selection */}
           <div className="space-y-3">
             <Label htmlFor="selected-model" className="text-base font-medium">
-              Philosophical Engine
+              AI Model
             </Label>
             <p className="text-xs text-muted-foreground">
-              Select the AI model powering philosophical responses
+              Select which intelligence powers your philosophical responses
             </p>
             <Select
               value={localSettings.selectedModel || "zhi5"}
@@ -86,11 +86,11 @@ export function PersonaSettingsDialog({
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="zhi5">Grok - Real-time, witty, direct (default)</SelectItem>
-                <SelectItem value="zhi1">Anthropic Claude - Most sophisticated, nuanced reasoning</SelectItem>
-                <SelectItem value="zhi2">OpenAI GPT-4o - Fast, versatile, creative</SelectItem>
-                <SelectItem value="zhi3">DeepSeek - Economical, efficient</SelectItem>
-                <SelectItem value="zhi4">Perplexity - Research-augmented, fact-checked</SelectItem>
+                <SelectItem value="zhi5">ZHI 5 - Real-time, witty, direct (default)</SelectItem>
+                <SelectItem value="zhi1">ZHI 1 - Fast, versatile, creative</SelectItem>
+                <SelectItem value="zhi2">ZHI 2 - Most sophisticated, nuanced reasoning</SelectItem>
+                <SelectItem value="zhi3">ZHI 3 - Economical, efficient</SelectItem>
+                <SelectItem value="zhi4">ZHI 4 - Research-augmented, fact-checked</SelectItem>
               </SelectContent>
             </Select>
           </div>
