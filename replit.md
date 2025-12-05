@@ -44,7 +44,7 @@ The application acts as a centralized knowledge server providing unified access 
 - **File Parsing (Quote Generator)**: Multer, pdf-parse, mammoth.
 - **ZHI Knowledge Provider**: `https://analyticphilosophy.net/zhi/query` (for `/zhi/query` endpoint).
 
-### RAG Database Corpus (30,596 chunks across 349 works)
+### RAG Database Corpus (30,796 chunks across 353 works)
 
 **Kuczynski Corpus** (194 works, 22,959 chunks):
 - Core philosophical papers on semantics, philosophy of mind, epistemology, ethics, mathematics
@@ -55,9 +55,9 @@ The application acts as a centralized knowledge server providing unified access 
 - Major works: Analysis of Matter, Analysis of Mind, Principles of Mathematics, Introduction to Mathematical Philosophy, Human Knowledge, Philosophy of Leibniz, History of Western Philosophy, Our Knowledge of the External World, Principia Mathematica (Vols 1-3), Philosophy of Logical Atomism, Mathematical Logic as Based on Theory of Types
 - Key themes: neutral monism, sense-data, knowledge by acquaintance, logicism, theory of types, structural realism, logical constructions, atomic facts
 
-**Freud Corpus** (18 works, 767 chunks):
-- Beyond Pleasure Principle, Metapsychological Papers, Introductory Lectures, Collected Papers Vol 8
-- Key themes: pleasure principle, death drive, repetition compulsion, unconscious, repression, cathartic method, talking cure, hysteria, Anna O case, Frau Emmy case
+**Freud Corpus** (22 works, 967 chunks):
+- Beyond Pleasure Principle, Metapsychological Papers, Introductory Lectures, Collected Papers Vol 8, Totem and Taboo, Question of Lay Analysis, Outline of Psychoanalysis, Rat Man Case
+- Key themes: pleasure principle, death drive, repetition compulsion, unconscious, repression, cathartic method, talking cure, hysteria, Anna O case, Frau Emmy case, primal horde, patricide, totemism, obsessional neurosis, lay analysis
 
 **Leibniz Corpus** (17 works, 3,195 chunks):
 - Major works: Discourse on Metaphysics, Monadology, New Essays on Human Understanding, Theodicy, Correspondence with Arnauld, Correspondence with Clarke, Ars Combinatoria, On Universal Synthesis and Analysis, Political Writings, Mathematical Writings
