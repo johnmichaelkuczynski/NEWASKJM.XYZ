@@ -44,7 +44,7 @@ The application acts as a centralized knowledge server providing unified access 
 - **File Parsing (Quote Generator)**: Multer, pdf-parse, mammoth.
 - **ZHI Knowledge Provider**: `https://analyticphilosophy.net/zhi/query` (for `/zhi/query` endpoint).
 
-### RAG Database Corpus (29,086 chunks across 311 works)
+### RAG Database Corpus (30,596 chunks across 349 works)
 
 **Kuczynski Corpus** (194 works, 22,959 chunks):
 - Core philosophical papers on semantics, philosophy of mind, epistemology, ethics, mathematics
@@ -66,6 +66,10 @@ The application acts as a centralized knowledge server providing unified access 
 **Spinoza Corpus** (6 works, 370 chunks):
 - Major works: Ethics, Tractatus Theologico-Politicus, Tractatus Politicus, Principles of Cartesian Philosophy, Treatise on the Emendation of the Intellect, Correspondence
 - Key themes: substance monism (Deus sive Natura), conatus, mind-body parallelism, adequate ideas, intellectual love of God, freedom as understanding necessity, democracy, separation of church and state
+
+**Plato Corpus** (38 dialogues, 1,510 chunks):
+- Major dialogues: Apology, Crito, Republic, Phaedo, Symposium, Phaedrus, Theaetetus, Parmenides, Sophist, Timaeus, Laws
+- Key themes: Theory of Forms, immortality of soul, knowledge as recollection, philosopher-king, dialectic, justice, virtue, beauty, love, the Good
 
 **Aristotle Corpus** (44 works, 213 chunks)
 **Aesop Corpus** (2 works, 108 chunks)
