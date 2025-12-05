@@ -44,12 +44,12 @@ The application acts as a centralized knowledge server providing unified access 
 - **File Parsing (Quote Generator)**: Multer, pdf-parse, mammoth.
 - **ZHI Knowledge Provider**: `https://analyticphilosophy.net/zhi/query` (for `/zhi/query` endpoint).
 
-### RAG Database Corpus (25,778 chunks across 293 works)
+### RAG Database Corpus (25,891 chunks across 294 works)
 
-**Kuczynski Corpus** (193 works, 22,846 chunks):
+**Kuczynski Corpus** (194 works, 22,959 chunks):
 - Core philosophical papers on semantics, philosophy of mind, epistemology, ethics, mathematics
-- Position statement collections: Intensionality (50), Empiricism & Psychology (148), Free Will & Collected Papers (150), Conceptual Atomism & CTM (148), Quote Library Vol 6 (84), AI & Philosophy (142), Conception & Causation (107), Business (50)
-- Key themes: all contexts extensional, semantics/presemantics distinction, subpersonal mentation, emotions as beliefs, Libet experiment (consciousness as spectator), CTM refutation, content-externalism false, type-token distinction, Frege's revolution, System L vs classical logic, LLMs vindicate compositional semantics
+- Position statement collections: Intensionality (50), Empiricism & Psychology (148), Free Will & Collected Papers (150), Conceptual Atomism & CTM (148), Quote Library Vol 6 (84), AI & Philosophy (142), Conception & Causation (107), Business (50), Analytic Philosophy Ch1 (113)
+- Key themes: all contexts extensional, semantics/presemantics distinction, subpersonal mentation, emotions as beliefs, Libet experiment (consciousness as spectator), CTM refutation, content-externalism false, type-token distinction, Frege's revolution, System L vs classical logic, LLMs vindicate compositional semantics, philosophy as category analysis, metaknowledge, logical vs grammatical form
 
 **Russell Corpus** (22 works, 1,427 chunks):
 - Major works: Analysis of Matter, Analysis of Mind, Principles of Mathematics, Introduction to Mathematical Philosophy, Human Knowledge, Philosophy of Leibniz, History of Western Philosophy, Our Knowledge of the External World, Principia Mathematica (Vols 1-3), Philosophy of Logical Atomism, Mathematical Logic as Based on Theory of Types
