@@ -1,7 +1,7 @@
 # Ask A Philosopher - Philosophical Q&A Application
 
 ### Overview
-"Ask A Philosopher" is a unified application for deep philosophical discourse with 59 philosophical and literary figures. It offers seven operational sections: philosophical Q&A chat, Model Builder, Paper Writer, Quote Generator, Dialogue Creator, Interview Creator, and Debate Creator. The platform uses actual writings and advanced AI to provide nuanced, contextually rich responses, enabling multi-author conversations through a Retrieval-Augmented Generation (RAG) system. Its purpose is to provide a robust platform for exploring complex philosophical and literary concepts, enhancing understanding through direct engagement with historical thinkers, with significant market potential in education and intellectual discourse. The application is powered by a comprehensive RAG database containing 24,472 embedded chunks across 273 works from 5 major sources: Kuczynski, Russell, Freud, Aristotle, and Aesop.
+"Ask A Philosopher" is a unified application for deep philosophical discourse with 59 philosophical and literary figures. It offers seven operational sections: philosophical Q&A chat, Model Builder, Paper Writer, Quote Generator, Dialogue Creator, Interview Creator, and Debate Creator. The platform uses actual writings and advanced AI to provide nuanced, contextually rich responses, enabling multi-author conversations through a Retrieval-Augmented Generation (RAG) system. Its purpose is to provide a robust platform for exploring complex philosophical and literary concepts, enhancing understanding through direct engagement with historical thinkers, with significant market potential in education and intellectual discourse. The application is powered by a comprehensive RAG database containing 34,445 embedded chunks across 407 works from 8 major sources: Kuczynski, Freud, Leibniz, Plato, Russell, Spinoza, Aristotle, and Aesop.
 
 ### User Preferences
 - **Response Style**: Crisp, direct, no academic bloat. Short sentences. Clear logic. No throat-clearing. Get to the point immediately. Default is Auto mode (no word limit); user can specify word count if desired.
@@ -44,32 +44,34 @@ The application acts as a centralized knowledge server providing unified access 
 - **File Parsing (Quote Generator)**: Multer, pdf-parse, mammoth.
 - **ZHI Knowledge Provider**: `https://analyticphilosophy.net/zhi/query` (for `/zhi/query` endpoint).
 
-### RAG Database Corpus (30,796 chunks across 353 works)
+### RAG Database Corpus (34,445 chunks across 407 works)
 
-**Kuczynski Corpus** (194 works, 22,959 chunks):
+**Kuczynski Corpus** (205 works, 23,256 chunks):
 - Core philosophical papers on semantics, philosophy of mind, epistemology, ethics, mathematics
-- Position statement collections: Intensionality (50), Empiricism & Psychology (148), Free Will & Collected Papers (150), Conceptual Atomism & CTM (148), Quote Library Vol 6 (84), AI & Philosophy (142), Conception & Causation (107), Business (50), Analytic Philosophy Ch1 (113)
-- Key themes: all contexts extensional, semantics/presemantics distinction, subpersonal mentation, emotions as beliefs, Libet experiment (consciousness as spectator), CTM refutation, content-externalism false, type-token distinction, Frege's revolution, System L vs classical logic, LLMs vindicate compositional semantics, philosophy as category analysis, metaknowledge, logical vs grammatical form
+- Position statement collections: Intensionality (50), Empiricism & Psychology (148), Free Will & Collected Papers (150), Conceptual Atomism & CTM (148), Quote Library Vol 6 (84), AI & Philosophy (142), Conception & Causation (107), Business (50), Analytic Philosophy Ch1 (113), OCD/Bureaucracy/Psychopathy (100), Neurosis vs Psychosis (50), Kant/Hume/Induction (100)
+- Key themes: all contexts extensional, semantics/presemantics distinction, subpersonal mentation, emotions as beliefs, Libet experiment (consciousness as spectator), CTM refutation, content-externalism false, type-token distinction, Frege's revolution, System L vs classical logic, LLMs vindicate compositional semantics, philosophy as category analysis, metaknowledge, logical vs grammatical form, analog-digital distinction, hard analyticity
 
 **Russell Corpus** (22 works, 1,427 chunks):
 - Major works: Analysis of Matter, Analysis of Mind, Principles of Mathematics, Introduction to Mathematical Philosophy, Human Knowledge, Philosophy of Leibniz, History of Western Philosophy, Our Knowledge of the External World, Principia Mathematica (Vols 1-3), Philosophy of Logical Atomism, Mathematical Logic as Based on Theory of Types
 - Key themes: neutral monism, sense-data, knowledge by acquaintance, logicism, theory of types, structural realism, logical constructions, atomic facts
 
-**Freud Corpus** (22 works, 967 chunks):
-- Beyond Pleasure Principle, Metapsychological Papers, Introductory Lectures, Collected Papers Vol 8, Totem and Taboo, Question of Lay Analysis, Outline of Psychoanalysis, Rat Man Case
-- Key themes: pleasure principle, death drive, repetition compulsion, unconscious, repression, cathartic method, talking cure, hysteria, Anna O case, Frau Emmy case, primal horde, patricide, totemism, obsessional neurosis, lay analysis
+**Freud Corpus** (75 works, 4,366 chunks):
+- Clinical works: Studies on Hysteria, Rat Man Case, Wolf Man Case, Schreber Case, Dora Case, Little Hans, Beyond Pleasure Principle, Metapsychological Papers, Introductory Lectures, Outline of Psychoanalysis
+- Cultural works: Totem and Taboo, Civilization and Its Discontents, Future of an Illusion, Moses and Monotheism, Question of Lay Analysis
+- Position statements: Sublimation (100), OCD (200), Sexuality in OCD (100), Neurosis (100), Psychosis (297), Neurosis vs Psychosis (100+), Resistance (199), Occult & Childhood (100), Creative Writers (100), Transference (100), Sadism/Masochism (100), Aggression/Psychopathy (100), Humor (100), Philosophy comparisons (95), Civilization (80), Bureaucrats/Astrology (100)
+- Key themes: pleasure principle, death drive, repetition compulsion, unconscious, repression, cathartic method, talking cure, hysteria, obsessional neurosis, psychosis, transference, resistance, sublimation, civilization vs instinct
 
 **Leibniz Corpus** (17 works, 3,195 chunks):
 - Major works: Discourse on Metaphysics, Monadology, New Essays on Human Understanding, Theodicy, Correspondence with Arnauld, Correspondence with Clarke, Ars Combinatoria, On Universal Synthesis and Analysis, Political Writings, Mathematical Writings
 - Key themes: monads, pre-established harmony, principle of sufficient reason, best of all possible worlds, innate ideas, substance, perception vs apperception, freedom and determinism, universal characteristic, calculus, combinatorics
 
+**Plato Corpus** (36 dialogues, 1,510 chunks):
+- Major dialogues: Apology, Crito, Republic, Phaedo, Symposium, Phaedrus, Theaetetus, Parmenides, Sophist, Timaeus, Laws
+- Key themes: Theory of Forms, immortality of soul, knowledge as recollection, philosopher-king, dialectic, justice, virtue, beauty, love, the Good
+
 **Spinoza Corpus** (6 works, 370 chunks):
 - Major works: Ethics, Tractatus Theologico-Politicus, Tractatus Politicus, Principles of Cartesian Philosophy, Treatise on the Emendation of the Intellect, Correspondence
 - Key themes: substance monism (Deus sive Natura), conatus, mind-body parallelism, adequate ideas, intellectual love of God, freedom as understanding necessity, democracy, separation of church and state
-
-**Plato Corpus** (38 dialogues, 1,510 chunks):
-- Major dialogues: Apology, Crito, Republic, Phaedo, Symposium, Phaedrus, Theaetetus, Parmenides, Sophist, Timaeus, Laws
-- Key themes: Theory of Forms, immortality of soul, knowledge as recollection, philosopher-king, dialectic, justice, virtue, beauty, love, the Good
 
 **Aristotle Corpus** (44 works, 213 chunks)
 **Aesop Corpus** (2 works, 108 chunks)
