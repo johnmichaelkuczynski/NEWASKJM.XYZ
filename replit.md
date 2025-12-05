@@ -1,7 +1,7 @@
 # Ask A Philosopher - Philosophical Q&A Application
 
 ### Overview
-"Ask A Philosopher" is a unified application for deep philosophical discourse with 59 philosophical and literary figures. It offers seven operational sections: philosophical Q&A chat, Model Builder, Paper Writer, Quote Generator, Dialogue Creator, Interview Creator, and Debate Creator. The platform uses actual writings and advanced AI to provide nuanced, contextually rich responses, enabling multi-author conversations through a Retrieval-Augmented Generation (RAG) system. Its purpose is to provide a robust platform for exploring complex philosophical and literary concepts, enhancing understanding through direct engagement with historical thinkers, with significant market potential in education and intellectual discourse. The application is powered by a comprehensive RAG database containing **23,273 embedded chunks** across 254 works from 4 major sources: Kuczynski (192 works, 22,342 chunks), Freud (16 works, 610 chunks), Aristotle (44 works, 213 chunks), and Aesop (2 works, 108 chunks). The system uses OpenAI text-embedding-ada-002 for semantic search with pgvector in PostgreSQL.
+"Ask A Philosopher" is a unified application for deep philosophical discourse with 59 philosophical and literary figures. It offers seven operational sections: philosophical Q&A chat, Model Builder, Paper Writer, Quote Generator, Dialogue Creator, Interview Creator, and Debate Creator. The platform uses actual writings and advanced AI to provide nuanced, contextually rich responses, enabling multi-author conversations through a Retrieval-Augmented Generation (RAG) system. Its purpose is to provide a robust platform for exploring complex philosophical and literary concepts, enhancing understanding through direct engagement with historical thinkers, with significant market potential in education and intellectual discourse. The application is powered by a comprehensive RAG database containing **24,444 embedded chunks** across 268 works from 5 major sources: Kuczynski (192 works, 22,342 chunks), Russell (14 works, 1,171 chunks), Freud (16 works, 610 chunks), Aristotle (44 works, 213 chunks), and Aesop (2 works, 108 chunks). The system uses OpenAI text-embedding-ada-002 for semantic search with pgvector in PostgreSQL.
 
 ### User Preferences
 - **Response Style**: Crisp, direct, no academic bloat. Short sentences. Clear logic. No throat-clearing. Get to the point immediately. Default is Auto mode (no word limit); user can specify word count if desired.
@@ -87,3 +87,22 @@ The application acts as a centralized knowledge server providing unified access 
 14. ✅ Dream Formation and Unconscious - Dream work and unconscious processes
 
 **Total Freud corpus: 16 works, 610 chunks**
+
+### Russell Corpus (Full Texts Embedded)
+
+1. ✅ Mysticism and Logic - 37 chunks: mysticism vs logic, scientific method, mathematics and logic
+2. ✅ ABC of Relativity - 60 chunks: Einstein's relativity explained, space-time, physics for laypersons
+3. ✅ Practice and Theory of Bolshevism - 47 chunks: critique of Soviet communism, politics, revolution
+4. ✅ Free Thought and Official Propaganda - 16 chunks: freedom of thought, censorship, education
+5. ✅ On the Experience of Time - 16 chunks: temporal experience, psychology of time
+6. ✅ Political Ideals - 45 chunks: liberalism, individual freedom, political theory
+7. ✅ Analysis of Mind - 150 chunks: neutral monism, consciousness, belief, desire, memory
+8. ✅ Human Knowledge: Its Scope and Limits - 200 chunks: epistemology, induction, probability, scientific inference
+9. ✅ Principles of Mathematics Part 1 - 100 chunks: mathematical logic, foundations of mathematics
+10. ✅ Principles of Mathematics Part 2 - 100 chunks: number theory, order, infinity
+11. ✅ Principles of Mathematics Part 3 - 100 chunks: quantity, space, motion, matter
+12. ✅ Complete Philosophical Writings Part 1 - 100 chunks: early philosophical essays
+13. ✅ Complete Philosophical Writings Part 2 - 100 chunks: mid-career philosophical work
+14. ✅ Complete Philosophical Writings Part 3 - 100 chunks: later philosophical essays
+
+**Total Russell corpus: 14 works, 1,171 chunks**
