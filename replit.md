@@ -1,7 +1,7 @@
 # Ask A Philosopher - Philosophical Q&A Application
 
 ### Overview
-"Ask A Philosopher" is a unified application for deep philosophical discourse with 59 philosophical and literary figures. It offers seven operational sections: philosophical Q&A chat, Model Builder, Paper Writer, Quote Generator, Dialogue Creator, Interview Creator, and Debate Creator. The platform uses actual writings and advanced AI to provide nuanced, contextually rich responses, enabling multi-author conversations through a Retrieval-Augmented Generation (RAG) system. Its purpose is to provide a robust platform for exploring complex philosophical and literary concepts, enhancing understanding through direct engagement with historical thinkers, with significant market potential in education and intellectual discourse. The application is powered by a comprehensive RAG database containing **23,260 embedded chunks** across 251 works from 4 major sources: Kuczynski (191 works, 22,336 chunks), Freud (14 works, 603 chunks), Aristotle (44 works, 213 chunks), and Aesop (2 works, 108 chunks). The system uses OpenAI text-embedding-ada-002 for semantic search with pgvector in PostgreSQL.
+"Ask A Philosopher" is a unified application for deep philosophical discourse with 59 philosophical and literary figures. It offers seven operational sections: philosophical Q&A chat, Model Builder, Paper Writer, Quote Generator, Dialogue Creator, Interview Creator, and Debate Creator. The platform uses actual writings and advanced AI to provide nuanced, contextually rich responses, enabling multi-author conversations through a Retrieval-Augmented Generation (RAG) system. Its purpose is to provide a robust platform for exploring complex philosophical and literary concepts, enhancing understanding through direct engagement with historical thinkers, with significant market potential in education and intellectual discourse. The application is powered by a comprehensive RAG database containing **23,263 embedded chunks** across 252 works from 4 major sources: Kuczynski (191 works, 22,336 chunks), Freud (15 works, 606 chunks), Aristotle (44 works, 213 chunks), and Aesop (2 works, 108 chunks). The system uses OpenAI text-embedding-ada-002 for semantic search with pgvector in PostgreSQL.
 
 ### User Preferences
 - **Response Style**: Crisp, direct, no academic bloat. Short sentences. Clear logic. No throat-clearing. Get to the point immediately. Default is Auto mode (no word limit); user can specify word count if desired.
@@ -80,7 +80,8 @@ The application acts as a centralized knowledge server providing unified access 
 8. ✅ Little Hans (Analysis of Phobia) Positions - 25 positions: Oedipus complex, castration anxiety, phobia formation, infantile sexuality, symbolic displacement
 9. ✅ Schreber (Paranoia Case) Positions - 25 positions: paranoia and homosexuality, projection mechanism, narcissistic regression, delusion as recovery
 10. ✅ Wolf Man (Infantile Neurosis) Positions - 25 positions: primal scene, deferred action, passive aims, phylogenetic inheritance
-11. ✅ Civilization and Its Discontents - Analysis and extended analysis of culture and instinct
-12. ✅ Dream Formation and Unconscious - Dream work and unconscious processes
+11. ✅ Metapsychological Papers Positions - 36 positions: On Narcissism, Instincts and Their Vicissitudes, Repression, The Unconscious, Mourning and Melancholia
+12. ✅ Civilization and Its Discontents - Analysis and extended analysis of culture and instinct
+13. ✅ Dream Formation and Unconscious - Dream work and unconscious processes
 
-**Total Freud corpus: 14 works, 603 chunks**
+**Total Freud corpus: 15 works, 606 chunks**
