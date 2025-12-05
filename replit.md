@@ -43,3 +43,21 @@ The application acts as a centralized knowledge server providing unified access 
 - **Embeddings**: OpenAI `text-embedding-ada-002`.
 - **File Parsing (Quote Generator)**: Multer, pdf-parse, mammoth.
 - **ZHI Knowledge Provider**: `https://analyticphilosophy.net/zhi/query` (for `/zhi/query` endpoint).
+
+### RAG Database Corpus (24,479 chunks across 274 works)
+
+**Kuczynski Corpus** (197 works, 22,370 chunks):
+- Core philosophical papers on semantics, philosophy of mind, epistemology, ethics, mathematics
+- Position statement collections: Intensionality (50), Empiricism & Psychology (148), Free Will & Collected Papers (150), Conceptual Atomism & CTM (148), Conception & Causation (107), Business (50)
+- Key themes: all contexts extensional, semantics/presemantics distinction, subpersonal mentation, emotions as beliefs, Libet experiment (consciousness as spectator), CTM refutation, content-externalism false
+
+**Russell Corpus** (14 works, 1,171 chunks):
+- Human Knowledge, Analysis of Mind, Principles of Mathematics, Complete Philosophical Writings
+- Key themes: neutral monism, sense-data, knowledge by acquaintance, logicism, theory of types
+
+**Freud Corpus** (17 works, 617 chunks, 615 position statements):
+- Beyond Pleasure Principle, Metapsychological Papers, Introductory Lectures, Collected Papers
+- Key themes: pleasure principle, death drive, repetition compulsion, unconscious, repression
+
+**Aristotle Corpus** (44 works, 213 chunks, 220 position statements)
+**Aesop Corpus** (2 works, 108 chunks)
