@@ -32,7 +32,7 @@ export const personaSettings = pgTable("persona_settings", {
   responseLength: integer("response_length").notNull().default(1000),
   writePaper: boolean("write_paper").notNull().default(false),
   quoteFrequency: integer("quote_frequency").notNull().default(10),
-  selectedModel: text("selected_model").notNull().default("zhi1"),
+  selectedModel: text("selected_model").notNull().default("zhi5"),
   enhancedMode: boolean("enhanced_mode").notNull().default(true),
 });
 
