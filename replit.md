@@ -38,22 +38,22 @@ The application acts as a centralized knowledge server providing unified access 
 - **Standalone SQLite Databases**: Plato Database (182 positions) and Nietzsche Database (706 positions) with APIs for searching.
 
 ### External Dependencies
-- **AI Providers**: Anthropic Claude Sonnet 4.5, OpenAI GPT-4o, DeepSeek, Perplexity.
+- **AI Providers**: OpenAI GPT-4o, Anthropic Claude Sonnet 4.5, DeepSeek, Perplexity, Grok.
 - **Database**: PostgreSQL (Neon) with pgvector extension.
 - **Embeddings**: OpenAI `text-embedding-ada-002`.
 - **File Parsing (Quote Generator)**: Multer, pdf-parse, mammoth.
 - **ZHI Knowledge Provider**: `https://analyticphilosophy.net/zhi/query` (for `/zhi/query` endpoint).
 
-### RAG Database Corpus (24,479 chunks across 274 works)
+### RAG Database Corpus (24,748 chunks across 284 works)
 
-**Kuczynski Corpus** (199 works, 22,383 chunks):
+**Kuczynski Corpus** (191 works, 22,336 chunks):
 - Core philosophical papers on semantics, philosophy of mind, epistemology, ethics, mathematics
 - Position statement collections: Intensionality (50), Empiricism & Psychology (148), Free Will & Collected Papers (150), Conceptual Atomism & CTM (148), Quote Library Vol 6 (84), AI & Philosophy (142), Conception & Causation (107), Business (50)
 - Key themes: all contexts extensional, semantics/presemantics distinction, subpersonal mentation, emotions as beliefs, Libet experiment (consciousness as spectator), CTM refutation, content-externalism false, type-token distinction, Frege's revolution, System L vs classical logic, LLMs vindicate compositional semantics
 
-**Russell Corpus** (14 works, 1,171 chunks):
-- Human Knowledge, Analysis of Mind, Principles of Mathematics, Complete Philosophical Writings
-- Key themes: neutral monism, sense-data, knowledge by acquaintance, logicism, theory of types
+**Russell Corpus** (22 works, 1,427 chunks):
+- Major works: Analysis of Matter, Analysis of Mind, Principles of Mathematics, Introduction to Mathematical Philosophy, Human Knowledge, Philosophy of Leibniz, History of Western Philosophy, Our Knowledge of the External World, Principia Mathematica (Vols 1-3), Philosophy of Logical Atomism, Mathematical Logic as Based on Theory of Types
+- Key themes: neutral monism, sense-data, knowledge by acquaintance, logicism, theory of types, structural realism, logical constructions, atomic facts
 
 **Freud Corpus** (17 works, 617 chunks, 615 position statements):
 - Beyond Pleasure Principle, Metapsychological Papers, Introductory Lectures, Collected Papers
