@@ -44,16 +44,12 @@ The application acts as a centralized knowledge server providing unified access 
 - **File Parsing (Quote Generator)**: Multer, pdf-parse, mammoth.
 - **ZHI Knowledge Provider**: `https://analyticphilosophy.net/zhi/query` (for `/zhi/query` endpoint).
 
-### RAG Database Corpus (35,324 chunks across 418 works)
+### RAG Database Corpus (38,595 chunks across 519 works from 11 thinkers)
 
 **Kuczynski Corpus** (205 works, 23,256 chunks):
 - Core philosophical papers on semantics, philosophy of mind, epistemology, ethics, mathematics
 - Position statement collections: Intensionality (50), Empiricism & Psychology (148), Free Will & Collected Papers (150), Conceptual Atomism & CTM (148), Quote Library Vol 6 (84), AI & Philosophy (142), Conception & Causation (107), Business (50), Analytic Philosophy Ch1 (113), OCD/Bureaucracy/Psychopathy (100), Neurosis vs Psychosis (50), Kant/Hume/Induction (100)
 - Key themes: all contexts extensional, semantics/presemantics distinction, subpersonal mentation, emotions as beliefs, Libet experiment (consciousness as spectator), CTM refutation, content-externalism false, type-token distinction, Frege's revolution, System L vs classical logic, LLMs vindicate compositional semantics, philosophy as category analysis, metaknowledge, logical vs grammatical form, analog-digital distinction, hard analyticity
-
-**Russell Corpus** (22 works, 1,427 chunks):
-- Major works: Analysis of Matter, Analysis of Mind, Principles of Mathematics, Introduction to Mathematical Philosophy, Human Knowledge, Philosophy of Leibniz, History of Western Philosophy, Our Knowledge of the External World, Principia Mathematica (Vols 1-3), Philosophy of Logical Atomism, Mathematical Logic as Based on Theory of Types
-- Key themes: neutral monism, sense-data, knowledge by acquaintance, logicism, theory of types, structural realism, logical constructions, atomic facts
 
 **Freud Corpus** (75 works, 4,366 chunks):
 - Clinical works: Studies on Hysteria, Rat Man Case, Wolf Man Case, Schreber Case, Dora Case, Little Hans, Beyond Pleasure Principle, Metapsychological Papers, Introductory Lectures, Outline of Psychoanalysis
@@ -65,9 +61,18 @@ The application acts as a centralized knowledge server providing unified access 
 - Major works: Discourse on Metaphysics, Monadology, New Essays on Human Understanding, Theodicy, Correspondence with Arnauld, Correspondence with Clarke, Ars Combinatoria, On Universal Synthesis and Analysis, Political Writings, Mathematical Writings
 - Key themes: monads, pre-established harmony, principle of sufficient reason, best of all possible worlds, innate ideas, substance, perception vs apperception, freedom and determinism, universal characteristic, calculus, combinatorics
 
+**Jung Corpus** (58 works, 2,321 chunks):
+- Major works: Psychological Types, Archetypes and the Collective Unconscious, Aion, Psychology and Alchemy, Answer to Job, Modern Man in Search of a Soul, Memories Dreams Reflections
+- Position statements: Dreams (100), Shadow (100), Anima/Animus (100), Individuation (100), Synchronicity (100), Alchemy (100), Religious Function (100), Archetypes (100), Freud Critique (100)
+- Key themes: collective unconscious, archetypes (shadow, anima/animus, self), individuation, synchronicity, psychological types (introversion/extraversion), active imagination, alchemy as psychological symbolism
+
 **Plato Corpus** (36 dialogues, 1,510 chunks):
 - Major dialogues: Apology, Crito, Republic, Phaedo, Symposium, Phaedrus, Theaetetus, Parmenides, Sophist, Timaeus, Laws
 - Key themes: Theory of Forms, immortality of soul, knowledge as recollection, philosopher-king, dialectic, justice, virtue, beauty, love, the Good
+
+**Russell Corpus** (22 works, 1,427 chunks):
+- Major works: Analysis of Matter, Analysis of Mind, Principles of Mathematics, Introduction to Mathematical Philosophy, Human Knowledge, Philosophy of Leibniz, History of Western Philosophy, Our Knowledge of the External World, Principia Mathematica (Vols 1-3), Philosophy of Logical Atomism, Mathematical Logic as Based on Theory of Types
+- Key themes: neutral monism, sense-data, knowledge by acquaintance, logicism, theory of types, structural realism, logical constructions, atomic facts
 
 **Spinoza Corpus** (13 works, 810 chunks):
 - Major works: Ethics (Parts I-V), Tractatus Theologico-Politicus, Tractatus Politicus, Principles of Cartesian Philosophy, Treatise on the Emendation of the Intellect, Correspondence
@@ -80,5 +85,16 @@ The application acts as a centralized knowledge server providing unified access 
 - Biology: History of Animals, Parts of Animals, Generation of Animals
 - Metaphysics, Ethics (Nicomachean, Eudemian, Magna Moralia), Politics, Rhetoric, Poetics
 - Key themes: four causes, substance and form, actuality/potentiality, syllogistic logic, virtue ethics, eudaimonia, natural teleology, hylomorphism
+
+**Galileo Corpus** (40 works, 650 chunks):
+- Original works: Sidereus Nuncius, Letters on Sunspots, Il Saggiatore, Dialogue Concerning Two Chief World Systems, Two New Sciences, Letter to Grand Duchess Christina
+- Position statements: Philosophical Positions (100), Physics Discoveries (58 across 12 categories)
+- X-ADJACENT corpus: 120 post-Galilean developments (Newton's laws, calculus, stellar parallax, General Relativity, quantum mechanics)
+- Key themes: heliocentrism, telescopic astronomy, kinematics of falling bodies, projectile motion, pendulum phenomena, experimental method, mathematization of nature, science vs scripture
+
+**Newton Corpus** (3 works, 300 chunks):
+- Major works: Principia (philosophical positions + mechanics), Opticks
+- Position statements: Philosophical Positions (100), Opticks (100), Mechanics (100)
+- Key themes: Three Laws of Motion, universal gravitation, inverse-square law, absolute space/time, corpuscular theory of light, Newton's Rings, fits of reflection/transmission, chromatic aberration, reflecting telescope, centripetal force, orbital mechanics
 
 **Aesop Corpus** (2 works, 108 chunks)
