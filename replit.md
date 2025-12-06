@@ -1,7 +1,7 @@
 # Ask A Philosopher - Philosophical Q&A Application
 
 ### Overview
-"Ask A Philosopher" is a unified application for deep philosophical discourse with 59 philosophical and literary figures. It offers seven operational sections: philosophical Q&A chat, Model Builder, Paper Writer, Quote Generator, Dialogue Creator, Interview Creator, and Debate Creator. The platform uses actual writings and advanced AI to provide nuanced, contextually rich responses, enabling multi-author conversations through a Retrieval-Augmented Generation (RAG) system. Its purpose is to provide a robust platform for exploring complex philosophical and literary concepts, enhancing understanding through direct engagement with historical thinkers, with significant market potential in education and intellectual discourse. The application is powered by a comprehensive RAG database containing 34,445 embedded chunks across 407 works from 8 major sources: Kuczynski, Freud, Leibniz, Plato, Russell, Spinoza, Aristotle, and Aesop.
+"Ask A Philosopher" is a unified application for deep philosophical discourse with 59 philosophical and literary figures. It offers seven operational sections: philosophical Q&A chat, Model Builder, Paper Writer, Quote Generator, Dialogue Creator, Interview Creator, and Debate Creator. The platform uses actual writings and advanced AI to provide nuanced, contextually rich responses, enabling multi-author conversations through a Retrieval-Augmented Generation (RAG) system. Its purpose is to provide a robust platform for exploring complex philosophical and literary concepts, enhancing understanding through direct engagement with historical thinkers, with significant market potential in education and intellectual discourse. The application is powered by a comprehensive RAG database containing 35,324 embedded chunks across 418 works from 8 major sources: Kuczynski, Freud, Leibniz, Plato, Russell, Spinoza, Aristotle, and Aesop.
 
 ### User Preferences
 - **Response Style**: Crisp, direct, no academic bloat. Short sentences. Clear logic. No throat-clearing. Get to the point immediately. Default is Auto mode (no word limit); user can specify word count if desired.
@@ -44,7 +44,7 @@ The application acts as a centralized knowledge server providing unified access 
 - **File Parsing (Quote Generator)**: Multer, pdf-parse, mammoth.
 - **ZHI Knowledge Provider**: `https://analyticphilosophy.net/zhi/query` (for `/zhi/query` endpoint).
 
-### RAG Database Corpus (34,445 chunks across 407 works)
+### RAG Database Corpus (35,324 chunks across 418 works)
 
 **Kuczynski Corpus** (205 works, 23,256 chunks):
 - Core philosophical papers on semantics, philosophy of mind, epistemology, ethics, mathematics
@@ -69,9 +69,16 @@ The application acts as a centralized knowledge server providing unified access 
 - Major dialogues: Apology, Crito, Republic, Phaedo, Symposium, Phaedrus, Theaetetus, Parmenides, Sophist, Timaeus, Laws
 - Key themes: Theory of Forms, immortality of soul, knowledge as recollection, philosopher-king, dialectic, justice, virtue, beauty, love, the Good
 
-**Spinoza Corpus** (6 works, 370 chunks):
-- Major works: Ethics, Tractatus Theologico-Politicus, Tractatus Politicus, Principles of Cartesian Philosophy, Treatise on the Emendation of the Intellect, Correspondence
+**Spinoza Corpus** (13 works, 810 chunks):
+- Major works: Ethics (Parts I-V), Tractatus Theologico-Politicus, Tractatus Politicus, Principles of Cartesian Philosophy, Treatise on the Emendation of the Intellect, Correspondence
+- Thematic compilations: Freedom (100), Emotions (100), Knowledge (100), God and Nature (100)
 - Key themes: substance monism (Deus sive Natura), conatus, mind-body parallelism, adequate ideas, intellectual love of God, freedom as understanding necessity, democracy, separation of church and state
 
-**Aristotle Corpus** (44 works, 213 chunks)
+**Aristotle Corpus** (48 works, 652 chunks):
+- Organon (Logic): Categories, On Interpretation, Prior Analytics, Posterior Analytics, Topics, Sophistical Refutations
+- Natural Philosophy: Physics, On the Heavens, On Generation and Corruption, Meteorology, On the Soul, Parva Naturalia
+- Biology: History of Animals, Parts of Animals, Generation of Animals
+- Metaphysics, Ethics (Nicomachean, Eudemian, Magna Moralia), Politics, Rhetoric, Poetics
+- Key themes: four causes, substance and form, actuality/potentiality, syllogistic logic, virtue ethics, eudaimonia, natural teleology, hylomorphism
+
 **Aesop Corpus** (2 works, 108 chunks)
