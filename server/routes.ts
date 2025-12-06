@@ -1039,7 +1039,9 @@ Now ATTACK this problem directly using your full philosophical firepower:
         "kant": "Kant",
         "darwin": "Darwin",
         "bergson": "Bergson",
-        "schopenhauer": "Schopenhauer"
+        "schopenhauer": "Schopenhauer",
+        "jung": "Jung",
+        "aesop": "Aesop"
       };
       
       const authorFilter = authorNameMap[figureId] || undefined;
