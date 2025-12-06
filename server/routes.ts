@@ -500,6 +500,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           .replace(/^CORPUS_ANALYSIS_/, '')
           .replace(/_/g, ' ')
           .replace(/([a-z])([A-Z])/g, '$1 $2')
+          .replace(/\s+\d{10,}$/g, '')  // Strip timestamps like "1762355363740"
+          .replace(/\s+\d+$/g, '')      // Strip any trailing numbers
           .trim();
       };
 
@@ -1013,6 +1015,8 @@ Now ATTACK this problem directly using your full philosophical firepower:
           .replace(/^CORPUS_ANALYSIS_/, '')
           .replace(/_/g, ' ')
           .replace(/([a-z])([A-Z])/g, '$1 $2')
+          .replace(/\s+\d{10,}$/g, '')  // Strip timestamps like "1762355363740"
+          .replace(/\s+\d+$/g, '')      // Strip any trailing numbers
           .trim();
       };
       
