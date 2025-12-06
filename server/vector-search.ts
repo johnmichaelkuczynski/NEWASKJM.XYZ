@@ -191,7 +191,9 @@ export async function findRelevantChunks(
     "kant": "Kant",
     "darwin": "Darwin",
     "bergson": "Bergson",
-    "schopenhauer": "Schopenhauer"
+    "schopenhauer": "Schopenhauer",
+    "jung": "Jung",
+    "aesop": "Aesop"
   };
   
   const authorFilter = authorNameMap[figureId] || undefined;
