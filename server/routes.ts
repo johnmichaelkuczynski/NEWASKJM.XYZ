@@ -1041,7 +1041,8 @@ Now ATTACK this problem directly using your full philosophical firepower:
         "bergson": "Bergson",
         "schopenhauer": "Schopenhauer",
         "jung": "Jung",
-        "aesop": "Aesop"
+        "aesop": "Aesop",
+        "newton": "Newton"
       };
       
       const authorFilter = authorNameMap[figureId] || undefined;
